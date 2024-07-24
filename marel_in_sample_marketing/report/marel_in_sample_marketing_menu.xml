@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <!-- <report id="report_marel_in_sample_marketing_menu" string="Form Pengajuan Sample" report_type="qweb-pdf" model="marelin.sample.marketing" file="marel_in_sample_marketing.marel_in_sample_marketing_menu" name="marel_in_sample_marketing.marel_in_sample_marketing_menu_report" />
+        <template id="marel_in_sample_marketing_menu_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="marel_in_sample_marketing.marel_in_sample_marketing_doc" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+        </template> -->
+
+        <report id="report_marel_in_sample_marketing_menu" string="Form Pengajuan Sample" report_type="qweb-pdf" model="marelin.sample.marketing" file="marel_in_sample_marketing.marel_in_sample_marketing_menu" name="marel_in_sample_marketing.marel_in_sample_marketing_menu_report" />
+        <template id="marel_in_sample_marketing_menu_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="marel_in_sample_marketing.marel_in_sample_marketing_doc" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</flectra>

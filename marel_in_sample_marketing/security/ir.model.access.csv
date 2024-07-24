@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_marelin_sample_marketing_all,marelin.sample.marketing,model_marelin_sample_marketing,base.group_user,1,1,1,1
