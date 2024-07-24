@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <record id="view_report_mrp_sro_pivot" model="ir.ui.view">
+        <field name="name">report.mrp.sro.pivot</field>
+        <field name="model">report.mrp.sro</field>
+        <field name="arch" type="xml">
+            <pivot string="Delivery" disable_linking="False">
+                <field name="categ_id" type="row"/>
+                <field name="product_id" type="row"/>
+                <field name="product_qty" type="measure"/>
+                <field name="total_qty_done" type="measure"/>
+                <field name="qty_kekurangan" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_report_mrp_sro_filter" model="ir.ui.view">
+        <field name="name">report.mrp.sro.filter</field>
+        <field name="model">report.mrp.sro</field>
+        <!-- <field name="context">{'search_default_outstanding':1}</field> -->
+        <field name="arch" type="xml">
+            <search string="Delivery">
+                <filter string="State: draft>confirmed>planned>progress" name="progress" domain="[('state','in',['draft','confirmed','planned','progress'])]"/>
+                <field name="date_planned_start"/>
+                <filter string="Today" name="today" domain="[('date_planned_start','&lt;=', (datetime.date.today()).strftime('%Y-%m-%d')),('date_planned_start','&gt;=',(datetime.date.today()).strftime('%Y-%m-%d'))]" help="Today or scheduled for today"/>
+                <filter string="Yesterday" name="yesterday" domain="[('date_planned_start','&gt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d'))), ('date_planned_start','&lt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d')))]" help="Yesterday"/>
+                <filter string="Current Month" name="current_month" domain="[('date_planned_start','&lt;',(context_today()+relativedelta(months=1)).strftime('%Y-%m-01')), ('date_planned_start','&gt;=',time.strftime('%Y-%m-01'))]"/>
+                <filter string="Last Month" name="last_month" domain="[('date_planned_start','&lt;=', (context_today()-relativedelta(day=31, months=1)).strftime('%Y-%m-%d')),('date_planned_start','&gt;=',(context_today()-relativedelta(day=1,months=1)).strftime('%Y-%m-%d'))]" help="Last month"/>
+                <field name="product_id"/>
+                <field name="name"/>
+                <group expand="0" string="Group By">
+                    <filter string="Product" name="product" context="{'group_by':'product_id'}"/>
+                    <filter string="No MO" name="name" context="{'group_by':'name'}"/>
+                    <separator/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_report_mrp_sro" model="ir.actions.act_window">
+        <field name="name">Report MO SR</field>
+        <field name="view_type">form</field>
+        <field name="res_model">report.mrp.sro</field>
+        <field name="view_mode">pivot</field>
+        <field name="context">{'search_default_progress':1}</field>
+        <field name="search_view_id" ref="view_report_mrp_sro_filter"/>
+    </record>
+
+    <!-- <report
+            id="report_excel_report_mrp_sro"
+            string="Report Conti Excel"
+            model='report.mrp.sro'
+            report_type = 'xlsx'
+            name='msp_report_xlsx.report_mrp_sro_excel'
+            file="msp_report_xlsx.report_mrp_sro_excel"/> -->
+
+    <menuitem
+        action="action_report_mrp_sro" 
+        id="menu_report_mrp_sro" 
+        parent="stock_request.menu_stock_request_operations"
+        name="Report MO SR"
+        sequence="12"/>
+				
+</flectra>

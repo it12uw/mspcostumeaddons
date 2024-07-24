@@ -1,0 +1,30 @@
+<flectra>
+    <data>
+
+        <record id="button_multi_confirm_sr_view" model="ir.ui.view">
+            <field name="name">stock.request.confirm.form</field>
+            <field name="model">stock.request.confirm</field>
+            <field name="arch" type="xml">
+                <form string="Confirm In Progress Stock Request">
+                    <p class="oe_grey">
+                        Once In Progress Stock Request are confirmed, you will not be able
+                        to modify them. The Purchases will receive a unique
+                        number and journal items will be created in your chart
+                        of accounts.
+                    </p>
+                    <footer>
+                        <button string="Confirm Stock Request" name="sr_multi_confirm" type="object" default_focus="1" class="btn-primary"/>
+                        <!-- <button string="Cancel" class="btn-default" special="cancel"/> -->
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_button_multi_confirm_sr"
+            multi="True"
+            key2="client_action_multi" name="Confirm Stock Request"
+            res_model="stock.request.confirm" src_model="stock.request"
+            view_mode="form" target="new" view_type="form" />
+
+    </data>
+</flectra>

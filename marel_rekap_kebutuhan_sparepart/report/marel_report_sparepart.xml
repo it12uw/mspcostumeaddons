@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <!-- Pemakaian Sparepart-->
+        <report id="marel_report_marel_pengambilan_sparepart" string="Pengambilan Sparepart" report_type="qweb-pdf" model="marel.pengambilan.sparepart" file="marel_rekap_kebutuhan_sparepart.marel_pengambilan_sparepart" name="marel_rekap_kebutuhan_sparepart.marel_report_marel_pengambilan_sparepart_report" />
+        <template id="marel_report_marel_pengambilan_sparepart_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="marel_rekap_kebutuhan_sparepart.report_marel_pengambilan_sparepart_doc" t-lang="o.partner_id.lang"/></t>
+            </t>
+        </template>
+    </data>
+</flectra>

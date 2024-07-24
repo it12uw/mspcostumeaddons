@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <!-- data sample gramasi -->
+        <record id="viewmsp_memo_qc_inline_tree" model="ir.ui.view">
+            <field name="name">msp.memo.qc.inline.tree</field>
+            <field name="model">msp.memo.qc.inline</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Data QC Manufactur">
+                    <field name="name"/>
+                    <field name="mrp_productioin_id"/>
+                    <field name="tgl_create"/>
+                    <field name="shift"/>
+                    <field name="line"/>
+                    <field name="nama_operator_id"/>
+                    <field name="nama_teknisi_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="viewmsp_memo_qc_inline_form" model="ir.ui.view">
+            <field name="name">msp.memo.qc.inline.form</field>
+            <field name="model">msp.memo.qc.inline</field>
+            <field name="type">form</field>
+            <!-- <field name="target">new</field> -->
+            <field name="arch" type="xml">
+                <form string="Data QC Manufactur">
+                    <header>
+                        <button name="action_close" type="object" string="Run" class="btn‐primary"/>
+                        <button name="action_set_draft" type="object" string="Set To Draft" class="btn-info"/>
+                        <!-- <field name="state" widget="statusbar" statusbar_visible="draft,open,done"/> -->
+                    </header>
+                    <sheet>
+                        <group>
+                            <label form="name" class="oe_edit_only" string="Prodak Sample"/>
+                            <field name="tgl_create"/>
+                            <field name="mrp_productioin_id"/>
+                            <field name="shift"/>
+                            <field name="line"/>
+                            <field name="nama_operator_id"/>
+                            <field name="nama_teknisi_id"/>
+                            <field name="keterangan"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- inherit tree wotk order -->
+        <!-- <record id="view_msp_mrp_qc_inline_inherit_workorder_tree" model="ir.ui.view">
+            <field name="name">view_msp_mrp_qc_inline_inherit_workorder_tree</field>
+            <field name="model">mrp.workorder</field>
+            <field name="inherit_id" ref="mrp.mrp_production_workcenter_tree_view_inherit"/>
+            <field name="arch" type="xml"> -->
+        <!-- <xpath expr="//button[@name='button_scrap']" position="after"> -->
+        <!-- <xpath expr="/tree/field[@name='state']" position="after">
+                    <button name="action_nilai_inline_qc" type="object" string="Create Data QC" states="done" attrs="{'invisible': ['|', '|', ('state', 'in', ('draft')),]}" force_save="1" class="btn-primary" context="{'default_active_id':active_id}" /> -->
+        <!-- <button name="%(act_msp_memoqc_inline_wizard)d" string="Create Data QC" type="action" class="btn-primary"/> -->
+        <!-- <button name="%(act_msp_memoqc_inline_wizard)d" string="Create Data QC" type="object" class="btn-primary"/> -->
+        <!-- <button name="viewmsp_memo_qc_inline_form" string="Create Data QC" type="object" class="btn-primary"/> -->
+        <!-- </xpath>
+            </field>
+        </record> -->
+    </data>
+</flectra>

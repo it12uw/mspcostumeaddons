@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <!-- model : posisi print report
+             file : folder addons database
+             name : folder file
+         -->
+        <!-- pemesanan aksesoris-->
+        <report id="marel_report_po_aksesoris" string="Print PO" report_type="qweb-pdf" model="purchase.order" file="purchase.marel_report_po" name="marel_in_data_report_purchase_o.marel_report_po_aksesoris_report" />
+        <template id="marel_report_po_aksesoris_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="marel_in_data_report_purchase_o.report_marel_report_po_pemesanan_aksesoris_doc" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+        <!-- pemesanan spare parts import-->
+        <report id="marel_report_po_spare_parts_import" string="Print PO import" report_type="qweb-pdf" model="purchase.order" file="purchase.marel_report_po" name="marel_in_data_report_purchase_o.marel_report_po_spare_parts_import_report" />
+        <template id="marel_report_po_spare_parts_import_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="marel_in_data_report_purchase_o.report_marel_report_po_pemesanan_spare_parts_import_doc" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+        <!-- pemesanan spare parts lokal-->
+        <report id="marel_report_po_spare_parts_lokal" string="Print PO lokal" report_type="qweb-pdf" model="purchase.order" file="purchase.marel_report_po" name="marel_in_data_report_purchase_o.marel_report_po_spare_parts_lokal_report" />
+        <template id="marel_report_po_spare_parts_lokal_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="marel_in_data_report_purchase_o.report_marel_report_po_pemesanan_spare_parts_lokal_doc" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+        <!-- ini adalah 
+        menu2 yang 
+        masuk pada 
+        sales order -->
+        <!-- report konfirmasi pesanan-->
+        <report id="marel_report_po_konfirmasi_pesanan" string="Konfirmasi Pesanan" report_type="qweb-pdf" model="sale.order" file="purchase.marel_report_po" name="marel_in_data_report_purchase_o.marel_report_po_konfirmasi_pesanan_report" />
+        <template id="marel_report_po_konfirmasi_pesanan_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_data_report_purchase_o.report_marel_report_po_konfirmasi_pesanan_doc" t-lang="doc.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+
+        <report id="marel_report_po_konfirmasi_pesanan_sale" string="Konfirmasi Pesanan Sale" report_type="qweb-pdf" model="sale.order" file="purchase.marel_report_po" name="marel_in_data_report_purchase_o.marel_report_po_konfirmasi_pesanan_report_sale" />
+        <template id="marel_report_po_konfirmasi_pesanan_report_sale">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_data_report_purchase_o.report_marel_report_po_konfirmasi_pesanan_doc_sale" t-lang="doc.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+        <!-- report informasi prder -->
+        <report id="marel_report_po_informasi_order" string="Informasi Order" report_type="qweb-pdf" model="sale.order" file="purchase.marel_report_po" name="marel_in_data_report_purchase_o.marel_report_marel_report_po_informasi_order_report" />
+        <template id="marel_report_marel_report_po_informasi_order_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_data_report_purchase_o.report_marel_report_marel_report_po_informasi_order_doc" t-lang="doc.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+        <!-- ini adalah 
+        menu2 yang
+         masuk pada 
+         draff di 
+         purchase order -->
+        <!-- pemesanan aksesoris-->
+        <report id="marel_report_po_aksesoris_draff" string="Print Draff PO" report_type="qweb-pdf" model="purchase.order" file="purchase.marel_report_po" name="marel_in_data_report_purchase_o.marel_report_po_aksesoris_draff_report" />
+        <template id="marel_report_po_aksesoris_draff_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="marel_in_data_report_purchase_o.report_marel_report_po_pemesanan_aksesoris_draff_doc" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+        <!-- pemesanan spare parts import-->
+        <report id="marel_report_po_spare_parts_import_draff" string="Print Draff PO import" report_type="qweb-pdf" model="purchase.order" file="purchase.marel_report_po" name="marel_in_data_report_purchase_o.marel_report_po_spare_parts_import_report_draff" />
+        <template id="marel_report_po_spare_parts_import_report_draff">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="marel_in_data_report_purchase_o.report_marel_report_po_pemesanan_spare_parts_import_draff_doc" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+        <!-- pemesanan spare parts lokal-->
+        <report id="marel_report_po_spare_parts_lokal_draff" string="Print Draff PO lokal" report_type="qweb-pdf" model="purchase.order" file="purchase.marel_report_po" name="marel_in_data_report_purchase_o.marel_report_po_spare_parts_lokal_report_draff" />
+        <template id="marel_report_po_spare_parts_lokal_report_draff">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="marel_in_data_report_purchase_o.report_marel_report_po_pemesanan_spare_parts_lokal_draff_doc" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+        <!-- report_marel_report_surat_jalan_doc -->
+        <report string="Surat Jalan u/ SO" id="action_report_delivery" model="stock.picking" report_type="qweb-pdf" name="marel_in_data_report_purchase_o.report_surat_jalan_custom" file="marel_in_data_report_purchase_o.report_surat_jalan_custom" print_report_name="'Surat Jalan u/ SO - %s - %s' % (object.partner_id.name or '', object.name)" />
+
+        <report string="Informasi orderan" id="action_report_marel_report_informasi_orderan_doc" model="mrp.production" report_type="qweb-pdf" name="marel_in_data_report_purchase_o.report_marel_report_informasi_orderan_doc" file="marel_in_data_report_purchase_o.report_marel_report_informasi_orderan_doc" />
+        <!-- report_marel_report_surat_jalan_doc_1 -->
+        <report string="Surat Jalan u/ Delivery" id="action_report_delivery_1" model="stock.picking" report_type="qweb-pdf" name="marel_in_data_report_purchase_o.report_surat_jalan_custom_1" file="marel_in_data_report_purchase_o.report_surat_jalan_custom_1" print_report_name="'Surat Jalan u/ Delivery - %s - %s' % (object.partner_id.name or '', object.name)" />
+
+        <report string="Surat Jalan Multi" id="action_report_delivery_multi" model="stock.picking" report_type="qweb-pdf" name="marel_in_data_report_purchase_o.report_surat_jalan_custom_multi" file="marel_in_data_report_purchase_o.report_surat_jalan_custom_multi" print_report_name="'Surat Jalan Multi - %s - %s' % (object.partner_id.name or '', object.name)" />
+
+
+        <!-- report packing list-->
+        <report id="_marel_report_packing_list" string="Packing List" report_type="qweb-pdf" model="sale.order" file="purchase.marel_report_po" name="marel_in_data_report_purchase_o._marel_report_packing_list_report" />
+        <template id="_marel_report_packing_list_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_data_report_purchase_o.report_marel_report_packing_list_doc" t-lang="doc.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+
+        <report string="Kop Surat" id="action_kop_surat" model="stock.picking" report_type="qweb-pdf" name="marel_in_data_report_purchase_o.report_kop_surat" file="marel_in_data_report_purchase_o.report_kop_surat" print_report_name="'Kop Surat - %s - %s' % (object.partner_id.name or '', object.name)" />
+
+        <!-- report konfirmasi pesanan 2 in 1-->
+        <report id="marel_report_po_konfirmasi_pesanan_2_in_1" string="Konfirmasi Pesanan 2 in 1" report_type="qweb-pdf" model="sale.order" file="purchase.marel_report_po" name="marel_in_data_report_purchase_o.marel_report_po_konfirmasi_pesanan_report_2_in_1" />
+        <template id="marel_report_po_konfirmasi_pesanan_report_2_in_1">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_data_report_purchase_o.report_marel_report_po_konfirmasi_pesanan_2_in_1_doc" t-lang="doc.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</flectra>

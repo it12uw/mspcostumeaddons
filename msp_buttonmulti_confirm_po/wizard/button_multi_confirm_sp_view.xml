@@ -1,0 +1,28 @@
+<flectra>
+    <data>
+        <record id="button_multi_confirm_sp_view" model="ir.ui.view">
+            <field name="name">stock.picking.confirm.form</field>
+            <field name="model">stock.picking.confirm</field>
+            <field name="arch" type="xml">
+                <form string="Confirm Ready Stock Picking">
+                    <p class="oe_grey">
+                        Once draft Purchases are confirmed, you will not be able
+                        to modify them. The Purchases will receive a unique
+                        number and journal items will be created in your chart
+                        of accounts.
+                    </p>
+                    <footer>
+                        <button string="Confirm Stock Picking" name="sp_multi_confirm" type="object" default_focus="1" class="btn-primary"/>
+                        <!-- <button string="Cancel" class="btn-default" special="cancel"/> -->
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_button_multi_confirm_sp"
+            multi="True"
+            key2="client_action_multi" name="Confirm Stock Picking"
+            res_model="stock.picking.confirm" src_model="stock.picking"
+            view_mode="form" target="new" view_type="form" />
+    </data>
+</flectra>

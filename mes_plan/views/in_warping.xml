@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data>
+         <!--        ============================ inherader.planwarping ============================ -->
+        <!--  -->
+        <record id="view_herader_plan_warping_tree" model="ir.ui.view">
+            <field name="name">herader.planwarping.tree</field>
+            <field name="model">herader.planwarping</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Header Plan Warping">
+                    <field name="name"/>
+                    <field name="kode_warping"/>
+                    <field name="seri"/>
+                    <field name="tarikan"/>
+                    <field name="quantity"/>
+                    <field name="mesin"/>
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_herader_plan_warping_form" model="ir.ui.view">
+            <field name="name">herader.planwarping.form</field>
+            <field name="model">herader.planwarping</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="in_herader_plan_warping_form">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"
+                                string="Data Plan Warping"/>
+                        </div>
+                        <group>
+                            <field name="name"/>
+                            <field name="kode_warping"/>
+                            <field name="seri"/>
+                            <field name="tarikan"/>
+                            <field name="quantity"/>
+                            <field name="mesin"/>
+                            <field name="date_start"/>
+                            <field name="date_end"/>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--        ============================ inoperator.mengisiwarping ============================ -->
+        <!--  -->
+        <record id="view_operator_mengisi_warping_tree" model="ir.ui.view">
+            <field name="name">operator.mengisiwarping.tree</field>
+            <field name="model">operator.mengisiwarping</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Data Operator Mengisi Warping">
+                    <field name="no_kp"/>
+                    <field name="name"/>
+                    <field name="mesin"/>
+                    <field name="tarikan"/>
+                    <field name="quantity"/>
+                    <field name="seri"/>
+                    <field name="tarikan"/>
+                    <field name="pts_benang_rata"/>
+                    <field name="jumlah_benang_lusi"/>
+                    <field name="lebar_kain"/>
+                    <field name="lusi_pakan"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_operator_mengisi_warping_form" model="ir.ui.view">
+            <field name="name">operator.mengisiwarping.form</field>
+            <field name="model">operator.mengisiwarping</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="in_in_operator_mengisi_warping_form">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"
+                                string="Data Operator Mengisi Warping"/>
+                        </div>
+                        <group>
+                            <field name="no_kp"/>
+                            <field name="seri"/>
+                            <field name="tarikan"/>
+                            <field name="quantity"/>
+                            <field name="mesin"/>
+                            <field name="date_start"/>
+                            <field name="date_end"/>
+                             
+                        </group>
+
+                        <group>
+                           <field name="kontrol_benang"/>
+                            <field name="pts_benang_rata"/>
+                            <field name="berat_neto1"/>
+                            <field name="name"/>
+                            <field name="lebar_kain"/>
+                            <field name="lusi_pakan"/>
+                            <field name="jumlah_benang_lusi"/>
+                            <field name="ne_benang_rata"/>  
+                        </group>
+                        <notebook>
+                            <page string="Operator Mengisi Warping">
+                                <field name= "operator1">
+                                    <tree string="Pengisian Data" editable="bottom">
+                                        <field name="pengisi"/>
+                                        <field name="shift"/>
+                                        <field name="jmlh_benang"/>
+                                        <field name="panjang_benang"/>
+                                        <field name="no_beam"/>
+                                        <field name="pts_benang"/>
+                                        <field name="pts_persejuta"/>
+                                        <field name="berat_bruto"/>
+                                        <field name="berat_beam"/>
+                                        <field name="berat_neto"/>
+                                    </tree>
+                                </field>
+                            </page>    
+                    
+                        
+                            <page string="Pengisian Lanjutan">
+                                <field name= "operator">
+                                    <tree string="Pengisian Lanjutan" editable="bottom">
+                                        <field name="jam_naik"/>
+                                        <field name="jam_turun"/>
+                                        <field name="lama_proses_menit"/>
+                                        <field name="rata_menit"/>
+                                        <field name="sebelum_dikanji_gram"/>
+                                        <field name="sebelum_dikanji_persen"/>
+                                        <field name="hns_kanan"/>
+                                        <field name="hns_tengah"/>
+                                        <field name="hns_kiri"/> 
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</flectra>

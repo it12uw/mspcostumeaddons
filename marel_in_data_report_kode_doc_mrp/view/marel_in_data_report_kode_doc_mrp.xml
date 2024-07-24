@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data>
+        <!--        ============================ inmarel.kode.dokumen.mrp.mrp============================ -->
+        <record id="view_marel_in_data_report_kode_doc_mrp_form" model="ir.ui.view">
+            <field name="name">inmarel.kode.dokumen.mrp.form</field>
+            <field name="model">inmarel.kode.dokumen.mrp</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="in_marel_kode_dokumen_form">
+                    <sheet>
+                        <group>
+                            <field name="kode_dokumen_bagian"/>
+                            <h3>===================== Kode Dokumen KKP =====================</h3>
+                            <field name="kode_dokumen_kkp"/>
+                            <field name="halaman_kkp"/>
+                            <field name="no_revisi_kkp"/>
+                            <field name="tgl_revisi_kkp"/>
+                            <field name="tgl_efektif_kkp"/>
+                            <!-- <h3>===================== Kode Dokumen BOM =====================</h3>
+                            <field name="kode_dokumen_bom"/>
+                            <field name="halaman_bom"/>
+                            <field name="no_revisi_bom"/>
+                            <field name="tgl_revisi_bom"/>
+                            <field name="tgl_efektif_bom"/> -->
+                            <h3>===================== production orderan =====================</h3>
+                            <field name="kode_dokumen_production_order_so"/>
+                            <field name="halaman_production_order_so"/>
+                            <field name="no_revisi_production_order_so"/>
+                            <field name="tgl_revisi_production_order_so"/>
+                            <field name="tgl_efektif_production_order_so"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- tree ================================ -->
+        <record id="view_marel_in_data_report_kode_doc_mrp_tree" model="ir.ui.view">
+            <field name="name">inmarel.kode.dokumen.mrp.tree</field>
+            <field name="model">inmarel.kode.dokumen.mrp</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Kode Dokumen">
+                    <field name="kode_dokumen_kkp"/>
+                    <!-- <field name="kode_dokumen_bom"/> -->
+                    <field name="kode_dokumen_production_order_so"/>
+                </tree>
+            </field>
+        </record>
+        <!-- coba ========================================================= -->
+        <record id="view_marel_in_data_report_kode_doc_mrp_view_form" model="ir.ui.view">
+            <field name="name">mrp.production.form</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='product_id']" position="before">
+                    <field name="kode_dokumen_bagian_id" options="{'no_open': True, 'no_create': True}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</flectra>

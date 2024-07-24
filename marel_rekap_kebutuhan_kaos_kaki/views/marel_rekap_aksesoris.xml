@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <record id="view_marel_rekap_aksesoris_tree" model="ir.ui.view">
+            <field name="name">marel.rekap.aksesoris.tree</field>
+            <field name="model">marel.rekap.aksesoris</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Rekap Aksesoris">
+                    <field name="res_partner_id"/>
+                    <field name="marel_listrekap_aksesorisbarang_line"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_marel_rekap_aksesoris_form" model="ir.ui.view">
+            <field name="name">marel.rekap.aksesoris.form</field>
+            <field name="model">marel.rekap.aksesoris</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Rekap Aksesoris">
+                    <sheet>
+                        <group>
+                            <field name="res_partner_id"  options="{'no_open': True, 'no_create': True, 'required': True}"/>
+                        </group>
+                        <notebook>
+                            <page string="Rekap Aksesoris">
+                                <field name="marel_listrekap_aksesorisbarang_line">
+                                    <tree string="Rekap Aksesoris" editable="bottom">
+                                        <field name="product_template_id" options="{'no_open': True, 'no_create': True , 'required': True}"/>
+                                        <!-- satu -->
+                                        <field name="product_template_kaos_kaki_1" options="{'no_open': True, 'no_create': True}"/>
+                                        <field name="jumlah_beli_1"/>
+                                        <field name="delivery_rekap_aksesoris_1"/>
+                                        <!-- dua -->
+                                        <field name="product_template_kaos_kaki_2" options="{'no_open': True, 'no_create': True}"/>
+                                        <field name="jumlah_beli_2"/>
+                                        <field name="delivery_rekap_aksesoris_2"/>
+                                        <!-- tida -->
+                                        <field name="product_template_kaos_kaki_3" options="{'no_open': True, 'no_create': True}"/>
+                                        <field name="jumlah_beli_3"/>
+                                        <field name="delivery_rekap_aksesoris_3"/>
+                                        <!-- empat -->
+                                        <field name="product_template_kaos_kaki_4" options="{'no_open': True, 'no_create': True}"/>
+                                        <field name="jumlah_beli_4"/>
+                                        <field name="delivery_rekap_aksesoris_4"/>
+                                        <!-- lima -->
+                                        <field name="product_template_kaos_kaki_5" options="{'no_open': True, 'no_create': True}"/>
+                                        <field name="jumlah_beli_5"/>
+                                        <field name="delivery_rekap_aksesoris_5"/>
+                                        <!-- tota; -->
+                                        <field name="total_beli" readonly="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</flectra>

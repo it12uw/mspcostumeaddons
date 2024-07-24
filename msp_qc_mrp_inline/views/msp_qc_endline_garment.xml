@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+	<data noupdate="0">
+		<!-- data sample gramasi -->
+		<record id="view_msp_qc_endline_garment_tree" model="ir.ui.view">
+			<field name="name">msp.qc.endline.garment.tree</field>
+			<field name="model">msp.qc.endline.garment</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="End Line garment">
+					<field name="name" />
+					<field name="tgl_create" />
+					<field name="name_workorder_id" />
+					<field name="inspection_date" />
+					<field name="mrp_productioin_id" />
+				</tree>
+			</field>
+		</record>
+		<record id="view_msp_qc_endline_garment_form" model="ir.ui.view">
+			<field name="name">msp.qc.endline.garment.form</field>
+			<field name="model">msp.qc.endline.garment</field>
+			<field name="type">form</field>
+			<field name="target">new</field>
+			<field name="arch" type="xml">
+				<form string="EndLine QC Garment">
+					<group>
+						<label form="name" class="oe_edit_only" string="No Id" />
+						<group>
+							<field name="product_qty_inline_1" invisible="1"/>
+							<field name="name" />
+							<field name="product_qty_inline" />
+							<field name="inspection_date" />
+							<field name="mrp_productioin_id" />
+							<field name="keterangan" />
+						</group>
+					</group>
+					<group>
+						<table>
+							<tr>
+								<td>
+									No
+								</td>
+								<td width="280px">
+									<strong>Reject</strong>
+								</td>
+								<td width="280px">
+									<strong>Kategori Reject</strong>
+								</td>
+								<td width="280px">
+									<strong>Jumlah</strong>
+								</td>
+								<td width="280px">
+									<u>
+										<strong>Keterangan</strong>
+									</u>
+								</td>
+								<td width="280px">
+									<u>
+
+										<strong>Sugestion</strong>
+									</u>
+								</td>
+							</tr>
+							<tr>
+								<td width="280px">
+									1
+								</td>
+								<td width="280px">
+									<field name="rijek_1" />
+								</td>
+								<td width="280px">
+									<field name="bentuk_rijek_1" />
+								</td>
+								<td width="280px">
+									<field name="nilai_rijek_1" />
+								</td>
+								<td width="280px">
+									<field name="keterangan_1" />
+								</td>
+								<td width="280px">
+									<field name="sugestion_1" />
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>
+									<field name="rijek_2" />
+								</td>
+								<td>
+									<field name="bentuk_rijek_2" />
+								</td>
+								<td>
+									<field name="nilai_rijek_2" />
+								</td>
+								<td>
+									<field name="keterangan_2" />
+								</td>
+								<td>
+									<field name="sugestion_2" />
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>
+									<field name="rijek_3" />
+								</td>
+								<td>
+									<field name="bentuk_rijek_3" />
+								</td>
+								<td>
+									<field name="nilai_rijek_3" />
+								</td>
+								<td>
+									<field name="keterangan_3" />
+								</td>
+								<td>
+									<field name="sugestion_3" />
+								</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>
+									<field name="rijek_4" />
+								</td>
+								<td>
+									<field name="bentuk_rijek_4" />
+								</td>
+								<td>
+									<field name="nilai_rijek_4" />
+								</td>
+								<td>
+									<field name="keterangan_4" />
+								</td>
+								<td>
+									<field name="sugestion_4" />
+								</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>
+									<field name="rijek_5" />
+								</td>
+								<td>
+									<field name="bentuk_rijek_5" />
+								</td>
+								<td>
+									<field name="nilai_rijek_5" />
+								</td>
+								<td>
+									<field name="keterangan_5" />
+								</td>
+								<td>
+									<field name="sugestion_5" />
+								</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>
+									<field name="rijek_6" />
+								</td>
+								<td>
+									<field name="bentuk_rijek_6" />
+								</td>
+								<td>
+									<field name="nilai_rijek_6" />
+								</td>
+								<td>
+									<field name="keterangan_6" />
+								</td>
+								<td>
+									<field name="sugestion_6" />
+								</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>
+									<field name="rijek_7" />
+								</td>
+								<td>
+									<field name="bentuk_rijek_7" />
+								</td>
+								<td>
+									<field name="nilai_rijek_7" />
+								</td>
+								<td>
+									<field name="keterangan_7" />
+								</td>
+								<td>
+									<field name="sugestion_7" />
+								</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>
+									<field name="rijek_8" />
+								</td>
+								<td>
+									<field name="bentuk_rijek_8" />
+								</td>
+								<td>
+									<field name="nilai_rijek_8" />
+								</td>
+								<td>
+									<field name="keterangan_8" />
+								</td>
+								<td>
+									<field name="sugestion_8" />
+								</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td>
+									<field name="rijek_9" />
+								</td>
+								<td>
+									<field name="bentuk_rijek_9" />
+								</td>
+								<td>
+									<field name="nilai_rijek_9" />
+								</td>
+								<td>
+									<field name="keterangan_9" />
+								</td>
+								<td>
+									<field name="sugestion_9" />
+								</td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td>
+									<field name="rijek_10" />
+								</td>
+								<td>
+									<field name="bentuk_rijek_10" />
+								</td>
+								<td>
+									<field name="nilai_rijek_10" />
+								</td>
+								<td>
+									<field name="keterangan_10" />
+								</td>
+								<td>
+									<field name="sugestion_10" />
+								</td>
+							</tr>
+						</table>
+					</group>
+					<group>
+						<field name="jumlah_kritikal_qc"/>
+						<field name="jumlah_mayor_qc"/>
+						<field name="jumlah_minor_qc"/>
+						<br/>
+						<!-- <field name="inspection_result" /> -->
+						<field name="comment" />
+					</group>
+
+					<footer>
+						<button name="msp_qc_inline_garment_wizard" type="object" string="Save" class="btn-primary" />
+						<button string="Cancel" class="btn-default" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+	</data>
+</flectra>

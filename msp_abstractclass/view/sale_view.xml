@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <!-- Sale -->
+    <record model="ir.ui.view" id="inherit_view_order_form_custom_1">
+        <field name="name">sale.order.inherit.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='sale_total']/field[@name='amount_untaxed']" position="before">
+                <field name="total_cost" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                <field name="margin_sale" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+            </xpath>
+        </field>
+    </record>
+</flectra>

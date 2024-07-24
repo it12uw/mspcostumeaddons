@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+	<template id="msp_qc_mrp_inline2_report">
+		<t t-call="web.external_layout">
+			<t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})" />
+			<div class="page oe_purchase_font_title">
+				<div class="oe_structure"/>
+				<table>
+					<tr>
+						<th class="text-center">
+							<span>
+								<h3>
+										Data Inline 2 (40%)
+								</h3>
+							</span>
+						</th>
+					</tr>
+					<tr>
+						<td>
+							<strong>
+								<span t-field="o.name_workorder_id" />
+							</strong>
+						</td>
+					</tr>
+				</table>
+				<br/>
+				<table class="table table-condensed">
+					<tr>
+						<th width="400px">
+                            Document ID
+						</th>
+						<th>:</th>
+						<th>MSP/F/P/QC/04.01</th>
+					</tr>
+					<tr>
+						<th width="400px">
+                            Page
+						</th>
+						<th>:</th>
+						<th>1 Dari 1</th>
+					</tr>
+					<tr>
+						<th width="400px">
+                            Revision
+						</th>
+						<th>:</th>
+						<th>-</th>
+					</tr>
+					<tr>
+						<th width="400px">
+                            Revision No
+						</th>
+						<th>:</th>
+						<th>-</th>
+					</tr>
+					<tr>
+						<th width="400px">
+                            Effective Date
+						</th>
+						<th>:</th>
+						<th>02 Febuari 2019</th>
+					</tr>
+				</table>
+				<div class="row mt32 mb32" id="informations">
+					<div t-if="o.product_qty_inline_1 &gt; 2" class="col-xs-3">
+						<div t-if="o.product_qty_inline &lt; 8">
+							<span>Sample Size :</span>
+							<span t-field="o.sample_size_2_8"/>
+							<br/>
+							<span>Mayor : </span>
+							<span t-field="o.mayor_2_8"/>
+							<br/>
+							<span>Minor : </span>
+							<span t-field="o.minor_2_8"/>
+						</div>
+					</div>
+					<div t-if="o.product_qty_inline_1 &gt; 9" class="col-xs-3">
+						<div t-if="o.product_qty_inline &lt; 15">
+							<span>Sample Size :</span>
+							<span t-field="o.sample_size_9_15"/>
+							<br/>
+							<span>Mayor : </span>
+							<span t-field="o.mayor_9_15"/>
+							<br/>
+							<span>Minor : </span>
+							<span t-field="o.minor_9_15"/>
+						</div>
+					</div>
+					<div t-if="o.product_qty_inline_1 &gt; 16" class="col-xs-3">
+						<div t-if="o.product_qty_inline &lt; 25">
+							<span>Sample Size :</span>
+							<span t-field="o.sample_size_16_25"/>
+							<br/>
+							<span>Mayor : </span>
+							<span t-field="o.mayor_16_25"/>
+							<br/>
+							<span>Minor : </span>
+							<span t-field="o.minor_16_25"/>
+						</div>
+					</div>
+					<div t-if="o.product_qty_inline_1 &gt; 26" class="col-xs-3">
+						<div t-if="o.product_qty_inline &lt; 50">
+							<span>Sample Size :</span>
+							<span t-field="o.sample_size_26_50"/>
+							<br/>
+							<span>Mayor : </span>
+							<span t-field="o.mayor_26_50"/>
+							<br/>
+							<span>Minor : </span>
+							<span t-field="o.minor_26_50"/>
+						</div>
+					</div>
+					<div t-if="o.product_qty_inline_1 &gt; 51" class="col-xs-3">
+						<div t-if="o.product_qty_inline &lt; 90">
+							<span>Sample Size :</span>
+							<span t-field="o.sample_size_51_90"/>
+							<br/>
+							<span>Mayor : </span>
+							<span t-field="o.mayor_51_90"/>
+							<br/>
+							<span>Minor : </span>
+							<span t-field="o.minor_51_90"/>
+						</div>
+					</div>
+					<div t-if="o.product_qty_inline_1 &gt; 91" class="col-xs-3">
+						<div t-if="o.product_qty_inline &lt; 150">
+							<span>Sample Size :</span>
+							<span t-field="o.sample_size_91_150"/>
+							<br/>
+							<span>Mayor : </span>
+							<span t-field="o.mayor_91_150"/>
+							<br/>
+							<span>Minor : </span>
+							<span t-field="o.minor_91_150"/>
+						</div>
+					</div>
+					<div t-if="o.product_qty_inline_1 &gt; 151" class="col-xs-3">
+						<div t-if="o.product_qty_inline &lt; 280">
+							<span>Sample Size :</span>
+							<span t-field="o.sample_size_151_280"/>
+							<br/>
+							<span>Mayor : </span>
+							<span t-field="o.mayor_151_280"/>
+							<br/>
+							<span>Minor : </span>
+							<span t-field="o.minor_151_280"/>
+						</div>
+					</div>
+					<div t-if="o.product_qty_inline_1 &gt; 281" class="col-xs-3">
+						<div t-if="o.product_qty_inline &lt; 500">
+							<span>Sample Size :</span>
+							<span t-field="o.sample_size_281_500"/>
+							<br/>
+							<span>Mayor : </span>
+							<span t-field="o.mayor_281_500"/>
+							<br/>
+							<span>Minor : </span>
+							<span t-field="o.minor_281_500"/>
+						</div>
+					</div>
+					<div t-if="o.product_qty_inline_1 &gt; 501" class="col-xs-3">
+						<div t-if="o.product_qty_inline &lt; 1200">
+							<span>Sample Size :</span>
+							<span t-field="o.sample_size_501_1200"/>
+							<br/>
+							<span>Mayor : </span>
+							<span t-field="o.mayor_501_1200"/>
+							<br/>
+							<span>Minor : </span>
+							<span t-field="o.minor_501_1200"/>
+						</div>
+					</div>
+					<div t-if="o.product_qty_inline_1 &gt; 1201" class="col-xs-3">
+						<div t-if="o.product_qty_inline &lt; 3200">
+							<span>Sample Size :</span>
+							<span t-field="o.sample_size_1201_3200"/>
+							<br/>
+							<span>Mayor : </span>
+							<span t-field="o.mayor_1201_3200"/>
+							<br/>
+							<span>Minor : </span>
+							<span t-field="o.minor_1201_3200"/>
+						</div>
+					</div>
+					<div t-if="o.product_qty_inline_1 &gt; 3201" class="col-xs-3">
+						<div t-if="o.product_qty_inline &lt; 10000">
+							<span>Sample Size :</span>
+							<span t-field="o.sample_size_3201_10000"/>
+							<br/>
+							<span>Mayor : </span>
+							<span t-field="o.mayor_3201_10000"/>
+							<br/>
+							<span>Minor : </span>
+							<span t-field="o.minor_3201_10000"/>
+						</div>
+					</div>
+					<div t-if="o.product_qty_inline_1 &gt; 10001" class="col-xs-3">
+						<div t-if="o.product_qty_inline &lt; 35000">
+							<span>Sample Size :</span>
+							<span t-field="o.sample_size_10001_35000"/>
+							<br/>
+							<span>Mayor : </span>
+							<span t-field="o.mayor_10001_35000"/>
+							<br/>
+							<span>Minor : </span>
+							<span t-field="o.minor_10001_35000"/>
+						</div>
+					</div>
+					<div t-if="o.product_qty_inline_1 &gt; 35000" class="col-xs-3">
+						<!-- <div t-if="o.product_qty_inline &lt; 35000"> -->
+						<span>Sample Size :</span>
+						<span t-field="o.sample_size_35001"/>
+						<br/>
+						<span>Mayor : </span>
+						<span t-field="o.mayor_35001"/>
+						<br/>
+						<span>Minor : </span>
+						<span t-field="o.minor_35001"/>
+						<!-- </div> -->
+					</div>
+				</div>
+				<table class="table table-condensed">
+					<tr>
+						<th width="466px">Report No</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.name" />
+						</td>
+					</tr>
+					<tr>
+						<th width="466px">Inspection Date</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.inspection_date" />
+						</td>
+					</tr>
+					<tr>
+						<th width="466px">No PO</th>
+						<td>:</td>
+						<td>
+							<!-- <span t-field="o.name" /> -->
+						</td>
+					</tr>
+					<tr>
+						<th width="466px">Delivery Date</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.mrp_productioin_id.sale_id.requested_date" />
+						</td>
+					</tr>
+					<tr>
+						<th width="466px">Style</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.mrp_productioin_id.product_id.style" />
+						</td>
+					</tr>
+					<tr>
+						<th width="466px">Order Qty</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.product_qty_inline" />
+						</td>
+					</tr>
+					<tr>
+						<th width="466px">Product</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.mrp_productioin_id.product_id" />
+						</td>
+					</tr>
+					<tr>
+						<td width="466px"></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+				<br/>
+				<table class="table table-condensed">
+					<tr>
+						<th width="400px">HandFeel</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.handfeel" />
+						</td>
+					</tr>
+					<tr>
+						<th width="400px">Color</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.color" />
+						</td>
+					</tr>
+				</table>
+				<br/>
+				<table class="table table-condensed">
+					<tr>
+						<th width="280px">Benang</th>
+						<th width="280px">Bordir</th>
+						<th width="280px">Label</th>
+						<th width="280px">Hangtag</th>
+						<th width="280px">Barcode</th>
+					</tr>
+					<tr>
+						<td width="280px">
+							<span t-field="o.aksesoris_1" />
+						</td>
+						<td width="280px">
+							<span t-field="o.aksesoris_2" />
+						</td>
+						<td width="280px">
+							<span t-field="o.aksesoris_3" />
+						</td>
+						<td width="280px">
+							<span t-field="o.aksesoris_4" />
+						</td>
+						<td width="280px">
+							<span t-field="o.aksesoris_5" />
+						</td>
+					</tr>
+				</table>
+				<br/>
+				<table class="table table-condensed">
+					<tr>
+						<th width="350px">Reject</th>
+						<th width="350px">Defect Found</th>
+						<th width="350px">Jumlah Reject</th>
+						<th>Sugestion</th>
+					</tr>
+					<tr>
+						<td width="350px">
+							<span t-field="o.rijek_1" />
+						</td>
+						<td width="350px">
+							<span t-field="o.bentuk_rijek_1" />
+						</td>
+						<td width="350px" t-if="o.nilai_rijek_1 &gt; 0">
+							<span t-field="o.nilai_rijek_1" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_1" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_2" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_2" />
+						</td>
+						<td t-if="o.nilai_rijek_2 &gt; 0">
+							<span t-field="o.nilai_rijek_2" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_2" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_3" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_3" />
+						</td>
+						<td t-if="o.nilai_rijek_3 &gt; 0">
+							<span t-field="o.nilai_rijek_3" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_3" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_4" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_4" />
+						</td>
+						<td t-if="o.nilai_rijek_4 &gt; 0">
+							<span t-field="o.nilai_rijek_4" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_4" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_5" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_5" />
+						</td>
+						<td t-if="o.nilai_rijek_5 &gt; 0">
+							<span t-field="o.nilai_rijek_5" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_5" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_6" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_6" />
+						</td>
+						<td t-if="o.nilai_rijek_6 &gt; 0">
+							<span t-field="o.nilai_rijek_6" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_6" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_7" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_7" />
+						</td>
+						<td t-if="o.nilai_rijek_7 &gt; 0">
+							<span t-field="o.nilai_rijek_7" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_7" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_8" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_8" />
+						</td>
+						<td t-if="o.nilai_rijek_8 &gt; 0">
+							<span t-field="o.nilai_rijek_8" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_8" />
+						</td>
+					</tr>
+				</table>
+				<br/>
+				<table class="table table-condensed">
+					<tr>
+						<th width="466px">Total Major</th>
+						<th width="466px">Total Minor</th>
+						<th width="466px">Total Kritikal</th>
+					</tr>
+					<tr>
+						<td width="466px">
+							<span t-field="o.jumlah_mayor_qc" />
+						</td>
+						<td width="466px">
+							<span t-field="o.jumlah_minor_qc" />
+						</td>
+						<td width="466px">
+							<span t-field="o.jumlah_kritikal_qc" />
+						</td>
+					</tr>
+				</table>
+				<br/>
+				<table class="table table-condensed">
+					<tr>
+						<th width="700px">Inspection Result</th>
+						<th width="700px">Comment</th>
+					</tr>
+					<tr>
+						<td width="700px">
+							<span t-field="o.inspection_result" />
+						</td>
+						<td width="700px">
+							<span t-field="o.comment" />
+						</td>
+					</tr>
+				</table>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<table>
+					<tr>
+						<th width="466px">Quality Controller</th>
+						<th width="466px">Production</th>
+						<th width="466px">Approve By</th>
+					</tr>
+				</table>
+			</div>
+		</t>
+	</template>
+</flectra>

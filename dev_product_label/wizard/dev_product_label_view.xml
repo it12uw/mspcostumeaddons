@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+	<!--WIZARD FORMAT-->
+    <record id="view_dev_product_label_form" model="ir.ui.view">
+        <field name="name">view.dev.product.label.form</field>
+        <field name="model">dev.product.label</field>
+        <field name="arch" type="xml">
+         <form string="Print Product Label" version="7.0">
+                <group>
+				    <group>
+				        <field name="template_id" required="1"/>
+				    </group>
+			    </group>
+		        <field name="pro_line_ids">
+		            <tree editable="bottom">
+		                <field name="product_id"/>
+		                <field name="label"/>
+		            </tree>
+		        </field>
+                <footer>
+            		<button string="Print PDF" name="print_pdf" type="object" class="oe_highlight" icon="fa-print" /> or
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+         </form>
+       </field>
+    </record>
+    
+	<!--WIZARD ACTION-->
+    <record id="action_print_product_label" model="ir.actions.act_window">
+        <field name="name">Print Product Label</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">dev.product.label</field>
+        <field name="view_type">form</field>
+        <field name="view_id" ref="view_dev_product_label_form"/>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+	<!--MENU WHICH OPENS WIZARD-->
+	<menuitem  id="menu_dev_product_label" parent="sale.product_menu_catalog" action="action_print_product_label" groups="group_product_label_template"/>
+</flectra>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+
+  <record id="view_location_form_inventory" model="ir.ui.view">
+    <field name="name">stock.location.form.inventory</field>
+    <field name="model">stock.location</field>
+    <field name="inherit_id" ref="stock.view_location_form"/>
+    <field name="arch" type="xml">
+      <field name="return_location" position="after">
+        <field name="is_wip"/>
+        <field name="is_stock"/>
+      </field>
+    </field>
+  </record>
+
+  <record id="view_move_pinjam" model="ir.ui.view">
+    <field name="name">view.move.pinjam</field>
+    <field name="model">stock.picking</field>
+    <field name="inherit_id" ref="stock.view_picking_form"/>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='origin']" position="after">
+                <field name="is_pinjam" attrs="{'invisible': [('picking_type_code', '=', 'internal',)]}"/>
+                <field name="is_makloon" attrs="{'invisible': [('picking_type_code', '=', 'internal'),('picking_type_id','!=',19)]}"/>  
+            </xpath>
+        </data>
+    </field>
+  </record>
+
+  <record id="view_type_stock" model="ir.ui.view">
+    <field name="name">view.type.stock</field>
+    <field name="model">stock.picking.type</field>
+    <field name="inherit_id" ref="stock.view_picking_type_form"/>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='show_reserved']" position="after">
+                <field name="is_stock"/> 
+            </xpath>
+        </data>
+    </field>
+  </record>
+
+</flectra>

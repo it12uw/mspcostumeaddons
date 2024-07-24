@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <!-- template report -->
+    <template id="report_jumlah_rijek_produksi">
+        <t t-call="web.html_container">
+            <t t-call="web.internal_layout">
+                <div class="page">
+                    <table align="right">
+                        <tr>
+                            <td width="400px">
+                            Document ID
+                            </td>
+                            <td>:</td>
+                            <td>MSP/F/P/PPC/01/02</td>
+                        </tr>
+                        <tr>
+                            <td width="400px">
+                            Page
+                            </td>
+                            <td>:</td>
+                            <td>1 Dari 1</td>
+                        </tr>
+                        <tr>
+                            <td width="400px">
+                            Revision
+                            </td>
+                            <td>:</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td width="400px">
+                            Revision No
+                            </td>
+                            <td>:</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td width="400px">
+                            Effective Date
+                            </td>
+                            <td>:</td>
+                            <td>1 Febuari 2019</td>
+                        </tr>
+                    </table>
+                    <br/>
+                    <table class="table table-condensed">
+                        <tr>
+                            <th colspan="12" class="text-center">
+                                <span>
+                                    <h4>REKAP RIJEK PRODUKSI</h4>
+                                </span>
+                            </th>
+                        </tr>
+                        <!-- <tr>
+                            <td>Source Ref</td>
+                            <td>:</td>
+                            <td>
+                                <t t-esc="mo"/>
+                            </td>
+                        </tr> -->
+                    </table>
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Bagian</th>
+                                <th>total putus benang</th>
+                                <th>total bolong</th>
+                                <th>total vanise</th>
+                                <th>total singker</th>
+                                <th>total kotor</th>
+                                <th>total terry</th>
+                                <th>total jumpstich</th>
+                                <th>total renggang</th>
+                                <th>total tidak loading</th>
+                                <th>total belang</th>
+                                <th>total ukuran</th>
+                                <th>total lingtu</th>
+                                <th>total pecah</th>
+                                <th>total loncat</th>
+                                <th>total gumpal</th>
+                                <th>total kasar</th>
+                                <th>total benang gabung</th>
+                                <th>total bintik bintik</th>
+                                <th>total jarum</th>
+                                <th>total transfer jebol</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="data" t-as="rijek">
+                                <td>
+                                    <t t-esc="rijek['name']" />
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['putus_benang']" />
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['bolong']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['vanise']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['singker']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['kotor']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['terry']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['jumpstich']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['renggang']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['tidak_loading']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['belang']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['ukuran']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['lingtu']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['pecah']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['loncat']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['gumpal']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['kasar']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['benang_gabung']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['bintik_bintik']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['jarum']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['transfer_jebol']"/>
+                                </td>
+                            </tr>
+                            <tr t-foreach="data_2" t-as="rijek">
+                                <td>
+                                    <t t-esc="rijek['name']" />
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['putus_benang']" />
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['bolong']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['vanise']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['singker']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['kotor']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['terry']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['jumpstich']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['renggang']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['tidak_loading']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['belang']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['ukuran']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['lingtu']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['pecah']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['loncat']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['gumpal']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['kasar']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['benang_gabung']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['bintik_bintik']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['jarum']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['transfer_jebol']"/>
+                                </td>
+                            </tr>
+                            <tr t-foreach="data_3" t-as="rijek">
+                                <td>
+                                    <t t-esc="rijek['name']" />
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['putus_benang']" />
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['bolong']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['vanise']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['singker']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['kotor']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['terry']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['jumpstich']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['renggang']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['tidak_loading']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['belang']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['ukuran']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['lingtu']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['pecah']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['loncat']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['gumpal']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['kasar']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['benang_gabung']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['bintik_bintik']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['jarum']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['transfer_jebol']"/>
+                                </td>
+                            </tr>
+                            <tr t-foreach="data_4" t-as="rijek">
+                                <td>
+                                    <t t-esc="rijek['name']" />
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['putus_benang']" />
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['bolong']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['vanise']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['singker']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['kotor']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['terry']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['jumpstich']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['renggang']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['tidak_loading']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['belang']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['ukuran']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['lingtu']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['pecah']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['loncat']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['gumpal']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['kasar']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['benang_gabung']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['bintik_bintik']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['jarum']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['transfer_jebol']"/>
+                                </td>
+                            </tr>
+                            <tr t-foreach="data_5" t-as="rijek">
+                                <td>
+                                    <t t-esc="rijek['name']" />
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['putus_benang']" />
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['bolong']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['vanise']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['singker']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['kotor']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['terry']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['jumpstich']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['renggang']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['tidak_loading']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['belang']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['ukuran']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['lingtu']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['pecah']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['loncat']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['gumpal']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['kasar']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['benang_gabung']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['bintik_bintik']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['jarum']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['transfer_jebol']"/>
+                                </td>
+                            </tr>
+                            <tr t-foreach="data_6" t-as="rijek">
+                                <td>
+                                    <t t-esc="rijek['name']" />
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['putus_benang']" />
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['bolong']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['vanise']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['singker']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['kotor']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['terry']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['jumpstich']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['renggang']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['tidak_loading']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['belang']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['ukuran']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['lingtu']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['pecah']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['loncat']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['gumpal']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['kasar']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['benang_gabung']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['bintik_bintik']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['jarum']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['transfer_jebol']"/>
+                                </td>
+                            </tr>
+                            <tr t-foreach="data_7" t-as="rijek">
+                                <td>
+                                    <t t-esc="rijek['name']" />
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['putus_benang']" />
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['bolong']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['vanise']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['singker']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['kotor']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['terry']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['jumpstich']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['renggang']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['tidak_loading']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['belang']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['ukuran']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['lingtu']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['pecah']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['loncat']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['gumpal']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['kasar']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['benang_gabung']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['bintik_bintik']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['jarum']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['transfer_jebol']"/>
+                                </td>
+                            </tr>
+                            <tr t-foreach="data_8" t-as="rijek">
+                                <td>
+                                    <t t-esc="rijek['name']" />
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['putus_benang']" />
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['bolong']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['vanise']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['singker']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['kotor']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['terry']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['jumpstich']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['renggang']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['tidak_loading']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['belang']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['ukuran']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['lingtu']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['pecah']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['loncat']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['gumpal']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['kasar']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['benang_gabung']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['bintik_bintik']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['jarum']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['transfer_jebol']"/>
+                                </td>
+                            </tr>
+                            <tr t-foreach="data_9" t-as="rijek">
+                                <td>
+                                    <t t-esc="rijek['name']" />
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['putus_benang']" />
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['bolong']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['vanise']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['singker']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['kotor']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['terry']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['jumpstich']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['renggang']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['tidak_loading']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['belang']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['ukuran']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['lingtu']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['pecah']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['loncat']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['gumpal']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['kasar']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['benang_gabung']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['bintik_bintik']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['jarum']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="rijek['transfer_jebol']"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+</flectra>

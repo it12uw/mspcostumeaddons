@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data>
+        <record model="ir.ui.view" id="mrp_workorder_multi">
+            <field name="name">mrp.workorder.multi</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='button_plan']" position="after">
+                    <button name="button_plan_multi" attrs="{'invisible': ['|', '|', ('state', '!=', 'confirmed'), ('routing_id', '=', False), ('is_locked', '=', False)]}" type="object" string="Create Workorders Multi" class="oe_highlight"/>
+                </xpath>
+                <xpath expr="//field[@name='production_location_id']" position="after">
+                    <field name="kkp_qty"/>
+                </xpath>
+            </field>
+        </record>
+   </data>
+</flectra>

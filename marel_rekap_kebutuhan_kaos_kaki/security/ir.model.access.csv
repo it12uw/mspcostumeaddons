@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_rekap_kebutuhan_aksesoris_all,access_rekap_kebutuhan_aksesoris_all,model_rekap_kebutuhan_aksesoris,base.group_user,1,0,0,0
+access_rekap_kebutuhan_aksesoris_line_all,access_rekap_kebutuhan_aksesoris_line_all,model_rekap_kebutuhan_aksesoris_line,base.group_user,1,0,0,0

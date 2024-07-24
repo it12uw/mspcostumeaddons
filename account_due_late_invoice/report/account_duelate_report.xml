@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<flectra>
+
+    <template id="account_duelate_report_doc">
+            <t t-call="web.html_container">
+                    <t t-call="web.internal_layout">
+                        <div class="page">
+                            <div class="row">
+                                <div class="text-center">
+                                    <h4><span><strong>Invoice Due Late</strong></span></h4>
+                                </div>
+                                <div class="text-center">
+                                    <td><span t-esc="date_start"/> To <span t-esc="date_end"/></td>
+                                </div>
+                            </div>
+    
+                            <div class="clearfix"/>
+                            <table class="table table-condensed">
+                            <t t-set="partner_group" t-value="[]"/>
+                                <t t-foreach="docs.sorted(key=lambda m:m.partner_id.name)" t-as="l">
+                                    <t t-set="partner_group" t-value="partner_group+[l.partner_id]"/>
+                                </t>
+                                <t t-foreach="set(partner_group)" t-as="partner">
+                                        <strong><t t-esc="partner.name"/></strong>
+                            
+                                    <tr>
+                                        <!-- <th><strong>Customer</strong></th> -->
+                                        <th><strong>Invoice Date</strong></th>
+                                        <th><strong>No Invoice</strong></th>
+                                        <th><strong>Due Date</strong></th>
+                                        <th><strong>No SO</strong></th>
+                                        <th class="text-right"><strong>Total</strong></th>
+                                        <th class="text-right"><strong>Term Days</strong></th>
+                                        <th class="text-right"><strong>Due Late</strong></th>
+                                    </tr>
+                           
+                                    <t t-foreach="docs" t-as="o">
+                                    <t t-if="partner.id==o.partner_id.id">
+                                    <tr>
+                                    <td><span t-field="o.date_invoice" t-options='{"widget":"date"}'/></td>
+                                    <td><span t-field="o.number"/></td>
+                                    <td><span t-field="o.date_due" t-options='{"widget":"date"}'/></td>
+                                    <td class="text-right"><span t-esc="o.amount_total_signed"/></td>
+                                    <td class="text-right"><span t-esc="o.days"/></td>
+                                    <td class="text-right"><span t-esc="o.due_late"/></td>
+                                    </tr>
+                                    </t>
+                                    </t>
+                                </t>
+                            
+                            
+                            <tr>
+                                <td>Total</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-right">
+                                    <t t-set="qord" t-value="sum([l.amount_total_signed for l in docs])"/>
+                                    <span t-esc="'{0:,.2f}'.format((qord))"/>
+                                </td>
+                                <!-- <td class="text-right">
+                                    <t t-set="qmo" t-value="avg([l.days for l in docs])"/>
+                                    <span t-esc="'{0:,.2f}'.format((qmo))"/>
+                                </td> -->
+                                <!-- <td class="text-right">
+                                    <t t-set="qpro" t-value="avg([l.due_late for l in docs])"/>
+                                    <span t-esc="'{0:,.2f}'.format((qpro))"/>
+                                </td> -->
+                            </tr>
+                            </table>
+                        </div>
+                    </t>
+                
+            </t>
+    </template>
+
+</flectra>

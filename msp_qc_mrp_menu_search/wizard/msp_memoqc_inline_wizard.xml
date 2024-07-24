@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+
+    <record id="view_msp_memoqc_inline_wizard" model="ir.ui.view">
+        <field name="name">viewnmsp memoqc inline wizard</field>
+        <field name="model">msp.memoqc.inline.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Line QC">
+                <group>
+                    <field name="name"/>
+                    <field name="tgl_create"/>
+                    <field name="mrp_productioin_id"/>
+                    <field name="shift"/>
+                    <field name="line"/>
+                    <field name="nama_operator_id"/>
+                    <field name="nama_teknisi_id"/>
+                    <field name="keterangan"/>
+                </group>
+                <footer>
+                    <button name="line_qc" type="object" string="Save Line Qc" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="act_msp_memoqc_inline_wizard" model="ir.actions.act_window">
+        <field name="name">act msp memoqc inline wizard </field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">msp.memoqc.inline.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_msp_memoqc_inline_wizard"/>
+        <field name="context">{'default_name_id':name,}</field>
+        <field name="target">new</field>
+    </record>
+</flectra>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data>
+        <!--        ============================ inmarel.kode.dokumen.po.mrp============================ -->
+        <record id="view_marel_in_data_report_kode_doc_po_form" model="ir.ui.view">
+            <field name="name">inmarel.kode.dokumen.po.form</field>
+            <field name="model">inmarel.kode.dokumen.po</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="in_marel_kode_dokumen_form">
+                    <sheet>
+                        <group>
+                            <field name="kode_dokumen_bagian_po"/>
+                            <field name="kode_dokumen_po"/>
+                            <field name="halaman_po"/>
+                            <field name="no_revisi_po"/>
+                            <field name="tgl_revisi_po"/>
+                            <field name="tgl_efektif_po"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- tree ================================ -->
+        <record id="view_marel_in_data_report_kode_doc_po_tree" model="ir.ui.view">
+            <field name="name">inmarel.kode.dokumen.po.tree</field>
+            <field name="model">inmarel.kode.dokumen.po</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Kode Dokumen">
+                    <field name="kode_dokumen_bagian_po"/>
+                    <field name="kode_dokumen_po"/>
+                    <field name="halaman_po"/>
+                </tree>
+            </field>
+        </record>
+        <!-- coba ========================================================= -->
+        <record id="view_marel_in_data_report_kode_doc_po_view_form" model="ir.ui.view">
+            <field name="name">view_marel_in_data_report_kode_doc_po_view_form</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="before">
+                    <field name="kode_dokumen_bagian_po_id" options="{'no_open': True, 'no_create': True}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</flectra>

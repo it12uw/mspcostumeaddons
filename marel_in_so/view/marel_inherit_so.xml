@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data>
+        <record id="marel_inherit_date_order_so" model="ir.ui.view">
+            <field name="name">sale.order.form3</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='confirmation_date']" position="before">
+                    <field name="date_order"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- purchase order button GM-->
+        <record id="marel_in_sale_order_otorisasi_button_gm" model="ir.ui.view">
+            <field name="name">sale.order.form2</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="/form/header/button[@name='action_confirm']" position="after">
+                    <button name="action_confirm_mm" string="Confirm Sale" type="object" attrs="{'invisible': [('state', 'not in', ['draft'])]}" groups="manager.marketting_manager"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="action_sale_order_line_list" model="ir.actions.act_window">
+            <field name="name">Sale Order Line</field>
+            <field name="res_model">sale.order.line</field>
+            <field name="view_mode">tree,form,pivot</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                Click to define a new Sample Line.
+                </p>
+            </field>
+        </record>
+
+        <menuitem
+        id="marel_in_so_action_sale_order_line_list"
+        name="SO Line"
+        parent="sale.menu_sale_report"
+        action="action_sale_order_line_list"
+        sequence="30"/>
+
+
+        <record id="action_mrp_bom_line_list" model="ir.actions.act_window">
+            <field name="name">BOM Line</field>
+            <field name="res_model">mrp.bom.line</field>
+            <field name="view_mode">tree,form,pivot</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                Click to define a new MRP BOM Line.
+                </p>
+            </field>
+        </record>
+
+        <menuitem
+        id="marel_in_mrp_action_mrp_bom_line_list"
+        name="BOM Line"
+        parent="mrp.menu_mrp_reporting"
+        action="action_mrp_bom_line_list"
+        sequence="30"/>
+
+    </data>
+</flectra>

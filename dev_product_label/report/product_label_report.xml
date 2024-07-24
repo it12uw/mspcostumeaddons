@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+	<template id="product_label_template_main">  
+		<t t-call="dev_product_label.dev_ext_black_layout">
+			<div class="page" style="font-size:15px;">
+			    <div class="row">
+			        <div class="col-xs-12">
+		                <t t-foreach="o.get_vals()" t-as="val">
+		                    <t t-set="barcode_type" t-value="val.get('barcode_type')"/>
+		                    <t t-set="barcode" t-value="val.get('barcode_label')"/>
+		                    <t t-set="bar_height" t-value="o.template_id.barcode_height"/>
+		                    <t t-set="bar_width" t-value="o.template_id.barcode_width"/>
+	                        <div t-attf-style="margin-top:#{o.template_id.margin_top}px;margin-left:#{o.template_id.margin_left}px;height:#{o.template_id.label_height}px;width:#{o.template_id.label_width}px;border:1px solid black;float:left;page-break-inside: avoid" class="text-center">
+	                        
+	                            <t t-if="o.template_id.product_name">
+	                                <t t-if="o.template_id.pro_name_bold">
+	                                    <b><span t-attf-style="font-size:#{o.template_id.pro_font_size}px;" t-esc="val.get('name')"/></b><br/>
+	                                </t>
+	                                <t t-if="not o.template_id.pro_name_bold">
+	                                    <span t-attf-style="font-size:#{o.template_id.pro_font_size}px;" t-esc="val.get('name')"/><br/>
+	                                </t>
+	                            </t>
+	                            <t t-if="val.get('attribute') and o.template_id.attributes">
+	                                <span t-attf-style="font-size:#{o.template_id.att_font_size}px;" t-esc="val.get('attribute')"/><br/>
+	                            </t>
+	                            <t t-if="val.get('default_code') and o.template_id.default_code">
+	                                <span t-attf-style="font-size:#{o.template_id.def_font_size}px;" t-esc="val.get('default_code')"/><br/>
+	                            </t>
+	                            <img class="text-left" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % (barcode_type, barcode, bar_width, bar_height)"/><br/>
+	                            <t t-if="val.get('barcode') and o.template_id.barcode_no">
+	                                <span t-attf-style="font-size:#{o.template_id.bar_font_size}px;" t-esc="val.get('barcode')"/>
+	                            </t>
+	                        </div>
+		                </t>
+			                
+			                
+<!--				                <t t-foreach="o.get_vals()" t-as="vals">-->
+<!--				                    <tr class="text-center">-->
+<!--				                        <t t-foreach="vals" t-as="val">-->
+<!--				                            <td t-attf-style="font-size:100%;padding-top:#{o.margin_top}};">-->
+<!--				                                <span t-esc="val.get('name')"/>-->
+<!--				                            </td>-->
+<!--				                        </t>-->
+<!--				                    </tr>-->
+<!--				                </t>-->
+			        </div>
+			    </div>
+			</div>
+		</t>
+	</template>
+	
+	
+	<template id="product_label_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="dev_product_label.product_label_template_main"/>
+            </t>
+        </t>
+    </template>
+    
+    
+</flectra>
+

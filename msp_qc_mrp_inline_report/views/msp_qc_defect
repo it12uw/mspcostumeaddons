@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <!-- data sample gramasi -->
+        <record id="view_msp_qc_defect_tree" model="ir.ui.view">
+            <field name="name">msp.qc.defect.tree</field>
+            <field name="model">msp.qc.defect</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Data Defect">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="viewmsp_qc_defect_form" model="ir.ui.view">
+            <field name="name">msp.qc.defect.form</field>
+            <field name="model">msp.qc.defect</field>
+            <field name="type">form</field>
+            <field name="target">new</field>
+            <field name="arch" type="xml">
+                <form string="Data Defect">
+                    <sheet>
+                        <label form="name" class="oe_edit_only" string="Nama Defect"/>
+                        <field name="name"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</flectra>

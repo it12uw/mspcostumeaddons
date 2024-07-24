@@ -1,0 +1,16 @@
+Most of the files are
+
+  <p><strong>This module is a backport from flectra SA and as such, it is not included in the OCA CLA. That means we do not have a copy of the copyright on it like all other OCA modules.</strong></p>
+  Copyright 2019 Eficent Business and IT Consulting Services S.L.
+  Copyright 2019 Flectra, S.A.
+  Copyright 2018 Flectra Community
+
+Many files also contain contributions from third
+parties. In this case the original copyright of
+the contributions can be traced through the
+history of the source version control system.
+
+When that is not the case, the files contain a prominent
+notice stating the original copyright and applicable
+license, or come with their own dedicated COPYRIGHT
+and/or LICENSE file.

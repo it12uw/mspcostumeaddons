@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+
+    <data>
+
+        <record id="stock_jadi_paper_format" model='report.paperformat'>
+            <field name="name">Stock Jadi Format</field>
+            <field name="format">custom</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">47</field>
+            <field name="header_spacing">45</field>
+        </record>
+
+        <!-- <report
+            string="Stock Inventory Report"
+            id="action_report_stock_inventory"
+            model="stock.inventory.wizard"
+            report_type="qweb-pdf"
+            name="aspl_stock_inventory_report.report_stock_inventory"
+            file="aspl_stock_inventory_report.report_stock_inventory"
+            paperformat="aspl_stock_inventory_report.stock_invetory_paper_format"
+        /> -->
+        <record id="action_report_stock_jadi" model="ir.actions.report">
+            <field name="name">Stock Jadi Report</field>
+            <field name="model">stock.jadi.wizard</field>
+            <field name="report_type">qweb-html</field>
+            <field name="report_name">aspl_stock_jadi_report.report_stock_jadi</field>
+            <field name="report_file">aspl_stock_jadi_report.report_stock_jadi</field>
+            <field name="print_report_name">'Stock %s %s' % (object.location_id.name or '', object.end_date).replace('/','')</field>
+        </record>
+
+        <record id="action_report_stock_jadi" model="ir.actions.report">
+            <field name="paperformat_id" ref="aspl_stock_jadi_report.stock_jadi_paper_format"/>
+        </record>
+
+    </data>
+
+</flectra>

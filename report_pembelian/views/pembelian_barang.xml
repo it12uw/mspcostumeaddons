@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+
+        
+    <record id="view_report_pembelian_per_barang_tree" model="ir.ui.view">
+        <field name="name">Report.Pembelian.PerBarang.Tree</field>
+        <field name="model">pem.bar</field>
+        <field name="arch" type="xml">
+            <tree string=" Report Histori Pembelian Per Barang" create="false" edit="false">
+                <field name="name"/>
+                <field name="date_start"/>
+                <field name="date_end"/>
+                <field name="company_id"/>
+                <!-- <field name="categ_id"/>
+                <field name="kategory"/> -->
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_report_pembelian_per_barang_form" model="ir.ui.view">
+            <field name="name">Report.Pembelian.PerBarang.Form</field>
+            <field name="model">pem.bar</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Report Pembelian Per Barang">
+                    <header>   
+                        <button name="generate_report" type="object" string="Generate Report" class="btn‐primary" />
+                        <button name="print_report" type="object" string="Export PDF" class="btn-success"/>
+                        <!-- <button name="action_close" type="object" string="Close" states="open" class="btn-success"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,open,done,stock"/> -->
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"
+                                string="Report Histori Pembelian"/>
+                        </div>
+                        <separator/>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="date_start"/>
+                                <field name="date_end"/>
+                                <field name="company_id"/>
+                                <!-- <field name="categ_id"/>
+                                <field name="kategory" widget="many2many_tags"/> -->
+                                <!-- <field name="categ_id" widget="many2many_tags"/> -->
+                                <!-- <field name=""/>
+                                <field name=""/> -->
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Report Histori Pembelian Per Barang ">
+                                <field name="report_ids" >
+                                    <tree string="Ringkasan Pembelian Per Barang" editable="top">
+                                        <field name="po_name"/>
+                                        <field name="nama_produk"/>
+                                        <field name="uom"/>
+                                        <field name="tot_biaya"/>
+                                       <!-- <field name="selisih_date"/>
+                                        <field name="gudang_oli" sum="Total oli"/> -->
+                                        <!-- <field name="complete_name"/> -->
+                                        <!-- <field name=''/>
+                                        <field name=''/> -->
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+    <record id="action_report_pembelian_per_barang" model="ir.actions.act_window">
+        <field name="name">Report Pembelian Per Barang</field>
+        <field name="res_model">pem.bar</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form,tree,pivot</field>
+        <!-- <field name="search_view_id" ref="view_mpc_produce_lot_filter"/> -->
+        <field name="context">{'search_default_today':1}</field>
+        <field name="view_id"></field>
+    </record>
+    <!-- <menuitem id="menu_report_pembelian" 
+            name="Report Pembelian" 
+            parent="purchase.menu_purchase_root"
+            sequence="20" /> -->
+    <menuitem id="menu_report_pembelian_perbarang" 
+            name="Report Pembelian Per Barang" 
+            parent="menu_report_pembelian"
+            action="action_report_pembelian_per_barang"
+            sequence="22" />
+</flectra>

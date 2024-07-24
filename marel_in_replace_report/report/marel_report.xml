@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <!-- model : posisi print report
+             file : folder addons database
+             name : folder file
+         -->
+        <!-- pemesanan aksesoris-->
+
+        <report id="marel_report_po_aksesoris" string="Production Order Aksesoris" report_type="qweb-pdf" model="mrp.production" file="mrp.marel_report" name="marel_in_replace_report.marel_report_production_order_aksesoris" />
+        <template id="marel_report_production_order_aksesoris">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="marel_in_replace_report.report_production_order_aksesoris_doc" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</flectra>

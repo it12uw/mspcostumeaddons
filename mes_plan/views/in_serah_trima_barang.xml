@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data>
+        <!-- ============================= in.serah.trimabenang ================================ -->
+        <record id="view_serah_trimabenang_tree" model="ir.ui.view">
+            <field name="name">serah.trimabenang.tree</field>
+            <field name="model">serah.trimabenang</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Serah Trima mes">
+                    <field name="tgl_buat"/>
+                    <field name="jenis_benang"/>
+                    <field name="jumlah_bon"/>
+                    <field name="kode"/>
+                    <field name="no_kp"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_serah_trimabenang_form" model="ir.ui.view">
+            <field name="name">serah.trimabenang.form</field>
+            <field name="model">serah.trimabenang</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="in_serah_trimabenang_form">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"
+                                string="Data Serah Trima"/>
+                        </div>
+                        <group>
+                            <field name="tgl_buat"/>
+                            <field name="no_kp"/>
+                            <field name="jenis_benang"/>
+                            <field name="kode"/>
+                            <field name="jumlah_bon"/>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</flectra>

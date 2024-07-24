@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <record id="view_marel_nama_qiusi_tree" model="ir.ui.view">
+            <field name="name">marel.nama.qiusi.tree</field>
+            <field name="model">marel.nama.qiusi</field>
+            <field name="type">tree</field>
+            <!-- <field name="priority" eval="8"/> -->
+            <field name="arch" type="xml">
+                <tree string="Data nama qiusi">
+                    <field name="nama_qiusi"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_marel_nama_qiusi_form" model="ir.ui.view">
+            <field name="name">marel.nama.qiusi.form</field>
+            <field name="model">marel.nama.qiusi</field>
+            <field name="type">form</field>
+            <!-- <field name="priority" eval="8"/> -->
+            <field name="arch" type="xml">
+                <form string="Data nama qiusi">
+                    <sheet>
+                        <group>
+                            <field name="nama_qiusi"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</flectra>

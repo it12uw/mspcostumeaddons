@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pengecekan_sample_user,Access Pengecekan Sample User,model_pengecekan_sample,base.group_user,1,0,0,0
+access_pengecekan_sample_manager,Access Pengecekan Sample Manager,model_pengecekan_sample,base.group_erp_manager,1,1,1,1

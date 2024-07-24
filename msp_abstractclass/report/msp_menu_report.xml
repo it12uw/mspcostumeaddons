@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <!-- model : posisi print report
+             file : folder addons database
+             name : folder file
+         -->
+        <!-- pemesanan aksesoris-->
+        <report id="menu_report_msp_so_line_resume" string="Margin SO" report_type="qweb-pdf" model="sale.order.line" file="msp_abstractclass.msp_menu_report" name="msp_abstractclass.menu_report_msp_so_line_resume_report"/>
+        <template id="menu_report_msp_so_line_resume_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="msp_abstractclass.msp_so_line_resume_doc" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</flectra>

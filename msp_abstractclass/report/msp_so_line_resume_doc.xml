@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+	<template id="msp_so_line_resume_doc">
+		<t t-call="web.external_layout">
+			<t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
+			<div class="page">
+				<div class="row">
+					<div class="col-xs-6">
+						<h3 align="center">
+							<strong>Resume SO</strong>
+						</h3>
+					</div>
+					<div class="col-xs-5 col-xs-offset-1">
+						<table align="right">
+							<tr>
+								<td width="140px">
+                            Document ID
+								</td>
+								<td>:</td>
+								<td>MSP/F/P/MK/01/02</td>
+							</tr>
+							<tr style="height:20px">
+								<td width="140px">
+                            Page
+								</td>
+								<td>:</td>
+								<td>1 Dari 1</td>
+							</tr>
+							<tr style="height:20px">
+								<td width="140px">
+                            Revision
+								</td>
+								<td>:</td>
+								<td>-</td>
+							</tr>
+							<tr style="height:20px">
+								<td width="140px">
+                            Revision No
+								</td>
+								<td>:</td>
+								<td>-</td>
+							</tr>
+							<tr style="height:20px">
+								<td width="140px">
+                            Effective Date
+								</td>
+								<td>:</td>
+								<td>1 Febuari 2019</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<br/>
+				<table class="table table-condensed table-striped">
+					<thead>
+						<tr>
+							<td>No SO</td>
+							<td>Gross Amount</td>
+							<td>Taxes</td>
+							<td>Total</td>
+							<td>Margin</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span t-field="o.order_id.name"/>
+							</td>
+							<td>
+								<span t-field="o.order_id.gross_amount"/>
+							</td>
+							<td>
+								<span t-field="o.order_id.amount_tax"/>
+							</td>
+							<td>
+								<span t-field="o.order_id.amount_total"/>
+							</td>
+							<td>
+								<span t-field="o.order_id.margin"/>
+							</td>
+						</tr>
+					</tbody>
+					<!-- <tr>
+						<td></td>
+						<td>
+							<strong>Total Gross Amount :</strong>
+							<t t-set="total_ga" t-value="sum([l.gross_amount for l in docs])"/>
+							<br/>
+                            Rp
+							<span t-esc="'{0:.2f}'.format(total_ga)"/>
+						</td>
+						<td></td>
+						<td>
+							<strong>Total Pendapatan :</strong>
+							<t t-set="total_at" t-value="sum([l.amount_total for l in docs])"/>
+							<br/>
+                            Rp
+							<span t-esc="'{0:.2f}'.format(total_at)"/>
+						</td>
+						<td>
+							<strong>Total Margin :</strong>
+							<t t-set="total_margin" t-value="sum([l.margin for l in docs])"/>
+							<br/>
+                            Rp
+							<span t-esc="'{0:.2f}'.format(total_margin)"/>
+
+						</td>
+					</tr> -->
+				</table>
+			</div>
+		</t>
+	</template>
+</flectra>

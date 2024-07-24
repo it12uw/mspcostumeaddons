@@ -1,0 +1,51 @@
+<flectra>
+    <data>
+
+        <record id="button_multi_confirm_po_view" model="ir.ui.view">
+            <field name="name">purchase.order.confirm.form</field>
+            <field name="model">purchase.order.confirm</field>
+            <field name="arch" type="xml">
+                <form string="Confirm Draft Purchases">
+                    <p class="oe_grey">
+                        Once draft Purchases are confirmed, you will not be able
+                        to modify them. The Purchases will receive a unique
+                        number and journal items will be created in your chart
+                        of accounts.
+                    </p>
+                    <footer>
+                        <button string="Confirm Purchases" name="po_multi_confirm" type="object" default_focus="1" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_button_multi_confirm_po"
+            multi="True"
+            key2="client_action_multi" name="Confirm Draft Purchases"
+            res_model="purchase.order.confirm" src_model="purchase.order"
+            view_mode="form" target="new" view_type="form" />
+<!-- ==================================================================================== done/lock PO-->
+        <record id="button_multi_done_po_view" model="ir.ui.view">
+            <field name="name">purchase.order.done.form</field>
+            <field name="model">purchase.order.done</field>
+            <field name="arch" type="xml">
+                <form string="Confirm Draft Purchases">
+                    <p class="oe_grey">
+                        Are you sure you want to lock this purchase order?
+                    </p>
+                    <footer>
+                        <button string="Done/Lock Purchases" name="po_multi_done" type="object" default_focus="1" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_button_multi_done_po"
+            multi="True"
+            key2="client_action_multi" name="Done/Lock Purchases"
+            res_model="purchase.order.done" src_model="purchase.order"
+            view_mode="form" target="new" view_type="form" />
+    </data>
+</flectra>

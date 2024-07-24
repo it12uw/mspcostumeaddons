@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <record id="view_picking_form_reopen" model="ir.ui.view">
+        <field name="name">view_picking_form_reopen</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"></field>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_cancel']" position="after">
+                <button name="action_back_to_draft" states="cancel" string="Back to draft" groups="base.group_user" type="object"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_move_pemakaian" model="ir.ui.view">
+        <field name="name">view.move.pemakaian</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='move_lines']/tree/field[@name='name']" position="before">
+                    <field name="partner_id"/> 
+                </xpath>
+                <xpath expr="//field[@name='move_lines']/tree/field[@name='product_uom']" position="after">
+                    <field name="sale_line_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                    <field name="purchase_line_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                </xpath>
+                <xpath expr="//field[@name='location_id']" position="attributes">
+                    <attribute name="attrs">{'invisible': []}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='location_dest_id']" position="attributes">
+                    <attribute name="attrs">{'invisible': []}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='origin']" position="after">
+                    <field name="sale_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                    <field name="purchase_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+</flectra>

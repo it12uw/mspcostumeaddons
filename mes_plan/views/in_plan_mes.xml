@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data>
+<!--        ============================ in.plan.mes============================ -->
+        <!--   -->
+        <record id="view_plan_mes_tree" model="ir.ui.view">
+            <field name="name">plan.mes.tree</field>
+            <field name="model">plan.mes</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="plan mes">
+                    <field name="kode_plan_mesin"/>
+                    <field name="no_kp"/>
+                    <field name="nama_template"/>
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                    <field name="real_date_start"/>
+                    <field name="real_date_end"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_plan_mes_form" model="ir.ui.view">
+            <field name="name">plan.mes.form</field>
+            <field name="model">plan.mes</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="in_plan_mes_form">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"
+                                string="Data MES Plan"/>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="kode_plan_mesin"/>
+                                <field name="no_kp"/>
+                                <field name="nama_template"/>
+                            </group>
+                            <group>
+                                <field name="date_start"/>
+                                <field name="date_end"/>
+                                <field name="real_date_start"/>
+                                <field name="real_date_end"/>
+                            </group>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</flectra>

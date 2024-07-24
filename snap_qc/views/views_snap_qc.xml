@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <record id="action_snap_qc" model="ir.actions.act_window">
+        <field name="name">Snap QC</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">snap.qc</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Tree View -->
+    <record id="view_tree_snap_qc" model="ir.ui.view">
+        <field name="name">tree.snap.qc</field>
+        <field name="model">snap.qc</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="date"/>
+                <field name="blok"/>
+                <field name="total_mesin"/>
+                <field name="total_mesin_jalan"/>
+                <field name="shift"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_form_snap_qc" model="ir.ui.view">
+        <field name="name">form.snap.qc</field>
+        <field name="model">snap.qc</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="date"/>
+                    <field name="blok"/>
+                    <field name="total_mesin"/>
+                    <field name="total_mesin_jalan"/>
+                    <field name="shift"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- <record id="view_form_snap_qc" model="ir.ui.view">
+        <field name="name">form.snap.qc</field>
+        <field name="model">snap.qc</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <div class="oe_canvas_container">
+                        <canvas id="canvas" width="600" height="400"/>
+                    </div>
+                </group>
+            </form>
+        </field>
+    </record>
+    
+    <record id="view_form_snap_qc_inherit" model="ir.ui.view">
+        <field name="name">form.snap.qc.inherit</field>
+        <field name="model">snap.qc</field>
+        <field name="inherit_id" ref="module_name.view_form_snap_qc"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//form/group" position="inside">
+                    <button string="Simpan" type="object" class="oe_highlight"/>
+                </xpath>
+            </data>
+        </field>
+    </record> -->
+    
+
+</flectra>

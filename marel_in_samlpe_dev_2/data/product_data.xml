@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data noupdate="1">
+        <record forcecreate="True" id="decimal_custom2" model="decimal.precision">
+            <field name="name">Custom 2</field>
+            <field name="digits">6</field>
+        </record>
+    </data>
+</flectra>

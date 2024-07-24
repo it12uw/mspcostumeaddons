@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <record id="view_marel_nama_operatorlist_tree" model="ir.ui.view">
+            <field name="name">marel.nama.operatorlist.tree</field>
+            <field name="model">marel.nama.operatorlist</field>
+            <field name="arch" type="xml">
+                <tree string="Pendataan Helper">
+                    <!--  TABAHAN TGL 6/5/20 -->
+                    <field name="status" readonly="1"/>
+                    <field name="tgl_kerja" readonly="1"/>
+                    <field name="no_kkp" required="1"/>
+                    <field name="nama_operator_id" required="1"/>
+                    <field name="nama_qiusi_id" required="1"/>
+                    <field name="no_mesin_id" options="{'no_create': True}" attrs="{'column_invisible':[('parent.workcenter_id', 'in', [8])]}" required="1"/>
+                    <field name="shift" required="1"/>
+                    <field name="jumlah_yg_selesai_sementara"/>
+                    <field name="workcenter_id" readonly="0"/>
+                    <field name="krono_kk_menit" attrs="{'column_invisible':[('parent.workcenter_id', 'not in', [1,6])]}"/>
+                    <!-- <field name="krono_kk_menit" attrs="{'readonly': [('status', '=', 'done','cancel')], 'invisible': [('workcenter_id', '!=', 1)]}"/> -->
+                    <field name="jumlah_reject" readonly="1"/>
+                    <field name="target_kk_operator" readonly="1"/>
+                </tree>
+            </field>
+        </record>
+        <!-- data helper loss tree -->
+        <!-- <record id="view_marel_nama_operatorlist_loss_tree" model="ir.ui.view">
+            <field name="name">marel.nama.operatorlist.tree</field>
+            <field name="model">marel.nama.operatorlist</field>
+            <field name="arch" type="xml">
+                <tree string="Data Pendataan Helper Loss">
+                    <field name="tgl_kerja"/>
+                    <field name="nama_operator_id"/>
+                    <field name="shift"/>
+                    <field name="jumlah_yg_selesai"/>
+                    <field name="jumlah_reject" readonly="1"/>
+                    <field name="target_kk_operator"/>
+                </tree>
+            </field>
+        </record> -->
+
+        <!-- pivot -->
+        <record model="ir.ui.view" id="view_marel_nama_operatorlist_pivot">
+            <field name="name">marel.nama.operatorlist.pivot</field>
+            <field name="model">marel.nama.operatorlist</field>
+            <field name="arch" type="xml">
+                <pivot string="Data Pendataan Helper">
+                    <!-- <field name="nama_operator_id" type="col"/> -->
+                    <!-- <field name="krono_kk_menit" type="measure"/> -->
+                    <!-- <field name="jumlah_yg_selesai" type="measure"/> -->
+                    <!-- <field name="jumlah_reject" type="measure"/> -->
+                    <field name="target_kk_operator" type="measure"/>
+                    <field name="gread_d" type="measure"/>
+                    <field name="putus_benang" type="measure"/>
+                    <field name="bolong" type="measure"/>
+                    <field name="vanise" type="measure"/>
+                    <field name="singker" type="measure"/>
+                    <field name="kotor" type="measure"/>
+                    <field name="terry" type="measure"/>
+                    <field name="jumpstich" type="measure"/>
+                    <field name="renggang" type="measure"/>
+                    <field name="tidak_loading" type="measure"/>
+                    <field name="belang" type="measure"/>
+                    <field name="ukuran" type="measure"/>
+                    <field name="jarum" type="measure"/>
+                    <field name="transfer_jebol" type="measure"/>
+                    <field name="tgl_kerja" type="row"/>
+                </pivot>
+            </field>
+        </record>
+        <!-- graph -->
+        <record model="ir.ui.view" id="view_marel_nama_operatorlist_graph">
+            <field name="name">marel.nama.operatorlist.graph</field>
+            <field name="model">marel.nama.operatorlist</field>
+            <field name="arch" type="xml">
+                <graph string="Data Pendataan Helper">
+                    <field name="krono_kk_menit" type="measure"/>
+                    <field name="jumlah_yg_selesai" type="measure"/>
+                    <field name="jumlah_reject" type="measure"/>
+                    <field name="target_kk_operator" type="measure"/>
+                    <!-- <field name="nama_operator_work_order_id" type="measure"/> -->
+                </graph>
+            </field>
+        </record>
+
+        <record id="view_marel_nama_operatorlist_form" model="ir.ui.view">
+            <field name="name">marel.nama.operatorlist.form</field>
+            <field name="model">marel.nama.operatorlist</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Data Pendataan Helper">
+                    <sheet>
+                        <group>
+                            <!--  TABAHAN TGL 6/5/20 -->
+                            <!-- <button name="action_confirm_value_fix" string="Confirm" type="object" attrs="{'invisible': [('status', 'not in', ['draft'])]}"/>
+                            <field name="status" readonly="1"/>
+                            <field name="tgl_kerja" attrs="{'readonly': ['|', ('status', '=', 'done','cancel')]}"/>
+                            <field name="no_kkp" attrs="{'readonly': ['|', ('status', '=', 'done','cancel')]}"/>
+                            <field name="nama_operator_id" options="{'no_create': True}" attrs="{'readonly': ['|', ('status', '=', 'done','cancel')]}"/>
+                            <field name="nama_qiusi_id" options="{'no_create': True}" attrs="{'readonly': ['|', ('status', '=', 'done','cancel')]}"/>
+                            <field name="no_mesin_id" options="{'no_create': True}" attrs="{'column_invisible':[('parent.workcenter_id', 'in', [8])]}"/>
+                            <field name="shift" attrs="{'readonly': ['|', ('status', '=', 'done','cancel')]}"/>
+                            <field name="no_box" attrs="{'column_invisible':[('parent.workcenter_id', 'not in', [8])], 'readonly': ['|', ('status', '=', 'done','cancel')]}"/>
+                            <field name="jumlah_yg_selesai_sementara" attrs="{'readonly': ['|', ('status', '=', 'done','cancel')]}"/>
+                            <field name="jumlah_yg_selesai" readonly="1"/>
+                            <field name="jumlah_reject" readonly="1"/>
+                            <field name="krono_kk_menit" attrs="{'column_invisible':[('parent.workcenter_id', 'not in', [1,6])]}"/>
+                            <field name="workcenter_id" readonly="1"/>
+                            <field name="target_kk_operator" readonly="1"/> -->
+                            <!-- rijek -->
+                            <!-- <field name="gread_d" attrs="{'invisible':[('status', '=', 'draft')]}"/>
+                            <field name="putus_benang"/>
+                            <field name="bolong"/>
+                            <field name="vanise"/>
+                            <field name="singker"/>
+                            <field name="kotor" />
+                            <field name="terry"/>
+                            <field name="jumpstich"/>
+                            <field name="renggang"/>
+                            <field name="tidak_loading"/>
+                            <field name="belang"/>
+                            <field name="ukuran"/>
+                            <field name="transfer"/>
+
+                            <field name="pecah"/>
+                            <field name="loncat"/>
+                            <field name="gumpal"/>
+                            <field name="kasar"/>
+                            <field name="benang_gabung"/>
+                            <field name="bintik_bintik"/>
+                            <field name="lingtu"/>
+
+                            <field name="jarum"/>
+                            <field name="transfer_jebol"/> -->
+                            <field name="status" readonly="1"/>
+                            <field name="tgl_kerja" attrs="{'readonly': ['|', ('status', '=', 'done','cancel')]}"/>
+                            <field name="no_kkp" attrs="{'readonly': ['|', ('status', '=', 'done','cancel')]}" required="1"/>
+                            <field name="nama_operator_id" options="{'no_create': True}" attrs="{'readonly': ['|', ('status', '=', 'done','cancel')],}" required="1"/>
+                            <field name="nama_qiusi_id" options="{'no_create': True}" attrs="{'readonly': ['|', ('status', '=', 'done','cancel')]}" required="1"/>
+                            <!-- <field name="no_mesin_id" options="{'no_create': True}" attrs="{'column_invisible':[('parent.workcenter_id', 'in', [8])]}"/> -->
+                            <field name="no_mesin_id" options="{'no_create': True}" attrs="{'invisible':[('workcenter_id', 'in', [8])], 'readonly': ['|', ('status', '=', 'done','cancel')]}" required="1"/>
+                            <field name="shift" attrs="{'readonly': ['|', ('status', '=', 'done','cancel')]}" required="1"/>
+                            <!-- <field name="no_box" attrs="{'column_invisible':[('parent.workcenter_id', 'not in', [8])], 'readonly': ['|', ('status', '=', 'done','cancel')]}"/> -->
+                            <field name="no_box" attrs="{'invisible':[('workcenter_id', 'not in', [8])]}" required="1"/>
+                            <field name="jumlah_yg_selesai_sementara" attrs="{'readonly': ['|', ('status', '=', 'done','cancel')]}"/>
+                            <field name="jumlah_yg_selesai" readonly="1"/>
+                            <field name="workcenter_id" readonly="0"/>
+                            <!-- <field name="krono_kk_menit" attrs="{'column_invisible':[('parent.workcenter_id', 'not in', 1)]}"/> -->
+                            <field name="krono_kk_menit" attrs="{'invisible':[('workcenter_id', 'not in', 1)], 'readonly': ['|', ('status', '=', 'done','cancel')]}"/>
+                            <field name="jumlah_reject" readonly="1"/>
+                            <!-- <field name="target_kk_operator" readonly="1" attrs="{'column_invisible':[('parent.workcenter_id', 'not in', 1)]}"/>
+                            <field name="target_conti" attrs="{'column_invisible':[('parent.workcenter_id', 'not in', 2)]}" readonly="1"/>
+                            <field name="target_as" attrs="{'column_invisible':[('parent.workcenter_id', 'not in', 5)]}" readonly="1"/>
+                            <field name="target_sewing" attrs="{'column_invisible':[('parent.workcenter_id', 'not in', 4)]}" readonly="1"/>
+                            <field name="target_bordir" attrs="{'column_invisible':[('parent.workcenter_id', 'not in', 7)]}" readonly="1"/>
+                            <field name="target_setting" attrs="{'column_invisible':[('parent.workcenter_id', 'not in', 6)]}" readonly="1"/> -->
+                            <field name="target_kk_operator" readonly="1" attrs="{'invisible':[('workcenter_id', 'not in', 1)]}"/>
+                            <field name="target_conti" attrs="{'invisible':[('workcenter_id', 'not in', 2)]}" readonly="1"/>
+                            <field name="target_as" attrs="{'invisible':[('workcenter_id', 'not in', 5)]}" readonly="1"/>
+                            <field name="target_sewing" attrs="{'invisible':[('workcenter_id', 'not in', 4)]}" readonly="1"/>
+                            <field name="target_bordir" attrs="{'invisible':[('workcenter_id', 'not in', 3)]}" readonly="1"/>
+                            <field name="target_setting" attrs="{'invisible':[('workcenter_id', 'not in', 6)]}" readonly="1"/>
+
+                        </group>
+                        <notebook>
+                            <page string="Operator Rijek Kaoskaki">
+                                <field name="operator_rijek_kaoskaki_ids">
+                                    <tree string="Jenis Rijek Kaoskaki">
+                                        <field name="jenis_rijek_kaoskaki_id"/>
+                                        <field name="jumlah_rjk"/>
+                                        <field name="keterangan"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_marel_nama_operatorlist_filter" model="ir.ui.view">
+            <field name="name">marel.nama.operatorlist.filter</field>
+            <field name="model">marel.nama.operatorlist</field>
+            <field name="arch" type="xml">
+                <search string="Produksi Harian">
+                    <field name="tgl_kerja"/>
+                    <filter string="Today" name="today" domain="[('tgl_kerja','&lt;=', (datetime.date.today()).strftime('%Y-%m-%d')),('tgl_kerja','&gt;=',(datetime.date.today()).strftime('%Y-%m-%d'))]" help="Today or scheduled for today"/>
+                    <filter string="Yesterday" name="yesterday" domain="[('tgl_kerja','&gt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d'))), ('tgl_kerja','&lt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d')))]" help="Yesterday"/>
+                </search>
+            </field>
+        </record>
+        <!-- operator_rijek_kaoskaki -->
+        <record id="view_operator_rijek_kaoskaki_form" model="ir.ui.view">
+            <field name="name">operator.rijek.kaoskaki.form</field>
+            <field name="model">operator.rijek.kaoskaki</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Operator Rijek Kaoskaki">
+                    <sheet>
+                        <group>
+                            <field name="jenis_rijek_kaoskaki_id"/>
+                            <field name="jumlah_rjk"/>
+                            <field name="keterangan"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_operator_rijek_kaoskaki_tree" model="ir.ui.view">
+            <field name="name">operator.rijek.kaoskaki.tree</field>
+            <field name="model">operator.rijek.kaoskaki</field>
+            <field name="arch" type="xml">
+                <tree string="Rijek Kaoskaki">
+                    <field name="jenis_rijek_kaoskaki_id"/>
+                    <field name="jumlah_rjk"/>
+                    <field name="keterangan"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Jenis Rijek Kaoskaki -->
+        <record id="view_jenis_rijek_kaoskaki_form" model="ir.ui.view">
+            <field name="name">jenis.rijek.kaoskaki.form</field>
+            <field name="model">jenis.rijek.kaoskaki</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Jenis Rijek Kaoskaki">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_jenis_rijek_kaoskaki_tree" model="ir.ui.view">
+            <field name="name">jenis.rijek.kaoskaki.tree</field>
+            <field name="model">jenis.rijek.kaoskaki</field>
+            <field name="arch" type="xml">
+                <tree string="Jenis Rijek Kaoskaki">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</flectra>

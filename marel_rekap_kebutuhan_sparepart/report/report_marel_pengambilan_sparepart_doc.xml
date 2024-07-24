@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+	<template id="report_marel_pengambilan_sparepart_doc">
+		<t t-call="web.external_layout">
+			<t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})" />
+			<div class="page">
+				<h3>
+					<strong>No : 
+						<span t-field="o.name"/>
+					</strong>
+				</h3>
+				<div class="oe_structure" />
+				<table class="table table-condensed">
+					<tr>
+						<td>
+							Tgl Pemakaian
+						</td>
+						<td>
+							Shift
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.tgl_pengambilan" />
+						</td>
+						<td>
+							<span t-field="o.shift" />
+						</td>
+					</tr>
+				</table>
+				<table class="table table-condensed">
+					<thead>
+						<tr>
+							<th>
+								Nama Barang
+							</th>
+							<th>
+								Jumlah
+							</th>
+							<th>
+								Mesin
+							</th>
+							<th>
+								Keterangan
+							</th>
+						</tr>
+					</thead>
+					<tbody class="rekap_kebutuhan_kaos_kaki">
+						<tr t-foreach="o.marel_pengambilan_sparepart_line" t-as="l">
+							<td class="text-left">
+								<span t-field="l.product_id" />
+							</td>
+							<td class="text-left">
+								<span t-field="l.jumlah_pengambilan" />
+							</td>
+							<td class="text-left">
+								<span t-field="l.no_mesin_id" />
+							</td>
+							<td class="text-left">
+								<span t-field="l.keterangan" />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table align="center">
+					<tr style="height:100px">
+						<td width="400px">
+							Yang Menerima :
+						</td>
+						<td width="400px">
+							KA. Shift/Leader :
+						</td>
+						<td width="240px">
+							Yang Mengetahui :
+						</td>
+					</tr>
+					<tr style="height:30px">
+						<td width="400px">
+							(......................)
+						</td>
+						<td width="400px">
+							(......................)
+						</td>
+						<td width="240px">
+							(......................)
+						</td>
+					</tr>
+				</table>
+				<div class="oe_structure" />
+			</div>
+		</t>
+	</template>
+</flectra>

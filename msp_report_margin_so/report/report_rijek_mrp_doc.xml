@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+	<data noupdate="0">
+		<template id="msp_report_rijek_mrp_doc">
+			<t t-call="web.external_layout">
+				<div class="page">
+					<table class="table table-condensed">
+						<thead>
+							<tr>
+								<th>
+								Document ID
+								</th>
+								<th>
+								Page
+								</th>
+								<th>
+								Revision No
+								</th>
+								<th>
+								Revision Date
+								</th>
+								<th>
+								Effective Date
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>MSP/F/P/MK/01.05</td>
+								<td>1 Dari 1</td>
+								<td>-</td>
+								<td> -</td>
+								<td>1 Febuari 2019</td>
+							</tr>
+						</tbody>
+					</table>
+					<span>
+						<strong>
+							<h4>
+										DATA RIJEK PRODUKSI
+							</h4>
+						</strong>
+					</span>
+					<br/>
+					<table class="table table-condensed table-striped">
+						<thead>
+							<tr>
+								<td>No MO</td>
+								<td>Pts Benang</td>
+								<td>BOLONG / SOBEK</td>
+								<td>VANISE</td>
+								<td>SINGKER/LIDAH SERET</td>
+								<td>KOTOR</td>
+								<td>TERRY</td>
+								<td>JUMPSTICH</td>
+								<td>RENGGANG</td>
+								<td>TIDAK LOADING</td>
+								<td>BELANG</td>
+								<td>UKURAN</td>
+								<td>LINGTU</td>
+								<td>PECAH</td>
+								<td>LONCAT</td>
+								<td>TRANSFER NYANGKOL</td>
+								<td>GUMPAL</td>
+								<td>KASAR</td>
+								<td>BENANG GABUNG</td>
+								<td>BINTIK BINTIK</td>
+								<td>Jarum</td>
+								<td>TRANSFER Jebol</td>
+							</tr>
+						</thead>
+						<t t-foreach="docs" t-as="o">
+							<tbody>
+								<tr>
+									<td>
+										<span t-field="o.name"/>
+									</td>
+									<td t-foreach="o.workorder_ids" t-as="l">
+										<span t-field="l.total_putus_benang"/>
+									</td>
+									<td t-foreach="o.workorder_ids" t-as="l">
+										<span t-field="l.total_bolong"/>
+									</td>
+									<td t-foreach="o.workorder_ids" t-as="l">
+										<span t-field="l.total_vanise"/>
+									</td>
+									<td t-foreach="o.workorder_ids" t-as="l">
+										<span t-field="l.total_singker"/>
+									</td>
+									<td t-foreach="o.workorder_ids" t-as="l">
+										<span t-field="l.total_kotor"/>
+									</td>
+									<td t-foreach="o.workorder_ids" t-as="l">
+										<span t-field="l.total_terry"/>
+									</td>
+									<td t-foreach="o.workorder_ids" t-as="l">
+										<span t-field="l.total_jumpstich"/>
+									</td>
+									<td t-foreach="o.workorder_ids" t-as="l">
+										<span t-field="l.total_renggang"/>
+									</td>
+									<td t-foreach="o.workorder_ids" t-as="l">
+										<span t-field="l.total_tidak_loading"/>
+									</td>
+									<td t-foreach="o.workorder_ids" t-as="l">
+										<span t-field="l.total_belang"/>
+									</td>
+									<td t-foreach="o.workorder_ids" t-as="l">
+										<span t-field="l.total_ukuran"/>
+									</td>
+									<td t-foreach="o.workorder_ids" t-as="l">
+										<span t-field="l.total_lingtu"/>
+									</td>
+									<td t-foreach="o.workorder_ids" t-as="l">
+										<span t-field="l.total_pecah"/>
+									</td>
+									<td t-foreach="o.workorder_ids" t-as="l">
+										<span t-field="l.total_loncat"/>
+									</td>
+									<td t-foreach="o.workorder_ids" t-as="l">
+										<span t-field="l.total_transfer"/>
+									</td>
+									<td t-foreach="o.workorder_ids" t-as="l">
+										<span t-field="l.total_gumpal"/>
+									</td>
+									<td t-foreach="o.workorder_ids" t-as="l">
+										<span t-field="l.total_kasar"/>
+									</td>
+									<td t-foreach="o.workorder_ids" t-as="l">
+										<span t-field="l.total_benang_gabung"/>
+									</td>
+									<td t-foreach="o.workorder_ids" t-as="l">
+										<span t-field="l.total_bintik_bintik"/>
+									</td>
+									<td t-foreach="o.workorder_ids" t-as="l">
+										<span t-field="l.total_transfer_jebol"/>
+									</td>
+								</tr>
+							</tbody>
+						</t>
+					</table>
+				</div>
+			</t>
+		</template>
+	</data>
+</flectra>

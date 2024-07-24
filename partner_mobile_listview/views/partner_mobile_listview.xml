@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<flectra>
+    <record id="view_partner_mobile_treeview" model="ir.ui.view">
+        <field name="name">Partner Mobile</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree" />
+        <field name="arch" type="xml">
+            <field name="phone" position="after">
+                <field name="mobile"/>
+                <field name="city"/>
+            </field>
+        </field>
+    </record>
+</flectra>

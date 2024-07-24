@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <!-- <record id="view_wip_mo_report_conti_tree" model="ir.ui.view">
+        <field name="name">wip.mo.report.conti.Tree</field>
+        <field name="model">wip.mo.report.conti</field>
+        <field name="arch" type="xml">
+            <tree string="Closing Kiriman Kain Harian Line" create="false" edit="false">
+                    <field name="reference"/>
+                    <field name="nama_produk"/>
+                    <field name="qty" sum='Total Keseluruhan'/>
+                    <field name="uom"/>
+                    <field name="mo"/>
+                    <field name="state"/>
+            </tree>
+        </field>
+    </record> -->
+
+     <record  id="view_wip_mo_report_conti_tree" model="ir.ui.view">
+        <field name="name">wip.mo.report.conti.tree</field>
+        <field name="model">wip.mo.report.conti</field>
+        <field name="arch" type="xml">
+            <tree string="WIP Conti">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_wip_mo_report_conti_form" model="ir.ui.view">
+            <field name="name">wip.mo.report.conti.form</field>
+            <field name="model">wip.mo.report.conti</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="WIP Conti">
+                    <header>   
+                        <button name="generate_report" type="object" string="Generate Report" class="btn‐primary" />
+                        <!-- <button name="print_report" type="object" string="Export PDF" class="btn-success"/> -->
+                        <button name="print_report_excel" type="object" string="Export Excel" class="btn-success"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"
+                                string="Marel Wip Mo Report"/>
+                        </div>
+                        <separator/>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="date_start"/>
+                                <field name="date_end"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="WIp Conti">
+                                <field name="report_ids" >
+                                    <tree string="Wip Mo Report Conti" editable="top" default_order="workcenter acs">
+                                        <field name="workcenter"/>
+                                        <field name="name"/>
+                                        <field name="state"/>
+                                        <field name="tgl_kerja"/>
+                                        <field name="product_id"/>
+                                        <field name="product_qty"/>
+                                        <field name="jumlah_yg_selesai"/>
+                                        <field name="uom_id"/>
+                                        <field name="shift"/>
+                                        <field name="nama_operator"/>
+                                        <field name="nama_qiusi"/>
+                                        <field name="nama_mesin_blok"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    <record id="action_wip_mo_report_conti" model="ir.actions.act_window">
+        <field name="name">Marel WIP Conti Report</field>
+        <field name="res_model">wip.mo.report.conti</field>
+        <!-- <field name="view_type">form</field> -->
+        <field name="view_mode">form,tree</field>
+        <!-- <field name="search_view_id" ref="view_mpc_produce_lot_filter"/> -->
+        <!-- <field name="context">{'search_default_today':1}</field>
+        <field name="view_id"></field> -->
+    </record>
+
+    <report
+            id="report_excel_wip_mo_report_conti"
+            string="Report Conti Excel"
+            model='wip.mo.report.conti'
+            report_type = 'xlsx'
+            name='marel_workorder_report.wip_mo_report_conti_excel'
+            file="marel_workorder_report.wip_mo_report_conti_excel"/>
+
+    <menuitem
+        action="action_wip_mo_report_conti" 
+        id="menu_wip_mo_report_conti_harian" 
+        parent="mrp.menu_mrp_reporting"
+        name="WIP Conti"
+        sequence="13"/>
+				
+</flectra>

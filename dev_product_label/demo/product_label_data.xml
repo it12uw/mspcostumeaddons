@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <record id="dev_product_label_single_barcode" model="dev.product.label.template">
+        <field name="name">Template 1</field>
+        <field name="page_height">60</field>
+        <field name="page_width">70</field>
+        <field name="label_height">150</field>
+        <field name="label_width">220</field>
+        <field name="margin_left">5</field>
+        <field name="margin_top">5</field>
+        <field name="barcode_height">50</field>
+        <field name="barcode_width">190</field>
+        <field name="barcode_from">default_code</field>
+        <field name="barcode_type">Code128</field>
+        
+        <field name="product_name">True</field>
+        <field name="pro_font_size">15</field>
+        <field name="pro_name_bold">True</field>
+        
+        <field name="attributes">True</field>
+        <field name="att_font_size">12</field>
+        
+        <field name="barcode_no">True</field>
+        <field name="bar_font_size">15</field>
+        
+        <field name="default_code">False</field>
+        <field name="def_font_size">15</field>
+    </record>
+    
+    
+    <record id="dev_product_label_single_barcode_2" model="dev.product.label.template">
+        <field name="name">Template 2</field>
+        <field name="page_height">70</field>
+        <field name="page_width">140</field>
+        <field name="label_height">200</field>
+        <field name="label_width">220</field>
+        <field name="margin_left">15</field>
+        <field name="margin_top">5</field>
+        <field name="barcode_height">130</field>
+        <field name="barcode_width">190</field>
+        <field name="barcode_from">barcode</field>
+        <field name="barcode_type">QR</field>
+        
+        <field name="product_name">True</field>
+        <field name="pro_font_size">15</field>
+        <field name="pro_name_bold">True</field>
+        
+        <field name="attributes">True</field>
+        <field name="att_font_size">12</field>
+        
+        <field name="barcode_no">False</field>
+        <field name="bar_font_size">15</field>
+        
+        <field name="default_code">True</field>
+        <field name="def_font_size">15</field>
+    </record>
+    
+    
+    <record id="dev_product_label_single_barcode_3" model="dev.product.label.template">
+        <field name="name">Template 3</field>
+        <field name="page_height">60</field>
+        <field name="page_width">210</field>
+        <field name="label_height">150</field>
+        <field name="label_width">200</field>
+        <field name="margin_left">15</field>
+        <field name="margin_top">5</field>
+        <field name="barcode_height">50</field>
+        <field name="barcode_width">190</field>
+        <field name="barcode_from">barcode</field>
+        <field name="barcode_type">Code128</field>
+        
+        <field name="product_name">True</field>
+        <field name="pro_font_size">15</field>
+        <field name="pro_name_bold">True</field>
+        
+        <field name="attributes">True</field>
+        <field name="att_font_size">12</field>
+        
+        <field name="barcode_no">False</field>
+        <field name="bar_font_size">15</field>
+        
+        <field name="default_code">True</field>
+        <field name="def_font_size">15</field>
+    </record>
+    
+    
+</flectra> 	
+
+

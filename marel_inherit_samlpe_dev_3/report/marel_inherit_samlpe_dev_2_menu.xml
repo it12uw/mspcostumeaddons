@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <report id="report_marel_inherit_samlpe_dev_2_menu" string="Form Sample" report_type="qweb-pdf" model="marelin.samlpe.dev2" file="marel_inherit_samlpe_dev_2.marel_inherit_samlpe_dev_2_menu" name="marel_inherit_samlpe_dev_2.marel_inherit_samlpe_dev_2_menu_report" />
+        <template id="marel_inherit_samlpe_dev_2_menu_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="marel_inherit_samlpe_dev_2.report_marel_report_sample_perminataan_benang_doc" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</flectra>

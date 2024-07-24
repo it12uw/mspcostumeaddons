@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data>        
+        <!-- Tree view for the menuitem -->
+        <record id="operator_tree" model="ir.ui.view">
+            <field name="name">pengisisan.operator.warping.tree</field>
+            <field name="model">pengisisan.operator.warping</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="pengisi"/>
+                    <field name="shift"/>
+                    <field name="jmlh_benang"/>
+                    <field name="panjang_benang"/>
+                    <field name="no_beam"/>                                       
+                    <field name="pts_benang"/>
+                    <field name="pts_persejuta"/>
+                    <field name="berat_bruto"/>
+                    <field name="berat_beam"/>
+                    <field name="berat_neto"/>
+                    <field name="jam_naik"/>
+                    <field name="jam_turun"/>
+                    <field name="lama_proses_menit"/>
+                    <field name="rata_menit"/>
+                    <field name="sebelum_dikanji_gram"/>
+                    <field name="sebelum_dikanji_persen"/>
+                    <field name="hns_kanan"/>
+                    <field name="hns_tengah"/>
+                    <field name="hns_kiri"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!-- Form view for the menuitem 
+        <record id="operator_form" model="ir.ui.view">
+            <field name="name">pengisisan.operator.warpingg.form</field>
+            <field name="model">pengisisan.operator.warpingg</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                         <button name="action_cancel" string="Cancel" type="object" />
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>-->
+    </data>
+</flectra> 

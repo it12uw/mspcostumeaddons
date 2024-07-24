@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data>
+        <!-- purchase order button -->
+        <record id="product_templater_button" model="ir.ui.view">
+            <field name="name">sproduct.template.formbutton</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='list_price']" position="after">
+                    <field name="is_confirm_price" attrs="{'invisible': [('is_confirm_price', '=', False)]}"/>
+                    <button name="button_confirm_price_uid" string="Konfirm Harga" type="object"/>
+                </xpath>
+                <xpath expr="//field[@name='list_price']" position="before">
+                    <field name="confirm_price_uid" attrs="{'invisible': [('is_confirm_price', '=', False)],'readonly':[('is_confirm_price','=',True)]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</flectra>

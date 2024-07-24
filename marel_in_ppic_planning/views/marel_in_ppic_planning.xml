@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <record id="view_marel_in_ppic_planning_tree" model="ir.ui.view">
+            <field name="name">marel.in.ppic.planning.tree</field>
+            <field name="model">marel.in.ppic.planning</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Data PIC">
+                    <field name="no_mo_id"/>
+                    <field name="product_id"/>
+                    <field name="total_orderan"/>
+                    <field name="no_mesin_id"/>
+                    <field name="tgl_mulai"/>
+                    <field name="tgl_akhir"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_marel_in_ppic_planning_form" model="ir.ui.view">
+            <field name="name">marel.in.ppic.planning.form</field>
+            <field name="model">marel.in.ppic.planning</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Data Mesin Produksi">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="no_mo_id"/>
+                                <field name="product_id"/>
+                            </group>
+                            <group>
+                                <field name="total_orderan"/>
+                                <field name="product_uom_id"/>
+                            </group>
+                            <group>
+                                <field name="total_yg_telah_jadi"/>
+                                <field name="total_yg_blm_selesai"/>
+                            </group>
+                            <group>
+                                <field name="no_mesin_id"/>
+                                <field name="tgl_mulai"/>
+                                <field name="tgl_akhir"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- <record model="ir.ui.view" id="view_marel_in_ppic_planning_gantt_view"><field name="name">marel.in.ppic.planning.gantt</field><field name="model">marel.in.ppic.planning</field><field name="arch" type="xml"><gantt string="Session Gantt" date_start="tgl_mulai" date_stop="tgl_akhir" string="Tasks"/></field></record> -->
+        <record id="view_marel_in_ppic_planning_gantt_view" model="ir.ui.view">
+            <field name="name">marel.in.ppic.planning.gantt</field>
+            <field name="model">marel.in.ppic.planning</field>
+            <field name="arch" type="xml">
+                <gantt date_start="tgl_mulai" date_stop="tgl_akhir" string="Tasks" default_group_by="no_mesin_id"/>
+                <!-- <gantt date_start="tgl_mulai" date_stop="tgl_akhir" string="Tasks"></gantt> -->
+                <!-- <field name="no_mesin_id"/> --></field>
+        </record>
+    </data>
+</flectra>

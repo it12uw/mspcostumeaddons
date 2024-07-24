@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <!-- pada name .in_mrp_product_produce_report memanggil template semua record -->
+        <!-- template perRecord -->
+        <template id="qweb_pembelian_perbarang_template">
+            <t t-call="web.basic_layout">
+                <div class="page">
+                    <h3 style="font-weight:bold" class='text-center'>
+                        PT Unggulrejo Wasono
+                    </h3>
+                    <h3 style="font-weight:bold" class='text-center'>
+                        HISTORI  PEMBELIAN PERBARANG
+                    </h3>
+
+                        <!-- <div class="row">
+                            <div class="col-xs-4" style="font-weight:bold;font-size:17px">No Kp / MO </div>    
+                            <div class="col-xs-4"><span t-field="o.name"/></div>
+                            <div class="col-xs-2"  style="font-weight:bold;font-size:17px">Delivery</div>
+                            <div class="text-left"><span t-field="o.name.delivery_date"/></div>
+                        </div> -->
+                        <!-- <div class="row">
+                            <div class="col-xs-4" style="font-weight:bold;font-size:17px">Kebutuhan Bahan Baku Lusi </div>
+                            <div class="col-xs-6"><span t-field="o.keb_lusi"/> Ball</div> 
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4" style="font-weight:bold;font-size:17px">Kebutuhan Bahan Baku Pakan </div>
+                            <div class="col-xs-6"><span t-field="o.keb_pak"/> Ball</div> 
+                        </div> -->
+                    <h4>
+                        <td> Per Tanggl <span t-field="o.date_start"/> sampai <span t-field="o.date_end"/></td>
+                    </h4>
+                        <table class="table table-condensed table-striped">
+                            <tr>
+                                <th>No PO</th>
+                                <th>Produk</th>
+                                <th>Satuan</th>
+                                <th>Total Biaya</th>
+                                <!-- <th>Waktu PO</th> -->
+                                <!-- <th>Total Biaya</th> -->
+                                <!-- <th class="text-left">WarpWeft</th>
+                                <th class="text-center" groups="stock.group_stock_multi_locations">
+                                    <strong>Need Quantity</strong>
+                                </th>
+                                <th class="text-center" groups="stock.group_stock_multi_locations">
+                                    <strong>Bale Quantity</strong>
+                                </th> -->
+                            </tr>
+                            <tr t-foreach="o.report_ids" t-as="i">
+                                <!-- <td><span t-field="i.report_id"/></td> -->
+                                <td><span t-field="i.po_name"/></td>
+                                <td>
+                                    <span t-field="i.nama_produk"/>
+                                </td>
+                                <td><span t-field="i.uom"/></td>
+                                <td><span t-esc='i.tot_biaya'/></td>
+                                <!-- <td><span t-field="i.selisih_date"/></td> -->
+                                <!-- <td><span t-field="i.tot_biaya"/></td> -->
+                           
+                                <!-- <td class="text-center">
+                                    <span t-esc="'{0:.2f}'.format(i.product_qty * o.product_qty)"/> -->
+                                    <!-- <br/>
+                                    <span t-esc="'{0:,.2f}'.format((i.product_qty * o.product_qty)+((i.product_qty * o.product_qty)*o.product_id.product_tmpl_id.shrinkage/100))"/> -->
+                                <!-- </td> -->
+                                <!-- <td class="text-center">
+                                    <span t-esc="'{0:,.2f}'.format(i.product_qty * o.product_qty/181.44)"/> -->
+                                    <!-- <br/>
+                                    <span t-esc="'{0:,.2f}'.format(((i.product_qty * o.product_qty)+((i.product_qty * o.product_qty)*o.product_id.product_tmpl_id.shrinkage/100))/181.44)"/> -->
+                                <!-- </td> -->
+                            </tr>
+                        
+                            <!-- <tr> 
+                                <td></td>
+                                <td>
+                                    <span t-esc="sum(line.qty for line in o.report_ids)"/>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <span t-esc="sum(line.tot_biaya for line in o.report_ids)"/>
+                                </td>
+                            </tr> -->
+                        </table>
+                </div>
+            </t>
+        </template>
+    </data>
+</flectra>

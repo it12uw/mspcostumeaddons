@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <!-- inherit tree wotk order -->
+        <record id="view_marel_in_mrp_workorder_tree" model="ir.ui.view">
+            <field name="name">view_marel_in_mrp_workorder_tree</field>
+            <field name="model">mrp.workorder</field>
+            <field name="inherit_id" ref="mrp.mrp_production_workcenter_tree_view_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="/tree/field[@name='production_id']" position="after">
+                    <field name="no_so"/>
+                </xpath>
+                <xpath expr="/tree/field[@name='state']" position="after">
+                    <field name="total_yg_persen_selesai"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</flectra>

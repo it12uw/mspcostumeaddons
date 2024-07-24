@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="1">
+        <record model="ir.sequence" id="seq_msp_memo_qc_inline_no">
+            <field name="name">Nomenclature No msp_memo_qc_inline</field>
+            <field name="code">msp.memo.qc.inline.no</field>
+            <field name="prefix">QC/MEMO/%(year)s/</field>
+            <field name="padding">5</field>
+        </record>  
+        <record model="ir.sequence" id="seq_msp_memo_qc_inline_code">
+            <field name="name">Nomenclature untuk msp_memo_qc_inline APP Code</field>
+            <field name="code">msp.memo.qc.inline.app</field>
+            <field name="padding">4</field>
+        </record>
+    </data>
+</flectra>

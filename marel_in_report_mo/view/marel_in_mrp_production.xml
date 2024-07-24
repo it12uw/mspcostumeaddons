@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data>
+        <record id="marel_in_mrp_prod_kkp" model="ir.ui.view">
+            <field name="name">marel.in.mrp.prod.kkp</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='routing_id']" position="after">
+                    <field name="kkp_div"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</flectra>

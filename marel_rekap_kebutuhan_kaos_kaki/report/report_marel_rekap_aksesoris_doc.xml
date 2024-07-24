@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <template id="report_marel_rekap_aksesoris_doc">
+        <t t-call="web.internal_layout">
+            <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
+            <div class="page oe_purchase_font_title">
+                <div class="oe_structure"/>
+                <table align="center" >
+                    <tr>
+                        <td>PT MAREL SUKSES PRATAMA</td>
+                    </tr>
+                    <tr>
+                        <td>FORM KEBUTUHAN AKSESORIS KAOS KAKI</td>
+                    </tr>
+                </table>
+                <br/>
+                <br/>
+                <table class="table table-condensed">
+                    <tr>
+                        <td>Tgl Permintaan</td>
+                        <td>No MO</td>
+                        <td>Nama Artikel</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span t-field="o.tgl_pengajuan"/>
+                        </td>
+                        <td>
+                            <span t-field="o.mrp_production_id"/>
+                        </td>
+                        <td>
+                            <span t-field="o.mrp_production_id.product_tmpl_id.name" />
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-condensed">
+                    <tr>
+                        <td>No SO</td>
+                        <td>Tgl Kirim</td>
+                        <td>Qty</td>
+                        <td>Deskripsi</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span t-field="o.mrp_production_id.origin"/>
+                        </td>
+                        <td>
+                            <span t-field="o.mrp_production_id.procurement_group_id.sale_id.requested_date"/>
+                        </td>
+                        <td>
+                            <span t-field="o.mrp_production_id.product_qty"/>
+                        </td>
+                        <td>
+                            <span t-field="o.status_deskripsi"/>
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Nama Aksesoris</th>
+                            <th>Jumlah</th>
+                            <th>Cek Stock</th>
+                            <th>Beli</th>
+                            <th>PO</th>
+                            <th>Supplier</th>
+                        </tr>
+                    </thead>
+                    <tbody class="rekap_kebutuhan_kaos_kaki">
+                        <tr t-foreach="o.rekap_kebutuhan_aksesoris_line" t-as="l">
+                            <td class="text-left">
+                                <span t-field="l.product_template_id"/>
+                            </td>
+                            <td class="text-left">
+                                <span t-field="l.jumlah"/>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="oe_structure"/>
+                <table align="center" >
+                    <tr style="height:100px">
+                        <td class="text-center" width="280px">Mengajukan,</td>
+                        <td class="text-center" width="280px">Mengetahui,</td>
+                    </tr>
+                    <tr style="height:30px">
+                        <td class="text-center" width="280px">Admin Aksesoris</td>
+                        <td class="text-center" width="280px">Marketting</td>
+                        <td class="text-center" width="280px">PPIC</td>
+                        <td class="text-center" width="280px">General Manager</td>
+                        <td class="text-center" width="280px">Purchasing</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center" width="280px">Fauzi</td>
+                        <td class="text-center" width="280px">(......................)</td>
+                        <td class="text-center" width="280px">Ferry</td>
+                        <td class="text-center" width="280px">Aria Wahyu</td>
+                        <td class="text-center" width="280px">Budi</td>
+                    </tr>
+                </table>
+            </div>
+        </t>
+    </template>
+</flectra>

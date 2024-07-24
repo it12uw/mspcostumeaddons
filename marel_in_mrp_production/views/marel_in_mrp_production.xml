@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <record id="mrp_production_tree_view_custom" model="ir.ui.view">
+            <field name="name">mrp.production.tree1</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="/tree/field[@name='date_planned_start']" position="after">
+                    <field name="origin"/>
+                    <field name="type_kk"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</flectra>

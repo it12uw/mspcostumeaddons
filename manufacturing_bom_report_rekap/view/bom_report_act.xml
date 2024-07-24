@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <!-- create action untuk report -->
+    <report 
+        string="BoM Report Benang" 
+        id="action_report_bom_production_order" 
+        model="mrp.production" 
+        name="manufacturing_bom_report_rekap.report_mrpbomorder_new"
+        file="manufacturing_bom_report_rekap.bom_report_act" 
+        report_type="qweb-pdf"
+    />
+    <report 
+        string="BoM Report Aksesoris" 
+        id="action_report_bom_production_order_aksesoris" 
+        model="mrp.production" 
+        name="manufacturing_bom_report_rekap.report_bom_aksesoris"
+        file="manufacturing_bom_report_rekap.bom_report_act" 
+        report_type="qweb-pdf"
+    />
+    <report 
+        string="BON Report Aksesoris" 
+        id="action_report_bon_production_order_aksesoris" 
+        model="mrp.production" 
+        name="manufacturing_bom_report_rekap.report_bon_aksesoris_req"
+        file="manufacturing_bom_report_rekap.bom_report_act" 
+        report_type="qweb-pdf"
+    />
+
+    <report 
+        string="BoM Report Kain" 
+        id="action_report_bom_production_order_kain" 
+        model="mrp.production" 
+        name="manufacturing_bom_report_rekap.report_bom_kain"
+        file="manufacturing_bom_report_rekap.bom_report_act" 
+        report_type="qweb-pdf"
+    />
+
+    <!-- <report 
+        string="BoM Report Kain Request" 
+        id="action_report_bom_production_order_kain_request" 
+        model="mrp.production" 
+        name="manufacturing_bom_report_rekap.report_bom_kain_request"
+        file="manufacturing_bom_report_rekap.bom_report_act" 
+        report_type="qweb-pdf"
+    /> -->
+
+    <report 
+        string="Req BoM Report Benang" 
+        id="action_report_bom_production_order_req" 
+        model="mrp.production" 
+        name="manufacturing_bom_report_rekap.report_mrpbomorder_req"
+        file="manufacturing_bom_report_rekap.bom_report_act" 
+        report_type="qweb-pdf"
+    />
+
+    <report 
+        string="Req BoM Report Aksesoris" 
+        id="action_report_bom_production_order_aksesoris_req" 
+        model="mrp.production" 
+        name="manufacturing_bom_report_rekap.report_bom_aksesoris_req"
+        file="manufacturing_bom_report_rekap.bom_report_act" 
+        report_type="qweb-pdf"
+    />
+
+    <report 
+        string="Req BON Report Aksesoris" 
+        id="action_report_bon_production_order_aksesoris_req" 
+        model="mrp.production" 
+        name="manufacturing_bom_report_rekap.report_bon_aksesoris_req"
+        file="manufacturing_bom_report_rekap.bom_report_act" 
+        report_type="qweb-pdf"
+    />
+</flectra>

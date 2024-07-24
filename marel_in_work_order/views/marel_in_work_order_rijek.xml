@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <record id="view_marel_in_work_order_form_3" model="ir.ui.view">
+            <field name="name">marel_in_work_order_form_3</field>
+            <field name="model">mrp.workorder</field>
+            <field name="inherit_id" ref="mrp.mrp_production_workcenter_form_view_inherit"/>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+                <xpath expr="//page[2]" position="after">
+                    <page string="Isi Rijek">
+                        <field name="nama_operator_line" mode="tree">
+                            <tree string="Isi Rijek" editable="bottom">
+                                <field name="gread_d" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                                <field name="putus_benang" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                                <field name="bolong" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                                <field name="vanise" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                                <field name="singker" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                                <field name="kotor" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                                <field name="terry" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                                <field name="jumpstich" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                                <field name="renggang" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                                <field name="tidak_loading" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                                <field name="belang" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                                <field name="ukuran" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                                <field name="transfer" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                                <field name="pecah" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                                <field name="loncat" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                                <field name="gumpal" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                                <field name="kasar" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                                <field name="benang_gabung" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                                <field name="bintik_bintik" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                                <field name="lingtu" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                                <field name="jarum" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                                <field name="transfer_jebol" attrs="{'column_invisible':[('parent.status', 'not in', 'progress')]}"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</flectra>

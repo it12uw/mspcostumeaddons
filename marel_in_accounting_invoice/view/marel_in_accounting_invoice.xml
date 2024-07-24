@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data>
+        <record model="ir.ui.view" id="account_vendor_receive_date">
+            <field name="name">account.vendor.receivedate</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='date_due']" position="after">
+                        <field name="receive_date"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="account_vendor_receive_date_tree">
+            <field name="name">account.vendor.receivedate.tree</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_tree"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='date_due']" position="after">
+                        <field name="receive_date"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+
+    </data>
+</flectra>

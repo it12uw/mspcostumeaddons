@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+
+        <record id="sale_order_line_tree" model="ir.ui.view">
+            <field name="name">sale.order.line.tree</field>
+            <field name="model">sale.report</field>
+            <field name="arch" type="xml">
+                <tree string="Sale Order Lines" create="false" default_order="name desc">
+                    <field name="date" widget="date"/>
+                    <field name="name"/>
+                    <field name="product_id"/>
+                    <field name="product_uom_qty" sum="Total"/>
+                    <field name="product_uom"/>
+                    <field name="unit_price"/>
+                    <field name="unit_cost"/>
+                    <field name="discount"/>
+                    <field name="price_subtotal"/>
+                    <field name="price_total"/>
+                    <field name="partner_id"/>
+                    <field name="street"/>
+                    <field name="street2"/>
+                    <field name="city_id"/>
+                    <field name="mobile"/>
+                    <field name="phone"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_order_line_search" model="ir.ui.view">
+            <field name="name">sale.report.line.search</field>
+            <field name="model">sale.report</field>
+            <field name="arch" type="xml">
+                <search string="Sales Analysis">
+                    <field name="date"/>
+                    <filter string="Today" name="today" domain="[('date','&lt;=', datetime.datetime.combine(context_today(), datetime.time(23,59,59))), ('date','&gt;=', datetime.datetime.combine(context_today(), datetime.time(0,0,0)))]" help="Today or scheduled for today"/>
+                    <filter string="Current Month" name="current_month" domain="[('date','&lt;',(context_today()+relativedelta(months=1)).strftime('%Y-%m-01')), ('date','&gt;=',time.strftime('%Y-%m-01'))]"/>
+                    <filter string="Last Month" name="last_month" domain="[('date','&lt;=', (context_today()-relativedelta(day=31, months=1)).strftime('%Y-%m-%d')),('date','&gt;=',(context_today()-relativedelta(day=1,months=1)).strftime('%Y-%m-%d'))]" help="Last month"/>
+                    <filter string="Year" name="this_year"
+                                domain="[('date','&lt;=', time.strftime('%Y-%m-%d')),('date','&gt;=',time.strftime('%Y-01-01'))]"
+                                help="Current Year"/>
+                    
+                    <filter name="Quotations" string="Quotations" domain="[('state','in', ('draft', 'sent'))]"/>
+                    <filter name="Sales" string="Sales" domain="[('state','not in',('draft', 'cancel', 'sent'))]"/>
+                    <separator/>
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="product_id"/>
+                    <field name="user_id"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="sale_order_line_action" model="ir.actions.act_window">
+            <field name="name">Sale Order Lines</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.report</field>
+            <field name="domain">[]</field>
+            <field name="context">{'search_default_today':1}</field>
+            <field name="search_view_id" ref="view_order_line_search"/>
+            <field name="view_mode">tree,form,pivot</field>
+            <field name="view_id" ref="sale_order_line_tree"/>
+        </record>
+
+        <menuitem action="sale_order_line_action" id="sale_order_line_action_id"
+            parent="sale.menu_sale_report"
+            sequence="8"/>
+            
+</flectra>

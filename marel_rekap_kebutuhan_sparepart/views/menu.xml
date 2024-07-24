@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+
+        <record id="action_marel_pengambilan_sparepart_window" model="ir.actions.act_window">
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field eval="1" name="sequence"/> -->
+            <field name="name">marel pengambilan sparepart</field>
+            <field name="res_model">marel.pengambilan.sparepart</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+					Click Untuk Tambah pengambilan					
+                </p>
+            </field>
+        </record>
+
+        <!-- <record id="ms_marel_pengambilan_sparepart_action_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_marel_pengambilan_sparepart_tree"/>
+            <field name="act_window_id" ref="action_marel_pengambilan_sparepart_window"/>
+        </record>
+
+        <record id="ms_marel_pengambilan_sparepart_action_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_marel_pengambilan_sparepart_form"/>
+            <field name="act_window_id" ref="action_marel_pengambilan_sparepart_window"/>
+        </record> -->
+
+        <menuitem id="menu_marel_rekap_kebutuhan_sparepart" name="Pengambilan Sparepart" web_icon="marel_rekap_kebutuhan_sparepart,static/description/pengajuan.png" sequence="250"/>
+        <!-- data-->
+        <menuitem id="menu_link_data_action_marel_pengambilan_sparepart_window" name="Data Pengambilan" parent="menu_marel_rekap_kebutuhan_sparepart" action="action_marel_pengambilan_sparepart_window" sequence="121"/>
+    </data>
+</flectra>

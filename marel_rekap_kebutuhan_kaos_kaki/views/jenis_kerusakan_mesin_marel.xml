@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <record id="view_jenis_kerusakan_mesin_marel_tree" model="ir.ui.view">
+            <field name="name">jenis.kerusakan.mesinmarel.tree</field>
+            <field name="model">jenis.kerusakan.mesinmarel</field>
+            <field name="type">tree</field>
+            <!-- <field name="priority" eval="8"/> -->
+            <field name="arch" type="xml">
+                <tree string="Jenis Kerusakan Mesin">
+                    <field name="jenis_kerusakan"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_jenis_kerusakan_mesin_marel_form" model="ir.ui.view">
+            <field name="name">jenis.kerusakan.mesinmarel.form</field>
+            <field name="model">jenis.kerusakan.mesinmarel</field>
+            <field name="type">form</field>
+            <!-- <field name="priority" eval="8"/> -->
+            <field name="arch" type="xml">
+                <form string="Jenis Kerusakan Mesin">
+                    <sheet>
+                        <group>
+                            <field name="jenis_kerusakan"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</flectra>

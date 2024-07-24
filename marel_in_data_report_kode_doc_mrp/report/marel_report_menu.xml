@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+	<data noupdate="0">
+		<report string="Print Transaksi Penerimaan" id="marel_report_menu_penerimaan_po" model="stock.picking" report_type="qweb-pdf" name="marel_in_stock_picking.marel_report_menu_penerimaan_po_report" file="marel_in_stock_picking.marel_report_menu_penerimaan_po_report" print_report_name="'Print Transaksi Penerimaan - %s - %s' % (object.partner_id.name or '', object.name)" />
+		
+        <report 
+        string="Print SPB" 
+        id="marel_report_menu_spb" 
+        model="stock.picking" 
+        report_type="qweb-pdf" 
+        name="marel_in_stock_picking.report_marel_report_pengantar_barang" 
+        file="marel_in_stock_picking.report_marel_report_pengantar_barang" 
+        print_report_name="'Print SPB - %s - %s' % (object.partner_id.name or '', object.name)" />
+	</data>
+</flectra>

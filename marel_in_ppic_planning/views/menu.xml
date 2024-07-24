@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <record id="action_marel_in_ppic_planning_window" model="ir.actions.act_window">
+            <field name="type">ir.actions.act_window</field>
+            <field name="name">marel in ppic planning</field>
+            <field name="res_model">marel.in.ppic.planning</field>
+            <field name="view_mode">tree,form,gantt</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+					Click to add Data Planing Produksi
+				</p>
+            </field>
+        </record>
+
+        <menuitem id="menu_marel_in_ppic_planning_1"
+			name="Data Planing"
+            web_icon="marel_in_ppic_planning,static/description/planning.png"
+			sequence="200"/>
+        <!-- data mesin-->
+        <menuitem id="menu_marel_in_ppic_planning_2"
+			name="Data Planing"
+			parent="menu_marel_in_ppic_planning_1"
+			sequence="50"/>
+        <menuitem id="menu_link_marel_in_ppic_planning"
+			name="Data Planing Produksi"
+			parent="menu_marel_in_ppic_planning_2"
+			action="action_marel_in_ppic_planning_window"
+			sequence="60"/>
+
+    </data>
+</flectra>

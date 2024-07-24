@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data>
+
+        <record id="invoice_duelate_customer_tree" model="ir.ui.view">
+            <field name="name">account.invoice.duelate.customer.tree</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='residual_signed']" position="after">
+                    <field name="days"/>
+                    <field name="pay_date"/>
+                    <field name="due_late" avg='Rerata'/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="invoice_duelate_vendor_tree" model="ir.ui.view">
+            <field name="name">account.invoice.duelate.vendor.tree</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='residual_signed']" position="after">
+                    <field name="days"/>
+                    <field name="pay_date"/>
+                    <field name="due_late" avg='Rerata'/> 
+                </xpath>
+            </field>
+        </record>
+
+        <record id="invoice_duelate_customer_form" model="ir.ui.view">
+            <field name="name">account.invoice.duelate.customer.from</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='payment_term_id']" position="after">
+                    <field name="real_term"/>
+                    <field name="date_due2"/>
+                </xpath>
+                <xpath expr="//label[@for='currency_id']" position="before">
+                    <field name="date_doc"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="invoice_duelate_vendor_form" model="ir.ui.view">
+            <field name="name">account.invoice.duelate.vendor.from</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='payment_term_id']" position="after">
+                    <field name="real_term"/>
+                    <field name="date_due2"/>
+                </xpath>
+                <xpath expr="//field[@name='currency_id']" position="before">
+                    <field name="date_doc"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</flectra>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data>
+        <record id="view_mrp_production_searchg_custom_qc_mrp" model="ir.ui.view">
+            <field name="name">mrp_production_search1</field>
+            <field name="model">mrp.production</field>
+            <field name="arch" type="xml">
+                <search string="Search Work Orders">
+                    <filter string="In Progress" name="progress" domain="[('state','=','progress')]"/>
+                    <filter string="Confirmed" name="confirmed" domain="[('state','=','confirmed')]"/>
+                    <filter string="Planned" name="planned" domain="[('state','=','planned')]"/>
+                    <filter string="Done" name="done" domain="[('state','=','done')]"/>
+                    <!-- <filter string="Available" name="available" domain="[('production_availability','=', 'assigned')]"/> -->
+                    <separator/>
+                    <field name="name"/>
+                    <field name="product_id"/>
+                    <!-- <field name="product_tmpl_id"/> -->
+                    <field name="origin"/>
+                    <field name="company_id"/>
+                    <separator/>
+                    <group expand="0" string="Group By">
+                        <!-- <filter string="Work Center" name="work_center" domain="[]" context="{'group_by':'workcenter_id'}"/>
+                        <filter string="Production" name="production" domain="[]" context="{'group_by':'production_id'}"/> -->
+                        <filter string="Status" name="status" domain="[]" context="{'group_by':'state'}"/>
+                        <!-- <filter string="Scheduled Month" name="scheduled_month" domain="[]" context="{'group_by':'date_planned_start'}" help="Scheduled Date by Month"/> -->
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="mrp_production_tree4" model="ir.ui.view">
+            <field name="name">mrp.production.tree.custom1</field>
+            <field name="model">mrp.production</field>
+            <field name="arch" type="xml">
+                <tree string="Mrp QC" create="false" default_order="date_planned_start desc">
+                    <!-- <field name="date_planned_start"/> -->
+                    <field name="name"/>
+                    <field name="product_id"/>
+                    <field name="product_qty" sum="Total Qty" string="Quantity"/>
+                    <field name="product_uom_id" string="Unit of Measure" options="{'no_open':True,'no_create':True}"/>
+                    <!-- <field name="sale_id"/> -->
+                    <!-- <field name="routing_id" groups="mrp.group_mrp_routings"/> -->
+                    <field name="origin"/>
+                    <field name="state"/>
+                    <field name="mrp_total_putus_benang"/>
+                    <field name="mrp_total_bolong"/>
+                    <field name="mrp_total_vanise"/>
+                    <field name="mrp_total_singker"/>
+                    <field name="mrp_total_kotor"/>
+                    <field name="mrp_total_terry"/>
+                    <field name="mrp_total_jumpstich"/>
+                    <field name="mrp_total_renggang"/>
+                    <field name="mrp_total_tidak_loading"/>
+                    <field name="mrp_total_belang"/>
+                    <field name="mrp_total_ukuran"/>
+                    <field name="mrp_total_lingtu"/>
+                    <field name="mrp_total_pecah"/>
+                    <field name="mrp_total_loncat"/>
+                    <field name="mrp_total_transfer"/>
+                    <field name="mrp_total_gumpal"/>
+                    <field name="mrp_total_kasar"/>
+                    <field name="mrp_total_benang_gabung"/>
+                    <field name="mrp_total_bintik_bintik"/>
+                    <field name="mrp_total_jarum"/>
+                    <field name="mrp_total_transfer_jebol"/>
+                    <field name="workorder_ids"/>
+                    <!-- <tree>
+                            <field name="total_persen_selesai" />
+                        </tree>
+                    </field> -->
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="action_mrp_production_tree_planned_all" model="ir.actions.act_window">
+            <field name="name">Data QC MRP Planned</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mrp.production</field>
+            <!-- <field name="search_view_id" ref="view_mrp_production_searchg_custom_qc_mrp"/> -->
+            <!-- <field name="domain">[('state', 'in', confirmed)]</field> -->
+            <field name="context">{'search_default_planned': True}</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,search</field>
+            <field name="view_id" ref="mrp_production_tree4"/>
+            <!-- <field name="domain">[('inventory_id', '=', active_id)]</field> -->
+        </record>
+
+        <record id="action_mrp_production_tree_progress_all" model="ir.actions.act_window">
+            <field name="name">Data QC MRP Progress</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mrp.production</field>
+            <!-- <field name="search_view_id" ref="view_mrp_production_searchg_custom_qc_mrp"/> -->
+            <!-- <field name="domain">[('state', 'in', confirmed)]</field> -->
+            <!-- <field name="context">{'search_default_progress': 1}</field> -->
+            <field name="context">{'search_default_progress': True}</field>
+            <field name="search_view_id" ref="view_mrp_production_searchg_custom_qc_mrp"/>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,search</field>
+            <field name="view_id" ref="mrp_production_tree4"/>
+            <!-- <field name="domain">[('inventory_id', '=', active_id)]</field> -->
+        </record>
+
+        <record id="action_mrp_production_tree_confirmed_all" model="ir.actions.act_window">
+            <field name="name">Data QC MRP Confirmed</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mrp.production</field>
+            <!-- <field name="search_view_id" ref="view_mrp_production_searchg_custom_qc_mrp"/> -->
+            <!-- <field name="domain">[('state', 'in', confirmed)]</field> -->
+            <!-- <field name="context">{'search_default_confirmed': True}</field> -->
+            <field name="context">{'search_default_confirmed': True}</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,search</field>
+            <field name="view_id" ref="mrp_production_tree4"/>
+            <!-- <field name="domain">[('inventory_id', '=', active_id)]</field> -->
+        </record>
+        <record id="action_mrp_production_tree_done_all" model="ir.actions.act_window">
+            <field name="name">Data QC MRP Done</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mrp.production</field>
+            <!-- <field name="search_view_id" ref="view_mrp_production_searchg_custom_qc_mrp"/> -->
+            <!-- <field name="domain">[('state', 'in', confirmed)]</field> -->
+            <!-- <field name="context">{'search_default_confirmed': True}</field> -->
+            <field name="context">{'search_default_done': True}</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,search</field>
+            <field name="view_id" ref="mrp_production_tree4"/>
+            <!-- <field name="domain">[('inventory_id', '=', active_id)]</field> -->
+        </record>
+
+        <!-- <record id="mrp_production_action" model="ir.actions.act_window">
+        <field name="name">Stock Move Lines</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mrp.production</field>
+        <field name="domain">[]</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="mrp_production_tree4"/>
+    </record> -->
+        <!-- <menuitem id="all_action_mrp_production_tree" parent="menu_stock_warehouse_mgmt" sequence="30" action="action_mrp_production_tree_all" /> -->
+
+        <menuitem action="action_mrp_production_tree_planned_all"
+        id="all_action_mrp_production_tree_planned"
+        parent="mrp.menu_mrp_manufacturing"
+        sequence="30"/>
+        
+        <menuitem action="action_mrp_production_tree_progress_all" id="all_action_mrp_production_tree_progress" parent="mrp.menu_mrp_manufacturing" sequence="30"/>
+        <menuitem action="action_mrp_production_tree_confirmed_all" id="all_action_mrp_production_tree_confirmed" parent="mrp.menu_mrp_manufacturing" sequence="30"/>
+        <menuitem action="action_mrp_production_tree_done_all" id="all_action_mrp_production_tree_done" parent="mrp.menu_mrp_manufacturing" sequence="30"/>
+
+
+        <!-- <record id="action_mrp_production_action" model="ir.actions.act_window">
+            <field name="name">mrp.production.tree.custom</field>
+            <field name="res_model">mrp.production</field>
+            <field name="view_mode">tree</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+					Click to add Income
+				</p>
+            </field>
+        </record>
+
+        <menuitem id="menu_mrp_production_action" name="Income SO" action="action_mrp_production_action" parent="stock.menu_stock_warehouse_mgmt" sequence="35"/> -->
+
+        <!-- 6 jani 2020 menu QC di tree view workorder -->
+      
+    </data>
+</flectra>

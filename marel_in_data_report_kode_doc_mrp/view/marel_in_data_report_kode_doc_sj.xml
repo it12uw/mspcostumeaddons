@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data>
+        <!--        ============================ inmarel.kode.dokumen.sj.mrp============================ -->
+        <record id="view_marel_in_data_resjrt_kode_doc_sj_form" model="ir.ui.view">
+            <field name="name">inmarel.kode.dokumen.sj.form</field>
+            <field name="model">inmarel.kode.dokumen.sj</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="in_marel_kode_dokumen_form">
+                    <sheet>
+                        <group>
+                            <field name="kode_dokumen_bagian_sj"/>
+                            <field name="kode_dokumen_sj"/>
+                            <field name="halaman_sj"/>
+                            <field name="no_revisi_sj"/>
+                            <field name="tgl_revisi_sj"/>
+                            <field name="tgl_efektif_sj"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- tree ================================ -->
+        <record id="view_marel_in_data_resjrt_kode_doc_sj_tree" model="ir.ui.view">
+            <field name="name">inmarel.kode.dokumen.sj.tree</field>
+            <field name="model">inmarel.kode.dokumen.sj</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Kode Dokumen">
+                    <field name="kode_dokumen_bagian_sj"/>
+                    <field name="kode_dokumen_sj"/>
+                    <field name="halaman_sj"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</flectra>

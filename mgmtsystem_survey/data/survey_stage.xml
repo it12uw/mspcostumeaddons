@@ -1,0 +1,6 @@
+<flectra>
+        <!-- Survey Type -->
+        <record model="survey.stage" id="mgmtsystem_survey_type">
+            <field name="name">Management System</field>
+        </record>
+</flectra>

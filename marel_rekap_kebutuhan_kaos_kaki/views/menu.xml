@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <record id="action_rekap_kebutuhan_aksesoris_window" model="ir.actions.act_window">
+            <field name="type">ir.actions.act_window</field>
+            <field name="name">rekap kebutuhan aksesoris</field>
+            <field name="res_model">rekap.kebutuhan.aksesoris</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+					Click to add Data Rekap Aksesoris
+				</p>
+            </field>
+        </record>
+        <!-- <record id="action_rekap_kebutuhan_aksesoris_window" model="ir.actions.act_window">
+            <field name="type">ir.actions.act_window</field>
+            <field name="name">rekap kebutuhan aksesoris</field>
+            <field name="res_model">rekap.kebutuhan.aksesoris</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+					Click to add Data Rekap Kebutuhan Aksesoris
+				</p>
+            </field>
+        </record> -->
+        <menuitem id="menu_marel_rekap_aksesoris"
+			name="Rekap Aksesoris"
+            web_icon="marel_rekap_kebutuhan_kaos_kaki,static/description/aksesoris.png"
+			sequence="250"/>
+        <!-- data-->
+        <menuitem id="menu_rekap_aksesoris"
+			name="Data Aksesoris"
+			parent="menu_marel_rekap_aksesoris"
+			sequence="101"/>
+        <menuitem id="menu_link_data_rekap_kebutuhan_aksesoris"
+			name="Data Rekap Kebutuhan"
+			parent="menu_rekap_aksesoris"
+			action="action_rekap_kebutuhan_aksesoris_window"
+			sequence="110"/>
+        <!-- <menuitem id="menu_link_data_rekap_kebutuhan_aksesoris"
+			name="Data Kebutuhan Aksesoris"
+			parent="menu_rekap_aksesoris"
+			action="action_rekap_kebutuhan_aksesoris_window"
+			sequence="120"/> -->
+    </data>
+</flectra>

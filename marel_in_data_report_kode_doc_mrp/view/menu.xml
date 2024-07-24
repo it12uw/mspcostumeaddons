@@ -1,0 +1,91 @@
+<flectra>
+    <data>
+        <record id="action_marel_in_data_report_kode_doc_mrp_list" model="ir.actions.act_window">
+            <field name="name">Kode Dokumen</field>
+            <field name="res_model">inmarel.kode.dokumen.mrp</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+					Click to add Documents
+				</p>
+            </field>
+        </record>
+        <record id="action_marel_in_data_report_kode_doc_po_list" model="ir.actions.act_window">
+            <field name="name">Kode Dokumen</field>
+            <field name="res_model">inmarel.kode.dokumen.po</field>
+            <field name="view_mode">tree,form,group</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+					Click to add Documents
+				</p>
+            </field>
+        </record>
+        <record id="action_marel_in_data_report_kode_doc_sj_list" model="ir.actions.act_window">
+            <field name="name">Kode Dokumen</field>
+            <field name="res_model">inmarel.kode.dokumen.sj</field>
+            <field name="view_mode">tree,form,group</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+					Click to add Documents
+				</p>
+            </field>
+        </record>
+        <record id="action_marel_in_data_report_kode_doc_invoice_list" model="ir.actions.act_window">
+            <field name="name">Kode Dokumen</field>
+            <field name="res_model">inmarel.kode.dokumen.invoice</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+					Click to add Documents
+				</p>
+            </field>
+        </record>
+        <menuitem id="marel_in_data_report_kode_doc_mrp_0"
+			name="Kode Dokumen"
+			sequence="120"/>
+        <!-- mrp -->
+        <menuitem id="marel_in_data_report_kode_doc_mrp_01"
+			name="Kode Dokumen Mrp"
+			parent="marel_in_data_report_kode_doc_mrp_0"
+			sequence="120"/>
+        <!-- sub menu -->
+        <menuitem id="marel_in_data_report_kode_doc_mrp_011"
+			name="Data Kode Dokumen"
+			parent="marel_in_data_report_kode_doc_mrp_01"
+			action="action_marel_in_data_report_kode_doc_mrp_list"
+			sequence="120"/>
+        <!-- po -->
+        <menuitem id="marel_in_data_report_kode_doc_po_02"
+			name="Kode Dokumen PO"
+			parent="marel_in_data_report_kode_doc_mrp_0"
+			sequence="120"/>
+        <!-- sub menu -->
+        <menuitem id="marel_in_data_report_kode_doc_mrp_021"
+			name="Data Kode Dokumen"
+			parent="marel_in_data_report_kode_doc_po_02"
+			action="action_marel_in_data_report_kode_doc_po_list"
+			sequence="120"/>
+        <!-- sj -->
+        <menuitem id="marel_in_data_report_kode_doc_sj_03"
+			name="Kode Dokumen SJ"
+			parent="marel_in_data_report_kode_doc_mrp_0"
+			sequence="120"/>
+        <!-- sub menu -->
+        <menuitem id="marel_in_data_report_kode_doc_mrp_031"
+			name="Data Kode Dokumen"
+			parent="marel_in_data_report_kode_doc_sj_03"
+			action="action_marel_in_data_report_kode_doc_sj_list"
+			sequence="120"/>
+        <!-- invoice -->
+        <menuitem id="marel_in_data_report_kode_doc_invoice_04"
+			name="Kode Dokumen Invoice"
+			parent="marel_in_data_report_kode_doc_mrp_0"
+			sequence="120"/>
+        <!-- sub menu -->
+        <menuitem id="marel_in_data_report_kode_doc_invoice_041"
+			name="Data Kode Dokumen"
+			parent="marel_in_data_report_kode_doc_invoice_04"
+			action="action_marel_in_data_report_kode_doc_invoice_list"
+			sequence="120"/>
+    </data>
+</flectra>

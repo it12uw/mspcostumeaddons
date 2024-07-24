@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <record id="view_operator_marelinsamlpe_dev3_list_2_form" model="ir.ui.view">
+            <field name="name">operator.marelinsamlpe.dev2.list2.form</field>
+            <field name="model">operator.marelinsamlpe.dev2.list</field>
+            <field name="inherit_id" ref="marel_in_samlpe_dev_2.view_operator_marelinsamlpe_dev2_list_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='tgl_buat']" position="after">
+                    <field name="tgl_buat_operator"/>
+                </xpath>
+                <xpath expr="//field[@name='feed_4b']" position="after">
+                    <field name="feed_4c"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</flectra>

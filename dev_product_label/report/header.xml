@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <template id="dev_ext_black_layout">
+        <div class="header">
+            
+        </div>
+
+        <div class="article o_report_layout_standard">
+            <t t-raw="0" />
+        </div>
+
+        <div class="footer">
+            
+        </div>
+    </template>
+    
+</flectra>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data>
+        <record id="view_marel_in_res_user_form" model="ir.ui.view">
+            <field name="name">marel_in_res_user_form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='vat']" position="after">
+                    <field name="attn"/>
+                    <field name="nik"/>
+                    <field name="no_fak"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</flectra>

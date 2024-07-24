@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data>
+        <record id="msp_in_stock_picking" model="ir.ui.view">
+            <field name="name">stock.picking.form</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='location_dest_id']" position="before">
+                    <field name="purchase_id2"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="msp_in_stock_picking_purchase" model="ir.ui.view">
+            <field name="name">purchase.order.form</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="No Packing">
+                        <field name="picking_ids2"/>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+    </data>
+</flectra>

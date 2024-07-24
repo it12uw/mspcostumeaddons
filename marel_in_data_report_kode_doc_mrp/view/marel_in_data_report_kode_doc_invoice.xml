@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data>
+        <!--        ============================ inmarel.kode.dokumen.invoice============================ -->
+        <record id="view_marel_in_data_report_kode_doc_invoice_form" model="ir.ui.view">
+            <field name="name">inmarel.kode.dokumen.invoice.form</field>
+            <field name="model">inmarel.kode.dokumen.invoice</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="in_marel_kode_dokumen_form">
+                    <sheet>
+                        <group>
+                            <field name="kode_dokumen_bagian_invoice"/>
+                            <field name="kode_dokumen_invoice"/>
+                            <field name="halaman_invoice"/>
+                            <field name="no_revisi_invoice"/>
+                            <field name="tgl_revisi_invoice"/>
+                            <field name="tgl_efektif_invoice"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- tree ================================ -->
+        <record id="view_marel_in_data_report_kode_doc_invoice_tree" model="ir.ui.view">
+            <field name="name">inmarel.kode.dokumen.invoice.tree</field>
+            <field name="model">inmarel.kode.dokumen.invoice</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Kode Dokumen">
+                    <field name="kode_dokumen_bagian_invoice"/>
+                    <field name="kode_dokumen_invoice"/>
+                    <field name="halaman_invoice"/>
+                    <field name="no_revisi_invoice"/>
+                    <field name="tgl_revisi_invoice"/>
+                    <field name="tgl_efektif_invoice"/>
+                </tree>
+            </field>
+        </record>
+        <!-- coba ========================================================= -->
+        <record id="view_marel_in_data_report_kode_doc_invoice_view_form" model="ir.ui.view">
+            <field name="name">view_marel_in_data_report_kode_doc_invoice_view_form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="before">
+                    <field name="kode_dokumen_bagian_invoice_id" options="{'no_open': True, 'no_create': True}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</flectra>

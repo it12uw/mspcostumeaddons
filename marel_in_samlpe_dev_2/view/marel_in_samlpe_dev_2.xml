@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <!-- data sample gramasi -->
+        <record id="view_marel_in_samlpe_dev_2_tree" model="ir.ui.view">
+            <field name="name">marelin.samlpe.dev2.tree</field>
+            <field name="model">marelin.samlpe.dev2</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Data Gramasi Sample" default_order="name desc">
+                    <field name="name"/>
+                    <field name="user_id"/>
+                    <field name="tgl_masuk"/>
+                    <field name="tgl_selesai"/>
+                    <field name="product_id"/>
+                    <!-- <field name="ukuran_relaxed"/> -->
+                    <!-- <field name="steam"/> -->
+                    <!-- <field name="needle"/> -->
+                    <field name="warna"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_marel_in_samlpe_dev_2_form" model="ir.ui.view">
+            <field name="name">marelin.samlpe.dev2.form</field>
+            <field name="model">marelin.samlpe.dev2</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Data Gramasi">
+                    <header>
+                        <button name="action_run" type="object" string="Run" class="btn-success"/>
+                        <button name="action_set_draft" type="object" string="Set To Draft" class="btn-info"/>
+                        <button name="action_cancel" string="Cancel" type="object" class="btn-danger"/>
+                        <field name="state" 
+                        widget="statusbar" 
+                        statusbar_visible="draft,open,done,cancel"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <label form="name" class="oe_edit_only" string="Produk Sample"/>
+                            <group>
+                                <field name="kode_dokumen"/>
+                                <field name="brand"/>
+                                <field name="model_sample"/>
+                                <field name="artikel"/>
+                                <field name="tipe"/>
+                                <field name="delivery"/>
+                                <field name="no_mesin"/>
+                                <field name="warna"/>
+                            </group>
+                            <group>
+                                <field name="tgl_masuk"/>
+                                <field name="tgl_selesai"/>
+                                <field name="product_id"/>
+                                <field name="size"/>
+                                <field name="waktu"/>
+                                <field name="waktu_anti_slip"/>
+                                <field name="keterangan_anti_slip"/>
+                                <field name="keterangan"/>
+                            </group>
+                            <group>
+                                <field name="style"/>
+                                <!-- <field name="artikel"/> -->
+                                <field name="body"/>
+                                <field name="wording_munich"/>
+                                <field name="logo"/>
+                                <field name="hell"/>
+                                <field name="toe"/>
+                                <field name="transfer"/>
+                                <field name="lintoe"/>
+                                <field name="penjerat"/>
+                                <field name="penjerat_2"/>
+                                <field name="karet"/>
+                                <field name="patter_1"/>
+                                <field name="patter_2"/>
+                                <field name="patter_3"/>
+                                <field name="patter_4"/>
+                                <field name="patter_5"/>
+                                <field name="patter_6"/>
+                                <field name="patter_7"/>
+                                <field name="patter_8"/>
+                                <field name="patter_9"/>
+                                <field name="patter_10"/>
+                                <field name="jumlah_pasang"/>
+                                <field name="total_bruto"/>
+                            </group>
+                            <group>
+                                <!-- <group name="main_grp_1" colspan="2">
+                                    <group name="main_grp_col_1">
+                                        <field name="gum_relaxed_x"/>
+                                        <field name="gum_relaxed_y"/>
+                                    </group>
+                                    <group name="main_grp_col1">
+                                        <field name="leg_gum_relaxed_x"/>
+                                        <field name="leg_gum_relaxed_y"/>
+                                    </group>
+                                    <group name="main_grp_col1">
+                                    </group>
+                                </group>
+                                <group name="main_grp_2" colspan="2">
+                                    <group name="main_grp_col_2">
+                                        <field name="leg_relaxed_x"/>
+                                        <field name="leg_relaxed_y"/>
+                                    </group>
+                                    <group name="main_grp_col2">
+                                        <field name="foot_relaxed_x"/>
+                                        <field name="foot_relaxed_y"/>
+                                    </group>
+                                    <group name="main_grp_col1">
+                                    </group>
+                                </group>
+                                <group name="main_grp_3" colspan="2">
+                                    <group name="main_grp_col_3">
+                                        <field name="foot_gum_relaxed_x"/>
+                                        <field name="foot_gum_relaxed_y"/>
+                                    </group>
+                                    <group name="main_grp_col3">
+                                        <field name="hell_relaxed_x"/>
+                                        <field name="hell_relaxed_y"/>
+                                    </group>
+                                    <group name="main_grp_col1">
+                                    </group>
+                                </group>
+                                <group name="main_grp_4" colspan="2">
+                                    <group name="main_grp_col_3">
+                                        <field name="leg_gum_atas_relaxed_x"/>
+                                        <field name="leg_gum_atas_relaxed_y"/>
+                                    </group>
+                                    <group name="main_grp_col3">
+                                        <field name="leg_gum_bawah_relaxed_x"/>
+                                        <field name="leg_gum_bawah_relaxed_y"/>
+                                    </group>
+                                    <group name="main_grp_col3">
+                                        <field name="leg_gum_tengah_relaxed_x"/>
+                                        <field name="leg_gum_tengah_relaxed_y"/>
+                                    </group>
+                                </group>
+                                <group name="main_grp_5" colspan="2">
+                                    <group name="main_grp_col_3">
+                                        <field name="gum_atas_relaxed_x"/>
+                                        <field name="gum_atas_relaxed_y"/>
+                                    </group>
+                                    <group name="main_grp_col3">
+                                        <field name="gum_bawah_relaxed_x"/>
+                                        <field name="gum_bawah_relaxed_y"/>
+                                    </group>
+                                    <group name="main_grp_col1">
+                                    </group>
+                                </group> -->
+                                <group name="main_grp_1" colspan="2">
+                                        <group>
+                                            <field name="gum_relaxed_x"/>
+                                            <field name="gum_relaxed_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="leg_gum_relaxed_x"/>
+                                            <field name="leg_gum_relaxed_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="leg_relaxed_x"/>
+                                            <field name="leg_relaxed_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="foot_relaxed_x"/>
+                                            <field name="foot_relaxed_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="foot_gum_relaxed_x"/>
+                                            <field name="foot_gum_relaxed_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="hell_relaxed_x"/>
+                                            <field name="hell_relaxed_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="leg_gum_atas_relaxed_x"/>
+                                            <field name="leg_gum_atas_relaxed_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="leg_gum_bawah_relaxed_x"/>
+                                            <field name="leg_gum_bawah_relaxed_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="leg_gum_tengah_relaxed_x"/>
+                                            <field name="leg_gum_tengah_relaxed_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="gum_atas_relaxed_x"/>
+                                            <field name="gum_atas_relaxed_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="gum_bawah_relaxed_x"/>
+                                            <field name="gum_bawah_relaxed_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="gum_relaxed_out_x"/>
+                                            <field name="gum_relaxed_out_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="leg_gum_relaxed_out_x"/>
+                                            <field name="leg_gum_relaxed_out_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="leg_relaxed_out_x"/>
+                                            <field name="leg_relaxed_out_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="foot_relaxed_out_x"/>
+                                            <field name="foot_relaxed_out_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="foot_gum_relaxed_out_x"/>
+                                            <field name="foot_gum_relaxed_out_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="hell_relaxed_out_x"/>
+                                            <field name="hell_relaxed_out_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="leg_gum_atas_relaxed_out_x"/>
+                                            <field name="leg_gum_atas_relaxed_out_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="leg_gum_bawah_relaxed_out_x"/>
+                                            <field name="leg_gum_bawah_relaxed_out_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="leg_gum_tengah_relaxed_out_x"/>
+                                            <field name="leg_gum_tengah_relaxed_out_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="gum_atas_relaxed_out_x"/>
+                                            <field name="gum_atas_relaxed_out_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="gum_bawah_relaxed_out_x"/>
+                                            <field name="gum_bawah_relaxed_out_y"/>
+                                        </group>
+                                </group>
+                            </group>
+                            <group>
+                                <field name='gambar_sample' widget="image" class="oe_avatar" />
+                                <field name="nama_sample"/>
+                                <field name="needle"/>
+                                <field name="tgl_bon"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <!-- <page string="Benang Sample">
+                                <field name="marel_in_samlpe_dev_list_line">
+                                    <tree string="Benang Sample" editable="bottom">
+                                        <field name="product_id" options="{'no_open': True, 'no_create': True}"/>
+                                        <field name="jumlah_ambil"/>
+                                        <field name="qty_bom_reguler" readonly="1"/>
+                                        <field name="qty_bom_soccer" readonly="1"/>
+                                        <field name="qty_benang_kg" readonly="1"/>
+                                        <field name="qty_benang_gr"/>
+
+                                        <field name="awal"/>
+                                        <field name="akhir"/>
+                                        <field name="terpakai"/>
+
+                                        <button name="get_hitung_qty_bom_line" type="object" string="Gramasi"/>
+                                    </tree>
+                                </field>
+                            </page> -->
+                            <page string="Benang Sample (BOM)">
+                                <field name="bom_line_list">
+                                    <tree string="Components" editable="bottom">
+                                        <field name="sequence" widget="handle" readonly="1"/>
+                                        <field name="product_id" readonly="1"/>
+                                        <!-- <field name="has_attachments" invisible="1" readonly="1"/> -->
+                                        <!-- <button name="action_see_attachments" type="object" icon="fa-files-o" attrs="{'invisible': [('has_attachments', '=', False)]}"/> -->
+                                        <!-- <button name="action_see_attachments" type="object" icon="fa-file" attrs="{'invisible': [('has_attachments', '=', True)]}"/> -->
+                                        <field name="product_qty" readonly="1"/>
+                                        <field name="product_uom_id" readonly="1"/>
+                                        <!-- <field name="attribute_value_ids" readonly="1"/> -->
+                                        <field name="operation_id" readonly="1"/>
+                                        <field name="jumlah_ambil" />
+                                        <field name="qty_bom_reguler" readonly="1"/>
+                                        <field name="qty_bom_soccer" readonly="1"/>
+                                        <field name="qty_benang_kg" readonly="1"/>
+                                        <field name="qty_benang_gr" readonly="1" force_save="1"/>
+                                        <field name="awal"/>
+                                        <field name="akhir" />
+                                        <field name="terpakai" />
+
+                                        <!-- <button name="get_hitung_qty_mrp_bom_line" type="object" string="Gramasi"/> -->
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Aksesoris Sample">
+                                <field name="marelin_aksesotis_samlpedev2_list">
+                                    <tree string="Aksesoris Sample" editable="bottom">
+                                        <field name="product_id" options="{'no_open': True, 'no_create': True}"/>
+                                        <field name="jumlah_ambil"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Operator mengsis Sample">
+                                <field name="operator_marelinsamlpedev2_list">
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</flectra>

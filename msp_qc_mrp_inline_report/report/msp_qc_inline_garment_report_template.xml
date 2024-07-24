@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+	<template id="msp_qc_inline_garment_report">
+		<t t-call="web.external_layout">
+			<t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})" />
+			<div class="page oe_purchase_font_title">
+				<div class="oe_structure"/>
+				<table>
+					<tr>
+						<th class="text-center">
+							<span>
+								<h3>
+										Data Inline Garment
+								</h3>
+							</span>
+						</th>
+					</tr>
+					<tr>
+						<td>
+							<strong>
+								<span t-field="o.name_workorder_id" />
+							</strong>
+						</td>
+					</tr>
+				</table>
+				<br/>
+				<table class="table table-condensed">
+					<tr>
+						<th width="400px">
+                            Document ID
+						</th>
+						<th>:</th>
+						<th>MSP/F/P/QC/04.01</th>
+					</tr>
+					<tr>
+						<th width="400px">
+                            Page
+						</th>
+						<th>:</th>
+						<th>1 Dari 1</th>
+					</tr>
+					<tr>
+						<th width="400px">
+                            Revision
+						</th>
+						<th>:</th>
+						<th>-</th>
+					</tr>
+					<tr>
+						<th width="400px">
+                            Revision No
+						</th>
+						<th>:</th>
+						<th>-</th>
+					</tr>
+					<tr>
+						<th width="400px">
+                            Effective Date
+						</th>
+						<th>:</th>
+						<th>02 Febuari 2019</th>
+					</tr>
+				</table>
+				<table class="table table-condensed">
+					<tr>
+						<th width="466px">Report No</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.name" />
+						</td>
+					</tr>
+					<tr>
+						<th width="466px">Inspection Date</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.inspection_date" />
+						</td>
+					</tr>
+					<tr>
+						<th width="466px">Delivery Date</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.mrp_productioin_id.sale_id" />
+						</td>
+					</tr>
+					<tr>
+						<th width="466px">Style</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.mrp_productioin_id.product_id.style" />
+						</td>
+					</tr>
+					<tr>
+						<th width="466px">Order Qty</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.product_qty_inline" />
+						</td>
+					</tr>
+					<tr>
+						<th width="466px">Product</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.mrp_productioin_id.product_id" />
+						</td>
+					</tr>
+					<tr>
+						<td width="466px"></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+				<br/>
+				<br/>
+				<table class="table table-condensed">
+					<tr>
+						<th width="280px">Reject</th>
+						<th width="280px">Defect Found</th>
+						<th width="280px">Jumlah Reject</th>
+						<th width="280px">Keterangan</th>
+						<th width="280px">Sugestion</th>
+					</tr>
+					<tr>
+						<td width="280px">
+							<span t-field="o.rijek_1" />
+						</td>
+						<td width="280px">
+							<span t-field="o.bentuk_rijek_1" />
+						</td>
+						<td width="280px" t-if="o.nilai_rijek_1 &gt; 0">
+							<span t-field="o.nilai_rijek_1" />
+						</td>
+						<td width="280px">
+							<field name="keterangan_1" />
+						</td>
+						<td width="280px">
+							<span t-field="o.sugestion_1" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_2" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_2" />
+						</td>
+						<td t-if="o.nilai_rijek_2 &gt; 0">
+							<span t-field="o.nilai_rijek_2" />
+						</td>
+						<td>
+							<field name="keterangan_2" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_2" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_3" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_3" />
+						</td>
+						<td t-if="o.nilai_rijek_3 &gt; 0">
+							<span t-field="o.nilai_rijek_3" />
+						</td>
+						<td>
+							<field name="keterangan_3" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_3" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_4" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_4" />
+						</td>
+						<td t-if="o.nilai_rijek_4 &gt; 0">
+							<span t-field="o.nilai_rijek_4" />
+						</td>
+						<td>
+							<field name="keterangan_4" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_4" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_5" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_5" />
+						</td>
+						<td t-if="o.nilai_rijek_5 &gt; 0">
+							<span t-field="o.nilai_rijek_5" />
+						</td>
+						<td>
+							<field name="keterangan_5" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_5" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_6" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_6" />
+						</td>
+						<td t-if="o.nilai_rijek_6 &gt; 0">
+							<span t-field="o.nilai_rijek_6" />
+						</td>
+						<td>
+							<field name="keterangan_6" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_6" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_7" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_7" />
+						</td>
+						<td t-if="o.nilai_rijek_7 &gt; 0">
+							<span t-field="o.nilai_rijek_7" />
+						</td>
+						<td>
+							<field name="keterangan_7" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_7" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_8" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_8" />
+						</td>
+						<td t-if="o.nilai_rijek_8 &gt; 0">
+							<span t-field="o.nilai_rijek_8" />
+						</td>
+						<td>
+							<field name="keterangan_8" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_8" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_9" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_9" />
+						</td>
+						<td t-if="o.nilai_rijek_9 &gt; 0">
+							<span t-field="o.nilai_rijek_9" />
+						</td>
+						<td>
+							<field name="keterangan_9" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_9" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_10" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_10" />
+						</td>
+						<td t-if="o.nilai_rijek_8 &gt; 0">
+							<span t-field="o.nilai_rijek_10" />
+						</td>
+						<td>
+							<field name="keterangan_10" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_10"/>
+						</td>
+					</tr>
+				</table>
+				<br/>
+				<table class="table table-condensed">
+					<tr>
+						<th width="466px">Total Major</th>
+						<th width="466px">Total Minor</th>
+						<th width="466px">Total Kritikal</th>
+					</tr>
+					<tr>
+						<td width="466px">
+							<span t-field="o.jumlah_mayor_qc" />
+						</td>
+						<td width="466px">
+							<span t-field="o.jumlah_minor_qc" />
+						</td>
+						<td width="466px">
+							<span t-field="o.jumlah_kritikal_qc" />
+						</td>
+					</tr>
+				</table>
+				<br/>
+				<table>
+					<tr>
+						<th>Comment</th>
+					</tr>
+					<tr>
+
+						<td>
+							<span t-field="o.comment" />
+						</td>
+					</tr>
+				</table>
+			</div>
+		</t>
+	</template>
+</flectra>

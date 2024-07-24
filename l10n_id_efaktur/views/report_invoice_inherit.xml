@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data>
+        <template id="report_invoice_inherit_efaktur" inherit_id="account.report_invoice_document">
+            <xpath expr="//div[@t-if='o.date_invoice']" position="before">
+                    <div t-if="o.l10n_id_tax_number">
+                        <td>Faktur No:</td>
+                        <td><span t-field="o.l10n_id_tax_number"/></td>
+                    </div>
+            </xpath>
+        </template>
+    </data>
+</flectra>

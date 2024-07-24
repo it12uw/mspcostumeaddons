@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <!-- Long kkp 48-->
+        <!-- <report id="marel_report_kkp_long_48" string="KKP 48 Pair ke Pcs" report_type="qweb-pdf" model="mrp.production" file="product.marel_report_kkp" name="marel_in_report_mo.marel_report_kkp_report" />
+        <template id="marel_report_kkp_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_mo_doc" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template> -->
+        <!-- short kkp 48 -->
+        <!-- <report id="marel_report_kkp_short_48" string="KKP 48 Pair ke Pcs short name" report_type="qweb-pdf" model="mrp.production" file="product.marel_report_kkp" name="marel_in_report_mo.marel_report_kkp_report_short" />
+        <template id="marel_report_kkp_report_short">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_mo_48_short_doc" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template> -->
+        <!-- data perRecord -->
+        <!-- <report id="marel_report_kkp_sisa_48" string="KKP 48 Sisa" report_type="qweb-pdf" model="mrp.production" file="product.marel_report_kkp" name="marel_in_report_mo.marel_report_kkp_report_sisa" />
+        <template id="marel_report_kkp_report_sisa">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_mo_sisa_doc" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template> -->
+        <!-- short kkp 24 -->
+        <!-- <report id="marel_report_kkp_long_24" string="KKP 24 Pair ke Pcs" report_type="qweb-pdf" model="mrp.production" file="product.marel_report_kkp" name="marel_in_report_mo.marel_report_kkp_report_24" />
+        <template id="marel_report_kkp_report_24">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_mo_24_doc" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template> -->
+        <!-- short kkp 24 Short new-->
+        <!-- <report id="marel_report_kkp_short_24" string="KKP 24 Pair ke Pcs short name" report_type="qweb-pdf" model="mrp.production" file="product.marel_report_kkp" name="marel_in_report_mo.marel_report_kkp_report_24_short" />
+        <template id="marel_report_kkp_report_24_short">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_mo_24_short_new_doc" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template> -->
+        <!-- data perRecord -->
+        <!-- <report id="marel_report_kkp_sisa_24" string="KKP 24 Sisa" report_type="qweb-pdf" model="mrp.production" file="product.marel_report_kkp" name="marel_in_report_mo.marel_report_kkp_report_sisa_24" />
+        <template id="marel_report_kkp_report_sisa_24">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_mo_sisa_doc_24" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template> -->
+        <!-- data KKP Headband 48 Long-->
+        <!-- <report id="marel_report_kkp_headband_long_48" string="KKP 48 HeadBand,dkk (Pcs)" report_type="qweb-pdf" model="mrp.production" file="product.marel_report_kkp" name="marel_in_report_mo.marel_report_kkp_headband_report" />
+        <template id="marel_report_kkp_headband_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_kkp_headband_doc" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template> -->
+        <!-- data KKP Headband Sisa 48-->
+        <!-- <report id="marel_report_kkp_headband_48_sisa" string="KKP 48 HeadBand,dkk sisa (Pcs)" report_type="qweb-pdf" model="mrp.production" file="product.marel_report_kkp" name="marel_in_report_mo.marel_report_kkp_headband_sisa_report" />
+        <template id="marel_report_kkp_headband_sisa_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_kkp_headband_sisa_doc" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template> -->
+        <!-- data KKP Headband 48 very Short-->
+        <!-- <report id="marel_report_kkp_headband_very_short_48" string="KKP 48 HeadBand,dkk very short name (Pcs)" report_type="qweb-pdf" model="mrp.production" file="product.marel_report_kkp" name="marel_in_report_mo.marel_report_kkp_headband_very_short_report" />
+        <template id="marel_report_kkp_headband_very_short_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_kkp_headband_very_short_doc" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template> -->
+        <!-- data BON Benang Per SO -->
+        <report id="marel_report_bon_benang_perso" string="BON Per SO" report_type="qweb-pdf" model="mrp.production" file="product.marel_report_kkp" name="marel_in_report_mo.marel_report_bon_benang_perso_report" />
+        <template id="marel_report_bon_benang_perso_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_bon_benang_perso" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template>
+        <!-- data print kwitansi -->
+        <report id="marel_kwitansi_ship" string="Print Kwitansi" report_type="qweb-pdf" model="account.invoice" file="account.marel_report_kkp" name="marel_in_report_mo.marel_report_kwitansi_ship_report" />
+        <template id="marel_report_kwitansi_ship_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="marel_in_report_mo.kwitansi_ship" t-lang="o.create_uid.lang"/>
+                </t>
+            </t>
+        </template>
+        <!-- data print kwitansi Multi-->
+        <report id="marel_kwitansi_ship_multi" string="Print Multi Kwitansi" report_type="qweb-pdf" model="account.invoice" file="account.marel_report_kkp" name="marel_in_report_mo.marel_report_kwitansi_ship_multi_report" />
+        <template id="marel_report_kwitansi_ship_multi_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="marel_in_report_mo.kwitansi_ship_multi" t-lang="o.create_uid.lang"/>
+                </t>
+            </t>
+        </template>
+
+        <!-- data KKP Headband 24 Very Short-->
+        <!-- <report id="marel_report_kkp_very_short_24" string="KKP 24 Pair ke Pcs very short name" report_type="qweb-pdf" model="mrp.production" file="product.marel_report_kkp" name="marel_in_report_mo.marel_report_kkp_report_24_very_short" />
+        <template id="marel_report_kkp_report_24_very_short">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_mo_24_very_short_doc" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template> -->
+        <!-- data KKP Headband 48 Very Short-->
+        <!-- <report id="marel_report_kkp_very_short_48" string="KKP 48  Pair ke Pcs very short name" report_type="qweb-pdf" model="mrp.production" file="product.marel_report_kkp" name="marel_in_report_mo.marel_report_kkp_report_48_very_short" />
+        <template id="marel_report_kkp_report_48_very_short">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_mo_48_very_short_doc" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template> -->
+        <!--  kkp 120-->
+        <!-- <report id="marel_report_kkp_120" string="KKP 120 Pair ke Pcs" report_type="qweb-pdf" model="mrp.production" file="product.marel_report_kkp" name="marel_in_report_mo.marel_report_kkp_120_report" /> -->
+        <!-- <template id="marel_report_kkp_120_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_mo_120_doc" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template> -->
+        <!--  kkp 120 sisa-->
+        <!-- <report id="marel_report_kkp_sisa_120" string="KKP 120 Pair ke Pcs Sisa" report_type="qweb-pdf" model="mrp.production" file="product.marel_report_kkp" name="marel_in_report_mo.marel_report_kkp_120_report_sisa" />
+        <template id="marel_report_kkp_120_report_sisa">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_mo_120_sisa_doc" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template> -->
+        <!-- data KKP Headband 120-->
+        <!-- <report id="marel_report_kkp_headband_120" string="KKP 120 HeadBand,dkk 120 (Pcs)" report_type="qweb-pdf" model="mrp.production" file="product.marel_report_kkp" name="marel_in_report_mo.marel_report_kkp_headband_120_report" />
+        <template id="marel_report_kkp_headband_120_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_kkp_headband_120_doc" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template> -->
+        <!--  kkp Headband 120 sisa-->
+        <!-- <report id="marel_report_kkp_headband_sisa_20" string="KKP 120 HeadBand,dkk 120 Sisa(Pcs)" report_type="qweb-pdf" model="mrp.production" file="product.marel_report_kkp" name="marel_in_report_mo.marel_report_kkp_headband_sisa_20_report" />
+        <template id="marel_report_kkp_headband_sisa_20_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_kkp_headband_sisa_120_doc" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template> -->
+        <!-- data KKP 60-->
+        <report 
+            id="marel_report_kkp_60" 
+            string="KKP Kaos Kaki Pair" 
+            report_type="qweb-pdf" 
+            model="mrp.production" 
+            file="marel_in_report_mo.marel_report_kkp_60_report" 
+            name="marel_in_report_mo.marel_report_kkp_60_report" 
+            print_report_name="'KKP Kaos Kaki Pair - %s' % (object.name)"
+        />
+        <template id="marel_report_kkp_60_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_mo_60_doc" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template>
+        <!--  kkp 60 sisa-->
+        <!-- <report id="marel_report_kkp_sisa_60" string=" KKP 60 Pair ke Pcs (Sisa) " report_type="qweb-pdf" model="mrp.production" file="product.marel_report_kkp" name="marel_in_report_mo.marel_report_kkp_sisa_60_report" />
+        <template id="marel_report_kkp_sisa_60_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_mo_60_sisa_doc" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template> -->
+        <!-- kkp 96 -->
+        <!-- <report id="marel_report_kkp_96" string=" KKP 96 Pair ke Pcs " report_type="qweb-pdf" model="mrp.production" file="product.marel_report_kkp" name="marel_in_report_mo.marel_report_kkp_96_report" />
+        <template id="marel_report_kkp_96_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_mo_96_doc" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template> -->
+
+        <!-- <report id="marel_report_kkp_sisa_96" string=" KKP 96 Pair ke Pcs Sisa " report_type="qweb-pdf" model="mrp.production" file="product.marel_report_kkp" name="marel_in_report_mo.marel_report_kkp_96_report_sisa" />
+        <template id="marel_report_kkp_96_report_sisa">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_mo_96_sisa_doc" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template> -->
+        <!-- kkp 96 headband-->
+        
+        <report 
+            id="marel_report_kkp_headband_96" 
+            string="KKP PCS" 
+            report_type="qweb-pdf" 
+            model="mrp.production" 
+            file="product.marel_report_kkp" 
+            name="marel_in_report_mo.marel_report_kkp_headband_96_report" 
+            print_report_name="'KKP PCS - %s' % (object.name)"
+        />
+        <template id="marel_report_kkp_headband_96_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_kkp_headband_96_doc" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template>
+
+        <!-- <report id="marel_report_kkp_headband_sisa_96" string="KKP Headband 96 Pcs Sisa " report_type="qweb-pdf" model="mrp.production" file="product.marel_report_kkp" name="marel_in_report_mo.marel_report_kkp_headband_sisa_96_report" />
+        <template id="marel_report_kkp_headband_sisa_96_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_kkp_headband_96_sisa_doc" t-lang="doc.create_uid.lang"/>
+                </t>
+            </t>
+        </template> -->
+
+
+    </data>
+</flectra>

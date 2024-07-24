@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <!-- <record id="view_marel_wip_mo_report_tree" model="ir.ui.view">
+        <field name="name">marel.wip.mo.report.Tree</field>
+        <field name="model">marel.wip.mo.report</field>
+        <field name="arch" type="xml">
+            <tree string="Closing Kiriman Kain Harian Line" create="false" edit="false">
+                    <field name="reference"/>
+                    <field name="nama_produk"/>
+                    <field name="qty" sum='Total Keseluruhan'/>
+                    <field name="uom"/>
+                    <field name="mo"/>
+                    <field name="state"/>
+            </tree>
+        </field>
+    </record> -->
+
+     <record  id="view_marel_wip_mo_report_tree" model="ir.ui.view">
+        <field name="name">marel.wip.mo.report.tree</field>
+        <field name="model">marel.wip.mo.report</field>
+        <field name="arch" type="xml">
+            <tree string="WIP Knitting">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_marel_wip_mo_report_form" model="ir.ui.view">
+            <field name="name">marel.wip.mo.report.form</field>
+            <field name="model">marel.wip.mo.report</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="WIP Knitting">
+                    <header>   
+                        <button name="generate_report" type="object" string="Generate Report" class="btn‐primary" />
+                        <!-- <button name="print_report" type="object" string="Export PDF" class="btn-success"/> -->
+                        <button name="print_report_excel" type="object" string="Export Excel" class="btn-success"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"
+                                string="Marel Wip Mo Report"/>
+                        </div>
+                        <separator/>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="date_start"/>
+                                <field name="date_end"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Closing Kain">
+                                <field name="report_ids" >
+                                    <tree string="Marel Wip Mo Report" editable="top" default_order="name desc">
+                                        <field name="name"/>
+                                        <field name="state"/>
+                                        <field name="tgl_kerja"/>
+                                        <field name="product_id"/>
+                                        <field name="product_qty"/>
+                                        <field name="jumlah_yg_selesai"/>
+                                        <field name="uom_id"/>
+                                        <field name="shift"/>
+                                        <field name="nama_operator"/>
+                                        <field name="nama_qiusi"/>
+                                        <field name="nama_mesin_blok"/>
+                                        <field name="krono_kk_menit"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    <record id="action_marel_wip_mo_report" model="ir.actions.act_window">
+        <field name="name">Marel WIP Knitting Report</field>
+        <field name="res_model">marel.wip.mo.report</field>
+        <!-- <field name="view_type">form</field> -->
+        <field name="view_mode">form,tree</field>
+        <!-- <field name="search_view_id" ref="view_mpc_produce_lot_filter"/> -->
+        <!-- <field name="context">{'search_default_today':1}</field>
+        <field name="view_id"></field> -->
+    </record>
+
+    <report
+            id="report_excel_marel_wip_mo_report"
+            string="Report Excel"
+            model='marel.wip.mo.report'
+            report_type = 'xlsx'
+            name='marel_workorder_report.marel_wip_mo_report_excel'
+            file="marel_workorder_report.marel_wip_mo_report_excel"/>
+
+    <menuitem
+        action="action_marel_wip_mo_report" 
+        id="menu_marel_wip_mo_report_harian" 
+        parent="mrp.menu_mrp_reporting"
+        name="WIP Knitting"
+        sequence="12"/>
+				
+</flectra>

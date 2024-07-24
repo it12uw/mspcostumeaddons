@@ -1,0 +1,42 @@
+Most of the files are
+
+  '63193': 0x00A9, // copyrightserif (0xF6D9) => copyright
+  '63721': 0x00A9, // copyrightsans (0xF8E9) => copyright
+  'copyright', 'Aacute', 'Acircumflex', 'Adieresis', 'Agrave', 'Aring',
+  'copyright': 737,
+  'copyright': 747,
+  'copyright': 760,
+  'copyrightsans', 'trademarksans', 'summation', 'parenlefttp',
+  'copyrightsans': 790,
+  'copyrightserif': 790,
+  'currency', 'yen', 'brokenbar', 'section', 'dieresis', 'copyright',
+  'notelement', 'angle', 'gradient', 'registerserif', 'copyrightserif',
+  'paragraph', 'germandbls', 'registered', 'copyright', 'trademark', 'acute',
+  'registered', 'minus', 'eth', 'multiply', 'threesuperior', 'copyright',
+  'section', 'bullet', 'paragraph', 'germandbls', 'registered', 'copyright',
+  /* Copyright 2012 Mozilla Foundation
+  /* Copyright 2014 Opera Software ASA
+  /* Copyright 2014 Therp BV (<http://therp.nl>)
+  // Some characters, e.g. copyrightserif, are mapped to the private use area and
+  :Copyright: This stylesheet has been placed in the public domain.
+  Copyright (C) 2010-2015 KO GmbH <copyright@kogmbh.com>
+  Copyright (C) 2012-2015 KO GmbH <copyright@kogmbh.com>
+  Copyright 2014 Therp BV (<http://therp.nl>)
+  Copyright 2018 Onestein
+  [[12, 0], 'Copyright', 'sid', null],
+  copyright: 0x00A9,
+  copyrightsans: 0xF8E9,
+  copyrightserif: 0xF6D9,
+  deemed a separate work for copyright law purposes. In addition, the copyright
+  proto[0][0] || 'Original licence',  // 0.Copyright
+  Copyright 2018 Flectra Community
+
+Many files also contain contributions from third
+parties. In this case the original copyright of
+the contributions can be traced through the
+history of the source version control system.
+
+When that is not the case, the files contain a prominent
+notice stating the original copyright and applicable
+license, or come with their own dedicated COPYRIGHT
+and/or LICENSE file.

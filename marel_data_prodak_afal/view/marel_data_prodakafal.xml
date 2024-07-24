@@ -1,0 +1,48 @@
+<flectra>
+	<data noupdate="0">
+		<record id="view_marel_data_prodak_afal_tree" model="ir.ui.view">
+			<field name="name">marel_data_prodakafal_tree</field>
+			<field name="model">marel.data.prodakafal</field>
+			<field name="type">tree</field>
+			<!-- <field name="action_window_id" ref= "action_marel_data_prodak_afal_list"/> -->
+			<field name="arch" type="xml">
+				<tree string="Data Produk Afal">
+					<field name="name"/>
+					<field name="create_date"/>
+					<field name="product_id"/>
+					<!-- <field name="uom_id"/>
+					<Field name="jenis_afal_id"/>
+					<field name="qty"/> -->
+				</tree>
+			</field>
+		</record>
+		<record id="view_marel_data_prodak_afal_form" model="ir.ui.view">
+			<field name="name">marel_data_prodakafal_from</field>
+			<field name="model">marel.data.prodakafal</field>
+			<field name="type">form</field>
+			<field name="priority" eval="8"/>
+			<field name="arch" type="xml">
+				<form string="Data Produk Afal">
+					<sheet>
+						<div class="oe_title">
+							<label form="name" class="oe_edit_only" string="Data Produk Afal"/>
+						</div>
+						<group>
+							<field name="name"/>
+							<field name="create_date"/>
+							<field name="product_id"/>
+							<field name="uom_id"/>
+							<Field name="jenis_afal_id"/>
+							<field name="qty"/>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="activity_ids" widget="mail_activity"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+	</data>
+</flectra>

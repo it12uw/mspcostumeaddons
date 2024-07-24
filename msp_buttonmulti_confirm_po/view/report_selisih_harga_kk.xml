@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+	<!-- template report -->
+	<template id="report_selisih_harga_kk">
+		<t t-call="web.html_container">
+			<t t-call="web.internal_layout">
+				<div class="page">
+					<table align="right">
+						<tr>
+							<th colspan="12" class="text-center">
+								<span>
+									<h4>
+										REKAP SELISIH HARGA KAOS KAKI
+									</h4>
+								</span>
+							</th>
+						</tr>
+						<tr>
+							<td width="400px">
+                            Document ID
+							</td>
+							<td>:</td>
+							<td>MSP/F/P/PPC/01/02</td>
+						</tr>
+						<tr>
+							<td width="400px">
+                            Page
+							</td>
+							<td>:</td>
+							<td>1 Dari 1</td>
+						</tr>
+						<tr>
+							<td width="400px">
+                            Revision
+							</td>
+							<td>:</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td width="400px">
+                            Revision No
+							</td>
+							<td>:</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td width="400px">
+                            Effective Date
+							</td>
+							<td>:</td>
+							<td>1 Febuari 2019</td>
+						</tr>
+					</table>
+					<br/>
+					<div>
+						<span>
+							<h3>
+								PRODUK :
+							</h3>
+						</span>
+					</div>
+					<table class="table table-condensed">
+						<thead>
+							<tr>
+								<th>
+									Product
+								</th>
+								<th>
+									SO
+								</th>
+								<th>
+									Qty
+								</th>
+								<th>
+									Harga Standar
+								</th>
+								<th>
+									Harga SO
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<t t-foreach="data" t-as="product">
+								<tr>
+									<td>
+										<t t-esc="product['name']" />
+									</td>
+									<td>
+										<t t-esc="product['nomer_so']" />
+									</td>
+									<td>
+										<t t-esc="product['qty']" />
+									</td>
+									<td>
+										<t t-esc="product['standard_price']"/>
+									</td>
+									<td>
+										<t t-esc="product['price_unit']"/>
+									</td>
+								</tr>
+							</t>
+						</tbody>
+					</table>
+					<!-- <table align="center">
+						<tr style="height:100px">
+							<td width="390px">
+								Mengajukan :
+							</td>
+							<td width="390px">
+								Mengetahui :
+							</td>
+							<td>
+								Mengetahui :
+							</td>
+						</tr>
+						<tr style="height:30px">
+							<td width="390px">
+								Bagian PPIC
+							</td>
+							<td width="390px">
+								Bagian Purchassing
+							</td>
+							<td>
+								Bagian Gudang
+							</td>
+						</tr>
+					</table> -->
+				</div>
+			</t>
+		</t>
+	</template>
+</flectra>

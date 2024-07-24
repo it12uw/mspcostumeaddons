@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="1">
+        <!-- 
+        <record id="seq_mpc_weaving_no" model="ir.sequence">
+            <field name="name">Nomenclature No Weaving</field>
+            <field name="code">mpc.weaving.no</field>
+            <field name="prefix">WEAV/%(year)s/</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record> 
+
+        <record id="seq_mpc_inspek_no" model="ir.sequence">
+            <field name="name">Nomenclature No Inspekting</field>
+            <field name="code">mpc.inspek.no</field>
+            <field name="prefix">INSP/%(year)s/</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>   -->
+
+        <record model="ir.sequence" id="seq_marel_sj_no">
+            <field name="name">Nomenclature No SJ</field>
+            <field name="code">marel.sj.no</field>
+            <field name="prefix">SJ</field>
+            <!-- <field name="suffix">/MAREL/%(year)s</field> -->
+            <field name="padding">6</field>
+        </record>
+
+        <record model="ir.sequence" id="seq_marel_bpb_no">
+            <field name="name">Nomenclature No BPB</field>
+            <field name="code">marel.bpb.no</field>
+            <field name="prefix">BPB</field>
+            <!-- <field name="suffix">/MAREL/%(year)s</field> -->
+            <field name="padding">6</field>
+        </record>
+
+
+        <record model="ir.sequence" id="seq_marel_spb_no">
+            <field name="name">Nomenclature No SPB</field>
+            <field name="code">marel.spb.no</field>
+            <field name="prefix">SPB</field>
+            <!-- <field name="suffix">/MAREL/%(year)s</field> -->
+            <field name="padding">6</field>
+        </record>
+    </data>
+</flectra>

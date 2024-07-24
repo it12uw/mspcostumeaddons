@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <record id="view_marel_nama_operator_tree" model="ir.ui.view">
+            <field name="name">marel.nama.operator.tree</field>
+            <field name="model">marel.nama.operator</field>
+            <field name="type">tree</field>
+            <!-- <field name="priority" eval="8"/> -->
+            <field name="arch" type="xml">
+                <tree string="Data Nama Operator">
+                    <field name="nama_operator"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_marel_nama_operator_form" model="ir.ui.view">
+            <field name="name">marel.nama.operator.form</field>
+            <field name="model">marel.nama.operator</field>
+            <field name="type">form</field>
+            <!-- <field name="priority" eval="8"/> -->
+            <field name="arch" type="xml">
+                <form string="Data Nama Operator">
+                    <sheet>
+                        <group>
+                            <field name="nama_operator"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</flectra>

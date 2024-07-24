@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <record id="view_msp_qc_inline2_wizard" model="ir.ui.view">
+        <field name="name">view msp_qc inline2 wizard</field>
+        <field name="model">msp.qc.inline2.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Line QC">
+				<group>
+					<label form="name" class="oe_edit_only" string="No Id" />
+					<group>
+						<field name="name" />
+						<field name="tgl_create" />
+						<field name="mrp_productioin_id" />
+						<field name="handfeel" />
+						<field name="color" />
+						<field name="aksesoris_1" />
+						<field name="aksesoris_2" />
+						<field name="aksesoris_3" />
+						<field name="aksesoris_4" />
+						<field name="aksesoris_5" />
+						<field name="inspection_result" />
+						<field name="keterangan" />
+					</group>
+					<group>
+						<field name="sample_size_151_280" />
+						<field name="mayor_151_280" />
+						<field name="minor_151_280" />
+						<field name="sample_size_281_500" />
+						<field name="mayor_281_500" />
+						<field name="minor_281_500" />
+						<field name="sample_size_501_1200" />
+						<field name="mayor_501_1200" />
+						<field name="minor_501_1200" />
+						<field name="sample_size_1201_3200" />
+						<field name="mayor_1201_3200" />
+						<field name="minor_1201_3200" />
+						<field name="sample_size_3201_10000" />
+						<field name="mayor_3201_10000" />
+						<field name="minor_3201_10000" />
+					</group>
+					<group>
+						<field name="prodak" />
+						<field name="no_carton_inspected_1" />
+						<field name="no_carton_inspected_2" />
+						<field name="no_carton_inspected_3" />
+						<field name="no_carton_inspected_4" />
+						<field name="no_carton_inspected_5" />
+						<field name="no_carton_inspected_6" />
+						<field name="no_carton_inspected_7" />
+						<field name="no_carton_inspected_8" />
+						<field name="no_carton_inspected_9" />
+						<field name="no_carton_inspected_10" />
+					</group>
+					<group>
+						<field name="rijek_1" />
+						<field name="rijek_2" />
+						<field name="rijek_3" />
+						<field name="rijek_4" />
+						<field name="rijek_5" />
+						<field name="rijek_6" />
+						<field name="rijek_7" />
+						<field name="rijek_8" />
+					</group>
+				</group>
+                <footer>
+                    <!-- <button name="msp_qc_inline2_wizard_to_wo" type="object" string="Save" class="btn-info"/> -->
+                    <button name="msp_qc_inline2_wizard" type="object" string="Save Line Qc" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="act_msp_qc_inline2_wizard" model="ir.actions.act_window">
+        <field name="name">act msp qc inline2 wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">msp.qc.inline2.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_msp_qc_inline2_wizard"/>
+        <field name="context">{'default_name_id':name,}</field>
+        <field name="target">new</field>
+    </record>
+</flectra>

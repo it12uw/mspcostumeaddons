@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <record id="view_marel_rekap_kebutuhan_aksesoris_tree" model="ir.ui.view">
+            <field name="name">rekap.kebutuhan.aksesoris.tree</field>
+            <field name="model">rekap.kebutuhan.aksesoris</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Rekap Aksesoris">
+                    <field name="mrp_production_id"/>
+                    <field name="status_deskripsi"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_marel_rekap_kebutuhan_aksesoris_form" model="ir.ui.view">
+            <field name="name">rekap.kebutuhan.aksesoris.form</field>
+            <field name="model">rekap.kebutuhan.aksesoris</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Rekap Aksesoris">
+                    <sheet>
+                        <group>
+                            <field name="tgl_pengajuan"/>
+                            <field name="mrp_production_id"  options="{'no_open': True, 'no_create': True, 'required': True}"/>
+                            <field name="status_deskripsi"/>
+                        </group>
+                        <notebook>
+                            <page string="Rekap Aksesoris">
+                                <field name="rekap_kebutuhan_aksesoris_line">
+                                    <tree string="Rekap Aksesoris" editable="bottom">
+                                        <field name="product_template_id" options="{'no_open': True, 'no_create': True , 'required': True}"/>
+                                        <field name="jumlah"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</flectra>

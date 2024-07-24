@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <!-- create action untuk report -->
+    <report 
+        string="Selisih Harga Prodak KK" 
+        id="action_report_bom_production_order" 
+        model="sale.order" 
+        name="marel_report_summary_so.report_selisih_harga_kk"
+        file="marel_report_summary_so.so_report_act" 
+        report_type="qweb-pdf"
+    />
+        <!-- <report 
+        string="BoM Report Aksesoris" 
+        id="action_report_bom_production_order_aksesoris" 
+        model="mrp.production" 
+        name="marel_report_summary_so.report_bom_aksesoris"
+        file="marel_report_summary_so.so_report_act" 
+        report_type="qweb-pdf"
+    /> -->
+</flectra>

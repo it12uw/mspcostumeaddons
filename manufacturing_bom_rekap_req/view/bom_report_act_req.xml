@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <!-- create action untuk report -->
+    <report 
+        string="BoM Report Kain Req" 
+        id="action_report_bom_production_order_req" 
+        model="mrp.production" 
+        name="manufacturing_bom_rekap_req.report_mrpbomorder_req"
+        file="manufacturing_bom_rekap_req.bom_report_act_req" 
+        report_type="qweb-pdf"
+    />
+    <report 
+        string="BoM Report Aksesoris Baju Req" 
+        id="action_report_bom_production_order_aksesoris_req" 
+        model="mrp.production" 
+        name="manufacturing_bom_rekap_req.report_bom_aksesoris_req"
+        file="manufacturing_bom_rekap_req.bom_report_act_req" 
+        report_type="qweb-pdf"
+    />
+</flectra>

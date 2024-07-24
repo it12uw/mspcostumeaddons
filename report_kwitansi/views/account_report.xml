@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data>
+        <!-- QWeb Reports -->
+        <report 
+            id="account_kwitansi"
+            model="account.invoice"
+            string="Kwitansi"
+            report_type="qweb-pdf"
+            name="report_kwitansi.report_kwitansi"
+            file="report_kwitansi.report_kwitansi"
+            attachment="(object.state in ('open','paid')) and ('Kwitansi'+(object.number or '').replace('/','')+'.pdf')"
+            print_report_name="('Kwitansi'+(object.number).replace('/','_'))"
+            groups="account.group_account_invoice"
+        />
+        
+        <report
+            id="account_shipping_tagihan"
+            model="account.invoice"
+            string="Ship Tagihan"
+            report_type="qweb-pdf"
+            name="report_kwitansi.report_shipping_tagihan"
+            file="report_kwitansi.report_shipping_tagihan"
+            attachment="(object.state in ('open','paid')) and ('Ship'+(object.number or '').replace('/','')+'.pdf')"
+            print_report_name="(object.number).replace('/','_')"
+        />
+
+       <!-- <report
+            id="account_invoices_inherit"
+            model="account.invoice"
+            string="Invoices with sign"
+            report_type="qweb-pdf"
+            name="report_kwitansi.report_invoice_inherit"
+            file="report_kwitansi.report_invoice_inherit"
+            attachment="(object.state in ('open','paid')) and ('INV'+(object.number or '').replace('/','')+'.pdf')"
+            print_report_name="(object._get_printed_report_name())"
+        /> -->
+
+    </data>
+</flectra>

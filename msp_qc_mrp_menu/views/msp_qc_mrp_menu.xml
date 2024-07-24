@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data>
+        <!-- <record id="action_mrp_production_action" model="ir.actions.act_window">
+            <field name="name">mrp.production.tree.custom</field>
+            <field name="res_model">mrp.production</field>
+            <field name="view_mode">tree</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+					Click to add Income
+				</p>
+            </field>
+        </record>
+
+        <menuitem id="menu_mrp_production_action" name="Income SO" action="action_mrp_production_action" parent="stock.menu_stock_warehouse_mgmt" sequence="35"/> -->
+
+        <!-- 6 jani 2020 menu QC di tree view workorder -->
+       
+    </data>
+</flectra>

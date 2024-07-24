@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <template id="report_marel_in_report_mo_96_doc">
+            <t t-call="web.basic_layout">
+                <t t-foreach="int(doc.product_qty/48)" t-as="l">
+                    <div class="page" style="font-size:10px;">
+                        <table class="table table-condensed">
+                            <div class="header">
+                                <div class="row"> 
+                                    <div class="col-xs-6">
+                                        PT MAREL SUKSES PRATAMA
+                                    </div>
+                                    <div class="col-xs-5 text-right">
+                                        <span class="page"/> / <span class="topage"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <thead>
+                                <tr>
+                                    <th>
+								Document ID
+                                    </th>
+                                    <th>
+								Page
+                                    </th>
+                                    <th>
+								Revision No
+                                    </th>
+                                    <th>
+								Revision Date
+                                    </th>
+                                    <th>
+								Effective Date
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MSP/F/P/PPC/01.06</td>
+                                    <td>Page 1 of 1</td>
+                                    <td>-</td>
+                                    <td>18 Maret 2021</td>
+                                    <td>30 Maret 2021</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table">
+                            <tr>
+                                <td width="7px">*Nama Artikel:</td>
+                                <td>
+                                    <span t-field="doc.product_tmpl_id.name" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="7px">*Customer:</td>
+                                <td>
+                                    <span t-field="doc.sale_id2.partner_id" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="7px">*Style:</td>
+                                <td>
+                                    <span t-field="doc.product_tmpl_id.style" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="7px">*Size:</td>
+                                <td>
+                                    <span t-field="doc.product_tmpl_id.size" width="7px"/>
+ *--------Warna :<span t-field="doc.product_tmpl_id.warna" />
+                                </td>
+                            </tr>
+                            <!-- <tr style="height:5px">
+                                <td width="7px">Warna:</td>
+                                <td>
+                                    <span t-field="doc.product_tmpl_id.warna" />
+                                </td>
+                            </tr> -->
+                        </table>
+                        <table class="table table-condensed table-striped">
+                            <tr>
+                                <td>No MO</td>
+                                <td>No SO</td>
+                                <td>Tgl Kirim</td>
+                                <td>Qty/KKP</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span t-field="doc.name" />
+                                </td>
+                                <td>
+                                    <span t-field="doc.origin" />
+                                </td>
+                                <td>
+                                    <span t-field="doc.sale_id2.requested_date" />
+                                </td>
+                                <td>
+                                    96 Pcs
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table table-condensed table-striped">
+                            <tr>
+                                <td>Tgl</td>
+                                <td>Mesin</td>
+                                <td>Proses</td>
+                                <td>Shift</td>
+                                <td>OPT</td>
+                                <td>Memo</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>A</td>
+                                <td></td>
+                                <td></td>
+                                <!-- <td><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)" style="width:300px;height:50px"/></td> -->
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>KNT</td>
+                                <td>B</td>
+                                <td></td>
+                                <td></td>
+                                <!-- <td><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)" style="width:300px;height:50px"/></td> -->
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>C</td>
+                                <td></td>
+                                <td></td>
+                                <!-- <td><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)" style="width:300px;height:50px"/></td> -->
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>A</td>
+                                <td></td>
+                                <td></td>
+                                <!-- <td><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)" style="width:300px;height:50px"/></td> -->
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>EMB</td>
+                                <td>B</td>
+                                <td></td>
+                                <td></td>
+                                <!-- <td><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)" style="width:300px;height:50px"/></td> -->
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>C</td>
+                                <td></td>
+                                <td></td>
+                                <!-- <td><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)" style="width:300px;height:50px"/></td> -->
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>A</td>
+                                <td></td>
+                                <td></td>
+                                <!-- <td><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)" style="width:300px;height:50px"/></td> -->
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>CNI/HL</td>
+                                <td>B</td>
+                                <td></td>
+                                <td></td>
+                                <!-- <td><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)" style="width:300px;height:50px"/></td> -->
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>C</td>
+                                <td></td>
+                                <td></td>
+                                <!-- <td><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)" style="width:300px;height:50px"/></td> -->
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>A</td>
+                                <td></td>
+                                <td></td>
+                                <!-- <td><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)" style="width:300px;height:50px"/></td> -->
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>INS</td>
+                                <td>B</td>
+                                <td></td>
+                                <td></td>
+                                <!-- <td><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)" style="width:300px;height:50px"/></td> -->
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>C</td>
+                                <td></td>
+                                <td></td>
+                                <!-- <td><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)" style="width:300px;height:50px"/></td> -->
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>A</td>
+                                <td></td>
+                                <td></td>
+                                <!-- <td><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)" style="width:300px;height:50px"/></td> -->
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>PAC</td>
+                                <td>B</td>
+                                <td></td>
+                                <td></td>
+                                <!-- <td><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)" style="width:300px;height:50px"/></td> -->
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>C</td>
+                                <td></td>
+                                <td></td>
+                                <!-- <td><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)" style="width:300px;height:50px"/></td> -->
+                            </tr>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</flectra>

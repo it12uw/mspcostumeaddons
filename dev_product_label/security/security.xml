@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <record id="group_product_label_template" model="res.groups">
+        <field name="name">Access Barcode Label</field>
+        <field name="comment">Access Barcode Label Template</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+
+
+</flectra>

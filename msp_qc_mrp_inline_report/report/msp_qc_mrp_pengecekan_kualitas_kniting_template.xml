@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+	<template id="msp_qc_mrp_pengecekan_kualitas_kniting_report">
+		<t t-call="web.external_layout">
+			<t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})" />
+			<div class="page oe_purchase_font_title">
+				<div class="oe_structure"/>
+				<table>
+					<tr>
+						<th class="text-center">
+							<span>
+								<h3>
+										FORM PENGECEKAN KUALITAS KNITING
+								</h3>
+							</span>
+						</th>
+					</tr>
+				</table>
+				<br/>
+				<table class="table table-condensed">
+					<tr>
+						<th width="400px">
+                            Document ID
+						</th>
+						<th>:</th>
+						<th>MSPP/QC/03.01</th>
+					</tr>
+					<tr>
+						<th width="400px">
+                            Page
+						</th>
+						<th>:</th>
+						<th>1 Dari 1</th>
+					</tr>
+					<tr>
+						<th width="400px">
+                            Revision
+						</th>
+						<th>:</th>
+						<th>-</th>
+					</tr>
+					<tr>
+						<th width="400px">
+                            Revision No
+						</th>
+						<th>:</th>
+						<th>-</th>
+					</tr>
+					<tr>
+						<th width="400px">
+                            Effective Date
+						</th>
+						<th>:</th>
+						<th>15 Febuari 2021</th>
+					</tr>
+				</table>
+
+				<div>
+					<div class="col-xs-6 pull-left">
+						<table class="table table-condensed table-striped">
+
+							<tr>
+								<td>NO</td>
+								<td>:</td>
+								<td>
+									<span t-field="l.welt_inside_crc"/>
+								</td>
+							</tr>
+							<tr>
+								<td>MO</td>
+								<td>:</td>
+								<td>
+									<span t-field="l.welt_outside_crc"/>
+								</td>
+							</tr>
+							<tr>
+								<td>Product</td>
+								<td>:</td>
+								<td>
+									<span t-field="l.transfer_crc"/>
+								</td>
+							</tr>
+							<tr>
+								<td>Style</td>
+								<td>:</td>
+								<td>
+									<span t-field="l.leg_gum_crc"/>
+								</td>
+							</tr>
+							<tr>
+								<td>Color</td>
+								<td>:</td>
+								<td>
+									<span t-field="l.leg_crc"/>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-xs-6 pull-right">
+						<table class="table table-condensed table-striped">
+							<tr>
+								<th>YF</th>
+								<th>Feed 1</th>
+								<th>YF</th>
+								<th>Feed 1</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>
+									<span t-field="l.feed_1"/>
+								</td>
+								<td>1C</td>
+								<td>
+									<span t-field="l.feed_1c"/>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>
+									<span t-field="l.feed_2"/>
+								</td>
+								<td>2A</td>
+								<td>
+									<span t-field="l.feed_2a"/>
+								</td>
+							</tr>
+							<tr>
+								<td>3.A</td>
+								<td>
+									<span t-field="l.feed_3_a"/>
+								</td>
+								<td>2B</td>
+								<td>
+									<span t-field="l.feed_2b"/>
+								</td>
+							</tr>
+							<tr>
+								<td>3.B</td>
+								<td>
+									<span t-field="l.feed_3_b"/>
+								</td>
+								<td>2C</td>
+								<td>
+									<span t-field="l.feed_2c"/>
+								</td>
+							</tr>
+							<tr>
+								<td>4.A</td>
+								<td>
+									<span t-field="l.feed_4_a"/>
+								</td>
+								<td>3A</td>
+								<td>
+									<span t-field="l.feed_3a"/>
+								</td>
+							</tr>
+							<tr>
+								<td>4.B</td>
+								<td>
+									<span t-field="l.feed_4_b"/>
+								</td>
+								<td>3B</td>
+								<td>
+									<span t-field="l.feed_3b"/>
+								</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>
+									<span t-field="l.feed_5"/>
+								</td>
+								<td>3C</td>
+								<td>
+									<span t-field="l.feed_3c"/>
+								</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>
+									<span t-field="l.feed_6"/>
+								</td>
+								<td>4A</td>
+								<td>
+									<span t-field="l.feed_4a"/>
+								</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>
+									<span t-field="l.feed_7"/>
+								</td>
+								<td>4B</td>
+								<td>
+									<span t-field="l.feed_4b"/>
+								</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>
+									<span t-field="l.feed_8"/>
+								</td>
+								<td>5A</td>
+								<td>
+									<span t-field="l.feed_5a"/>
+								</td>
+							</tr>
+							<tr>
+								<td>1A</td>
+								<td>
+									<span t-field="l.feed_1a"/>
+								</td>
+								<td>5B</td>
+								<td>
+									<span t-field="l.feed_5b"/>
+								</td>
+							</tr>
+							<tr>
+								<td>1B</td>
+								<td>
+									<span t-field="l.feed_1b"/>
+								</td>
+								<td>5C</td>
+								<td>
+									<span t-field="l.feed_5c"/>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+
+
+
+
+
+				<!-- =-===================================yang di bawah yang lama ============================ -->
+				<div class="row mt32 mb32" id="informations">
+					<div t-if="o.product_qty_inline_1 &lt; 281" class="col-xs-3">
+						<span>Sample SIze :</span>
+						<span t-field="o.sample_size_151_280"/>
+						<br/>
+						<span>Mayor : </span>
+						<span t-field="o.mayor_151_280"/>
+						<br/>
+						<span>Minor : </span>
+						<span t-field="o.minor_151_280"/>
+					</div>
+					<div t-if="o.product_qty_inline_1 &gt; 281" class="col-xs-3">
+						<div t-if="o.product_qty_inline &lt; 500">
+							<span>Sample SIze :</span>
+							<span t-field="o.sample_size_281_500"/>
+							<br/>
+							<span>Mayor : </span>
+							<span t-field="o.mayor_281_500"/>
+							<br/>
+							<span>Minor : </span>
+							<span t-field="o.minor_281_500"/>
+						</div>
+					</div>
+					<div t-if="o.product_qty_inline_1 &gt; 501" class="col-xs-3">
+						<div t-if="o.product_qty_inline &lt; 1200">
+							<span>Sample SIze :</span>
+							<span t-field="o.sample_size_501_1200"/>
+							<br/>
+							<span>Mayor : </span>
+							<span t-field="o.mayor_501_1200"/>
+							<br/>
+							<span>Minor : </span>
+							<span t-field="o.minor_501_1200"/>
+						</div>
+					</div>
+					<div t-if="o.product_qty_inline_1 &gt; 1201" class="col-xs-3">
+						<div t-if="o.product_qty_inline &lt; 3200">
+							<span>Sample SIze :</span>
+							<span t-field="o.sample_size_1201_3200"/>
+							<br/>
+							<span>Mayor : </span>
+							<span t-field="o.mayor_1201_3200"/>
+							<br/>
+							<span>Minor : </span>
+							<span t-field="o.minor_1201_3200"/>
+						</div>
+					</div>
+					<div t-if="o.product_qty_inline_1 &gt; 3201" class="col-xs-3">
+						<!-- <div t-if="o.product_qty_inline &lt; 3200"> -->
+						<span>Sample SIze :</span>
+						<span t-field="o.sample_size_3201_10000"/>
+						<br/>
+						<span>Mayor : </span>
+						<span t-field="o.mayor_3201_10000"/>
+						<br/>
+						<span>Minor : </span>
+						<span t-field="o.minor_3201_10000"/>
+						<!-- </div> -->
+					</div>
+				</div>
+				<table class="table table-condensed">
+					<tr>
+						<th width="466px">Report No</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.name" />
+						</td>
+					</tr>
+					<tr>
+						<th width="466px">Inspection Date</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.inspection_date" />
+						</td>
+					</tr>
+					<tr>
+						<th width="466px">No PO</th>
+						<td>:</td>
+						<td>
+							<!-- <span t-field="o.name" /> -->
+						</td>
+					</tr>
+					<tr>
+						<th width="466px">Delivery Date</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.mrp_productioin_id.sale_id.requested_date" />
+						</td>
+					</tr>
+					<tr>
+						<th width="466px">Style</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.mrp_productioin_id.product_id.style" />
+						</td>
+					</tr>
+					<tr>
+						<th width="466px">Order Qty</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.product_qty_inline" />
+						</td>
+					</tr>
+					<tr>
+						<th width="466px">Product</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.mrp_productioin_id.product_id" />
+						</td>
+					</tr>
+					<tr>
+						<td width="466px"></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+				<br/>
+				<table class="table table-condensed">
+					<tr>
+						<th width="400px">HandFeel</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.handfeel" />
+						</td>
+					</tr>
+					<tr>
+						<th width="400px">Color</th>
+						<td>:</td>
+						<td>
+							<span t-field="o.color" />
+						</td>
+					</tr>
+				</table>
+				<br/>
+				<table class="table table-condensed">
+					<tr>
+						<th width="280px">Benang</th>
+						<th width="280px">Bordir</th>
+						<th width="280px">Label</th>
+						<th width="280px">Hangtag</th>
+						<th width="280px">Barcode</th>
+					</tr>
+					<tr>
+						<td width="280px">
+							<span t-field="o.aksesoris_1" />
+						</td>
+						<td width="280px">
+							<span t-field="o.aksesoris_2" />
+						</td>
+						<td width="280px">
+							<span t-field="o.aksesoris_3" />
+						</td>
+						<td width="280px">
+							<span t-field="o.aksesoris_4" />
+						</td>
+						<td width="280px">
+							<span t-field="o.aksesoris_5" />
+						</td>
+					</tr>
+				</table>
+				<br/>
+				<table class="table table-condensed">
+					<tr>
+						<th width="280px">Reject</th>
+						<th width="280px">Defect Found</th>
+						<th width="280px">Jumlah Reject</th>
+						<th width="280px">Keterangan</th>
+						<th width="280px">Sugestion</th>
+					</tr>
+					<tr>
+						<td width="280px">
+							<span t-field="o.rijek_1" />
+						</td>
+						<td width="280px">
+							<span t-field="o.bentuk_rijek_1" />
+						</td>
+						<td width="280px" t-if="o.nilai_rijek_1 &gt; 0">
+							<span t-field="o.nilai_rijek_1" />
+						</td>
+						<td width="280px">
+							<field name="keterangan_1" />
+						</td>
+						<td width="280px">
+							<span t-field="o.sugestion_1" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_2" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_2" />
+						</td>
+						<td t-if="o.nilai_rijek_2 &gt; 0">
+							<span t-field="o.nilai_rijek_2" />
+						</td>
+						<td>
+							<field name="keterangan_2" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_2" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_3" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_3" />
+						</td>
+						<td t-if="o.nilai_rijek_3 &gt; 0">
+							<span t-field="o.nilai_rijek_3" />
+						</td>
+						<td>
+							<field name="keterangan_3" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_3" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_4" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_4" />
+						</td>
+						<td t-if="o.nilai_rijek_4 &gt; 0">
+							<span t-field="o.nilai_rijek_4" />
+						</td>
+						<td>
+							<field name="keterangan_4" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_4" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_5" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_5" />
+						</td>
+						<td t-if="o.nilai_rijek_5 &gt; 0">
+							<span t-field="o.nilai_rijek_5" />
+						</td>
+						<td>
+							<field name="keterangan_5" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_5" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_6" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_6" />
+						</td>
+						<td t-if="o.nilai_rijek_6 &gt; 0">
+							<span t-field="o.nilai_rijek_6" />
+						</td>
+						<td>
+							<field name="keterangan_6" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_6" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_7" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_7" />
+						</td>
+						<td t-if="o.nilai_rijek_7 &gt; 0">
+							<span t-field="o.nilai_rijek_7" />
+						</td>
+						<td>
+							<field name="keterangan_7" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_7" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span t-field="o.rijek_8" />
+						</td>
+						<td>
+							<span t-field="o.bentuk_rijek_8" />
+						</td>
+						<td t-if="o.nilai_rijek_8 &gt; 0">
+							<span t-field="o.nilai_rijek_8" />
+						</td>
+						<td>
+							<field name="keterangan_8" />
+						</td>
+						<td>
+							<span t-field="o.sugestion_8" />
+						</td>
+					</tr>
+				</table>
+				<br/>
+				<table class="table table-condensed">
+					<tr>
+						<th width="466px">Total Major</th>
+						<th width="466px">Total Minor</th>
+						<th width="466px">Total Kritikal</th>
+					</tr>
+					<tr>
+						<td width="466px">
+							<span t-field="o.jumlah_mayor_qc" />
+						</td>
+						<td width="466px">
+							<span t-field="o.jumlah_minor_qc" />
+						</td>
+						<td width="466px">
+							<span t-field="o.jumlah_kritikal_qc" />
+						</td>
+					</tr>
+				</table>
+				<br/>
+				<table class="table table-condensed">
+					<tr>
+						<th width="700px">Inspection Result</th>
+						<th width="700px">Comment</th>
+					</tr>
+					<tr>
+						<td width="700px">
+							<span t-field="o.inspection_result" />
+						</td>
+						<td width="700px">
+							<span t-field="o.comment" />
+						</td>
+					</tr>
+				</table>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<table>
+					<tr>
+						<th width="466px">Quality Controller</th>
+						<th width="466px">Production</th>
+						<th width="466px">Approve By</th>
+					</tr>
+				</table>
+			</div>
+		</t>
+	</template>
+</flectra>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <!-- <record id="stock_move_tree4" model="ir.ui.view">
+        <field name="name">stock.move.tree</field>
+        <field name="model">stock.move</field>
+        <field name="arch" type="xml">
+            <tree string="Stock Move Lines" create="false" default_order="picking_id_name desc">
+                <field name="picking_id_name"/>
+                <field name="product_id"/>
+                <field name="noorder"/>
+                <field name="keterangan_move"/>
+                <field name="rb"/>
+                <field name="rk"/>
+                <field name="rijek"/>
+                <field name="product_uom_qty"/>
+                <field name="reserved_availability"/>
+                <field name="quantity_done"/>
+                <field name="product_uom"/>
+            </tree>
+        </field>
+    </record> -->
+
+
+    <!-- <record id="action_stock_move_tree_all" model="ir.actions.act_window">
+        <field name="name">Stock Move Line</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">stock.move</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="stock_inventory_line_tree2"/>
+        <field name="domain">[('inventory_id', '=', active_id)]</field>
+    </record> -->
+    <record id="stock_move_tree4" model="ir.ui.view">
+        <field name="name">stock.move.tree.custom1</field>
+        <field name="model">stock.move</field>
+        <field name="arch" type="xml">
+            <tree editable="top" string="Stock Move Lines" create="false" default_order="reference desc">
+                <field name="date"/>
+                <field name="tgl_transaksi"/>
+                <field name="reference" readonly="1"/>
+                <field name="no_bpb" readonly="1"/>
+                <field name="no_spb" readonly="1"/>
+                <field name="no_sj" readonly="1"/>
+                <field name="product_id"/>
+                <!-- <field name="noorder"/> -->
+                <field name="keterangan_move"/>
+                <field name="rb"/>
+                <field name="rk"/>
+                <field name="rijek"/>
+                <field name="product_uom_qty"/>
+                <field name="reserved_availability"/>
+                <field name="quantity_done"/>
+                <field name="product_uom"/>
+                <field name="state" invisible="1"
+                />
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_stock_move_tree_all" model="ir.actions.act_window">
+        <field name="name">Data Stock Move</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">stock.move</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="stock_move_tree4"/>
+        <!-- <field name="domain">[('inventory_id', '=', active_id)]</field> -->
+    </record>
+
+
+    <!-- <record id="stock_move_action" model="ir.actions.act_window">
+        <field name="name">Stock Move Lines</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">stock.move</field>
+        <field name="domain">[]</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="stock_move_tree4"/>
+    </record> -->
+    <!-- <menuitem id="all_action_stock_move_tree" parent="menu_stock_warehouse_mgmt" sequence="30" action="action_stock_move_tree_all" /> -->
+
+    <menuitem 
+    action="action_stock_move_tree_all" 
+    id="all_action_stock_move_tree" 
+    parent="stock.menu_stock_warehouse_mgmt" 
+    sequence="30"/>
+
+
+    <!-- <record id="action_stock_move_action" model="ir.actions.act_window">
+            <field name="name">stock.move.tree.custom</field>
+            <field name="res_model">stock.move</field>
+            <field name="view_mode">tree</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+					Click to add Income
+				</p>
+            </field>
+        </record>
+
+        <menuitem id="menu_stock_move_action" name="Income SO" action="action_stock_move_action" parent="stock.menu_stock_warehouse_mgmt" sequence="35"/> -->
+</flectra>

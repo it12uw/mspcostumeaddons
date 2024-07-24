@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data>
+
+        <record id="action_msp_mrp_qc_inline1" model="ir.actions.act_window">
+            <field name="name">Data QC MRP</field>
+            <field name="res_model">msp.qc.inline1</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                Click to define a new QC.
+                </p>
+            </field>
+        </record>
+        <record id="action_msp_qc_defect" model="ir.actions.act_window">
+            <field name="name">Data Defect</field>
+            <field name="res_model">msp.qc.defect</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                Click to define a new Defect.
+                </p>
+            </field>
+        </record>
+        <!-- <record id="action_marel_in_permintaan_benang_sample" model="ir.actions.act_window">
+            <field name="name">Permintaan benang Sample</field>
+            <field name="res_model">marelin.permintaan.benang.sample</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+					Click to add Permintaan Benang
+				</p>
+            </field>
+        </record> -->
+        <!-- web_icon="msp_qc_mrp_menu,static/description/sample.png" -->
+        <!-- <menuitem id="msp_qc_mrp_menu_02" name="QC" sequence="100"/> -->
+        <!-- sample -->
+        <!-- <menuitem id="msp_qc_mrp_menu_12" name="QC MRP" parent="msp_qc_mrp_menu_02" sequence="30" /> -->
+        <menuitem 
+        id="menu_msp_mrp_qc_inline1" 
+        name="Inline 1" 
+        parent="msp_qc_mrp_menu.msp_qc_mrp_menu_12" 
+        action="action_msp_mrp_qc_inline1" 
+        sequence="35"/>
+        
+        <menuitem 
+        id="menu_msp_qc_defect"
+        name="Defect" 
+        parent="msp_qc_mrp_menu.msp_qc_mrp_menu_12" 
+        action="action_msp_qc_defect" 
+        sequence="35"/>
+    </data>
+</flectra>

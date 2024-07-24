@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data>
+        <record id="view_marel_summary_report_pivot" model="ir.ui.view">
+            <field name="name">marel.summary.report.pivot</field>
+            <field name="model">marel.summary.report</field>
+            <field name="arch" type="xml">
+                <pivot string="Report Sumray" disable_linking="True">
+                    <field name="name" type="row"/>
+                    <field name="product_id" type="row"/>
+                    <field name="product_uom_qty" type="row"/>
+                    <field name="price_subtotal_so" type="col"/>
+                    <field name="amount_total_so" type="col"/>
+                    <field name="amount_total_po" type="col"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="view_marel_summary_report_tree" model="ir.ui.view">
+            <field name="name">marel.summary.report.tree</field>
+            <field name="model">marel.summary.report</field>
+            <field name="arch" type="xml">
+                <tree string="Produksi Harian">
+                    <field name="name"/>
+                    <field name="product_id"/>
+                    <field name="product_uom_qty"/>
+                    <field name="price_subtotal_so"/>
+                    <field name="amount_total_so"/>
+                    <field name="price_subtotal_po"/>
+                    <field name="amount_total_po"/>
+                    <!-- <field name="pakan" avg="Rata2 Pick"/> -->
+                    <field name="tot_prov" avg="Rata2 Provit"/>
+                    <!-- <field name="hpp_pick" avg="Rata2 HPP/PICK"/> -->
+                    <field name="pov_tex" avg="Rata2 Provit + Tex"/>
+                    <field name="hpp_tex" avg="Rata2 HPP/PICK + Tax"/>
+                    <field name="sale_price"/>
+                    <field name="bom_comp"/>
+                    <field name="bom_cost"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_marel_summary_report" model="ir.actions.act_window">
+            <field name="name">Report Summray</field>
+            <field name="res_model">marel.summary.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">pivot,tree</field>
+            <!-- <field name="search_view_id" ref="view_mpc_produce_lot_filter"/> -->
+            <!-- <field name="context">{'search_default_today':1}</field> -->
+            <field name="view_id"></field>
+        </record>
+
+        <menuitem action="action_marel_summary_report" id="menu_marel_summary_report" name="Report Summray" sequence="60"/>
+    </data>
+</flectra>

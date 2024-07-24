@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+	<data>
+		<record id="action_marel_data_prodak_afal_list" model="ir.actions.act_window">
+			<field name="name">Data Prodak Afal</field>
+			<field name="res_model">marel.data.prodakafal</field>
+			<field name="view_mode">tree,form,pivot,graph</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+						Click to add a BS
+				</p>
+				<p>Klik Tombol Create Untuk Bikin Data BS Kain</p>
+			</field>
+		</record>
+
+		<record id="action_marel_jenis_afal_list" model="ir.actions.act_window">
+			<field name="name">Data Jenis Afal</field>
+			<field name="res_model">marel.jenis.afal</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+						Click to add a Jenis Afal
+				</p>
+				<p>Klik Tombol Create Untuk Bikin Data Jenis Afal</p>
+			</field>
+		</record>
+
+			<menuitem id="menu_afal_0" 
+					name="Data Afal" 
+					sequence="200"/>
+			<menuitem id="menu_afal_1" 
+					name="Produk Afal" 
+					parent="menu_afal_0" 
+					sequence="50"/>
+			<menuitem id="menu_data_prodak_afal" 
+					name="Data Afal"
+					parent="menu_afal_1" 
+					action="action_marel_data_prodak_afal_list" 
+					sequence="51"/>
+			<menuitem id="menu_data_jenis_afal" 
+					name="Jenis Afal"
+					parent="menu_afal_1" 
+					action="action_marel_jenis_afal_list" 
+					sequence="52"/>	
+		</data>
+	</flectra>	

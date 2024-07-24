@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data>
+        <record id="stock_category_filter" model="ir.ui.view">
+            <field name="name">stock.category.filter</field>
+            <field name="model">stock.quant</field>
+            <field name="inherit_id" ref="stock.quant_search_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[2]" position="inside">
+                    <filter string="Category" icon="categ_id" domain="[]" 
+                        context="{'group_by':'categ_id'}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</flectra>

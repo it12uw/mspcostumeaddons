@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <record id="view_msp_mrp_qc_inline_inherit_workorder_tree_1" model="ir.ui.view">
+            <field name="name">view_msp_mrp_qc_inline_inherit_workorder_tree_1</field>
+            <field name="model">mrp.workorder</field>
+            <field name="inherit_id" ref="mrp.mrp_production_workcenter_form_view_inherit"/>
+            <field name="arch" type="xml">
+                <!-- <xpath expr="/tree/field[@name='state']" position="after"> -->
+                <xpath expr="//button[@name='button_scrap']" position="after">
+                    <!-- <xpath expr="//field[@name='production_availability']" position="after"> -->
+                    <!-- <br/>
+                    <br/> -->
+                    <button name="action_nilai_pending_inline_1_qc" type="object" string="Ulang Inline 20%" class="oe_highlight" attrs="{'invisible': ['|',('status_button_1', '=', False)]}" groups="__export__.res_groups_295_66228db8"/>
+                    <button name="action_nilai_inline_1_qc" type="object" string="Inline 20%" class="oe_highlight" attrs="{'invisible': ['|',('status_button_1', '=', True),('total_yg_persen_selesai','&lt;', 20)]}" groups="__export__.res_groups_295_66228db8"/>
+                   
+                    <button name="action_nilai_pending_inline_2_qc" type="object" string="Ulang Inline 40%" class="oe_highlight" attrs="{'invisible': ['|',('status_button_2', '=', False)]}" groups="__export__.res_groups_295_66228db8"/>
+                    <button name="action_nilai_inline_2_qc" type="object" string="Inline 40%" class="oe_highlight" attrs="{'invisible': ['|',('status_button_2', '=', True),('total_yg_persen_selesai','&lt;', 40)]}" groups="__export__.res_groups_295_66228db8"/>
+
+                    <button name="action_nilai_pending_inline_3_qc" type="object" string="Ulang Inline 80%" class="oe_highlight" attrs="{'invisible': ['|',('status_button_3', '=', False)]}" groups="__export__.res_groups_295_66228db8"/>
+                    <button name="action_nilai_inline_3_qc" type="object" string="Inline 80%" class="oe_highlight" attrs="{'invisible': ['|',('status_button_3', '=', True),('total_yg_persen_selesai','&lt;', 80)]}" groups="__export__.res_groups_295_66228db8"/>
+
+                    <button name="action_nilai_pending_inline_4_qc" type="object" string="Ulang Final" class="oe_highlight" attrs="{'invisible': ['|',('status_button_4', '=', False)]}" groups="__export__.res_groups_295_66228db8"/>
+                    <button name="action_nilai_inline_4_qc" type="object" string="Final" class="oe_highlight" attrs="{'invisible': ['|',('status_button_4', '=', True),('total_yg_persen_selesai','&lt;', 100)]}" groups="__export__.res_groups_295_66228db8"/>
+
+                    <button name="action_nilai_pending_status_button_inline_garment_qc" type="object" string="Ulang Inline Garment" class="oe_highlight" attrs="{'invisible': ['|',('status_button_inline_garment', '=', False)]}" groups="__export__.res_groups_295_66228db8"/>
+                    <button name="action_nilai_inline_garment_qc" type="object" string="Inline Garment" class="oe_highlight" attrs="{'invisible': [('status_button_inline_garment', '=', True)]}" groups="__export__.res_groups_295_66228db8"/>
+
+                    <button name="action_nilai_pending_status_button_endline_garment_qc" type="object" string="Ulang EndLine Garment" class="oe_highlight" attrs="{'invisible': ['|',('status_button_endline_garment', '=', False)]}" groups="__export__.res_groups_295_66228db8"/>
+                    <button name="action_nilai_endline_garment_qc" type="object" string="EndLine Garment" class="oe_highlight" attrs="{'invisible': [('status_button_endline_garment', '=', True)]}" groups="__export__.res_groups_295_66228db8"/>
+
+                    <button name="button_finish" type="object" string="Finish" class="oe_highlight" attrs="{'invisible': ['|', '|', '|', ('status_button_4', '=', False), ('working_state', '=', 'blocked'), ('state', '!=', 'done'), ('is_user_working', '=', False)]}" groups="__export__.res_groups_295_66228db8"/>
+
+                </xpath>
+            </field>
+        </record>
+
+        <!-- attrs="{'invisible': ['|', ('state', 'in', 'progress'), ('status_button', '=', yes)]}" -->
+
+    </data>
+</flectra>
+<!-- <xpath expr="//button[@name='button_scrap']" position="after"> -->

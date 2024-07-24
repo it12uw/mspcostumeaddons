@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <record id="view_marel_in_bom" model="ir.ui.view">
+            <field name="name">marel_in_bom</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='routing_id']" position="after">
+                    <field name="janis_kk_id" options="{'no_create': True}"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_marel_in_bom_line" model="ir.ui.view">
+            <field name="name">marel_in_bom_line</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="/form/sheet/notebook/page/field/tree/field[@name='operation_id']" position="after">
+                    <!-- <tree string="Tambahan Bom Line" editable="bottom"> -->
+                    <!-- <field name="operation_id" readonly="1"/> -->
+                    <!-- <field name="jumlah_ambil"/> -->
+                    <field name="qty_bom_reguler" readonly="1"/>
+                    <field name="qty_bom_soccer" readonly="1"/>
+                    <field name="qty_benang_kg" readonly="1"/>
+                    <field name="qty_benang_gr"/>
+                    <!-- <field name="awal"/> -->
+                    <!-- <field name="akhir"/> -->
+                    <!-- <field name="terpakai"/> -->
+                    <button name="get_hitung_qty_mrp_bom_line" type="object" string="Gramasi"/>
+                    <!-- </tree> -->
+                </xpath>
+            </field>
+        </record>
+    </data>
+</flectra>

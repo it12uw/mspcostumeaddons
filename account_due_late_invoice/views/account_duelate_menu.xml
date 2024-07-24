@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data>
+        <report
+            string="Invoice Due Late"
+            id="action_account_duelate_report"
+            model="account.duelate.wiz"
+            report_type="qweb-pdf"
+            name="account_due_late_invoice.account_duelate_report_doc"
+            file="account_due_late_invoice.account_duelate_report_doc"
+            print_report_name="'Due Late Invoice'"
+        />
+
+    </data>
+</flectra>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+	<report id="dev_print_product_label"
+		            model="dev.product.label"
+		            string="Product Label"
+		            report_type="qweb-pdf"
+		            name="dev_product_label.product_label_template"  
+		            file="dev_product_label.product_label_template"
+		            />
+		            
+    
+    <record id="paperformat_product_label" model="report.paperformat">
+        <field name="name">Product Label A4</field>
+        <field name="default" eval="True" />
+        <field name="format">custom</field>
+        <field name="page_height">297</field>
+        <field name="page_width">210</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">7</field>
+        <field name="margin_bottom">7</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">7</field>
+        <field name="dpi">90</field>
+    </record>
+    
+    <record id="dev_product_label.dev_print_product_label" model="ir.actions.report">
+        <field name="paperformat_id" ref="dev_product_label.paperformat_product_label" />
+    </record>
+    
+    
+</flectra>

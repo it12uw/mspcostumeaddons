@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data>
+        <!-- =============================in.laporanharian.shiftwarping ================================ -->
+        <!--   -->
+        <record id="view_laporanharian_shiftwarping_tree" model="ir.ui.view">
+            <field name="name">laporanharian.shiftwarping.tree</field>
+            <field name="model">laporanharian.shiftwarping</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="plan mes">
+                    <field name="no_kp"/>
+                    <field name="seri"/>
+                    <field name="tarikan"/>
+                    <field name="quantity"/>
+                    <field name="mesin"/>
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                    <field name="keterangan"/>
+                    <field name="tgl"/>
+                    <field name="operator"/>
+                    <field name="panjang_tiap_beam"/>
+                    <field name="hasil_perbeam"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_laporanharian_shiftwarping_form" model="ir.ui.view">
+            <field name="name">laporanharian.shiftwarping.form</field>
+            <field name="model">laporanharian.shiftwarping</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="in_laporanharian_shiftwarping_form">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"
+                                string="Data "/>
+                        </div>
+                        <group>
+                            <field name="no_kp"/>
+                            <field name="seri"/>
+                            <field name="tarikan"/>
+                            <field name="quantity"/>
+                            <field name="mesin"/>
+                            <field name="date_start"/>
+                            <field name="date_end"/>
+                        </group>
+                        <notebook>
+                            <page>
+                                <group>
+                                    <group>
+                                        <field name="tgl"/>
+                                        <field name="pts_persejuta"/>
+                                        <field name="provit"/>
+                                        <field name="ttl_lost_time"/>
+                                        <field name="eff"/>
+                                    </group>
+                                    <group>
+                                        <field name="waktu"/>
+                                        <field name="operator"/>
+                                        <field name="panjang_tiap_beam"/>
+                                        <field name="hasil_perbeam"/>
+                                        <field name="keterangan"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</flectra>

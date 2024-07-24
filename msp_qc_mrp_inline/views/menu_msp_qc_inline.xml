@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data>
+
+        <record id="action_msp_qc_inline1" model="ir.actions.act_window">
+            <field name="name">Msp Qc Inline 1</field>
+            <field name="res_model">msp.qc.inline1</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                Click to define a new inline
+                </p>
+            </field>
+        </record>
+
+        <record id="action_msp_qc_inline2" model="ir.actions.act_window">
+            <field name="name">Msp Qc Inline 2</field>
+            <field name="res_model">msp.qc.inline2</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                Click to define a new inline
+                </p>
+            </field>
+        </record>
+
+        <record id="action_msp_qc_inline3" model="ir.actions.act_window">
+            <field name="name">Msp Qc Inline 3</field>
+            <field name="res_model">msp.qc.inline3</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                Click to define a new inline
+                </p>
+            </field>
+        </record>
+        <record id="action_msp_qc_inline4" model="ir.actions.act_window">
+            <field name="name">Msp Qc Inline 4</field>
+            <field name="res_model">msp.qc.inline4</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                Click to define a new inline
+                </p>
+            </field>
+        </record>
+
+        <record id="action_msp_qcinline_garment" model="ir.actions.act_window">
+            <field name="name">Msp Qc Garment</field>
+            <field name="res_model">msp.qc.inline.garment</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                Click to define a new inline
+                </p>
+            </field>
+        </record>
+
+        <record id="action_msp_qcendline_garment" model="ir.actions.act_window">
+            <field name="name">Msp Qc Garment</field>
+            <field name="res_model">msp.qc.endline.garment</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                Click to define a new inline
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="msp_qc_mrp_inline_00" name="Qc Inline" sequence="100"/>
+        <!-- sample -->
+        <menuitem id="msp_qc_mrp_inline_0" name="Data Inline" parent="msp_qc_mrp_inline_00" sequence="30"/>
+        <menuitem id="msp_qc_mrp_inline_01" name="Inline 1" parent="msp_qc_mrp_inline_0" action="action_msp_qc_inline1" sequence="35"/>
+        <menuitem id="msp_qc_mrp_inline_02" name="Inline 2" parent="msp_qc_mrp_inline_0" action="action_msp_qc_inline2" sequence="35"/>
+        <menuitem id="msp_qc_mrp_inline_03" name="Inline 3" parent="msp_qc_mrp_inline_0" action="action_msp_qc_inline3" sequence="35"/>
+        <menuitem id="msp_qc_mrp_inline_04" name="Inline 4" parent="msp_qc_mrp_inline_0" action="action_msp_qc_inline4" sequence="35"/>
+        <menuitem id="msp_qcinline_garment_0" name="Data Qc Garment" parent="msp_qc_mrp_inline_00" sequence="30"/>
+        <menuitem id="msp_qcinline_garment_01" name="Qc Inline" parent="msp_qcinline_garment_0" action="action_msp_qcinline_garment" sequence="35"/>
+        <menuitem id="msp_qcendline_garment_02" name="Qc Endline" parent="msp_qcinline_garment_0" action="action_msp_qcendline_garment" sequence="35"/>
+
+    </data>
+</flectra>

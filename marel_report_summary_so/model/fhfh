@@ -1,0 +1,50 @@
+from flectra import models, fields, api, _
+
+class ProductionBomReport(models.AbstractModel):
+    """
+    Class untuk Custom Data Report sebelum di render ke dalam template
+    """
+    _name = "report.manufacturing_bom_report.report_mrpbomorder"
+
+
+    @api.model
+    # def render_html(self, docids, data=None):
+    def get_report_values(self, docids, data=None):
+        """
+        Method default custom reporting odoo untuk custom data
+
+        params:
+            - docids = id record model yg akan digenerate didalam report
+            - data = biasanya digunakan untuk custom report dengan data dari Wizard
+        """
+        # report_obj = self.env['report']
+        # report = report_obj._get_report_from_name('manufacturing_bom_report.report_mrpbomorder')
+        self_model = self.env.context.get('active_model')        
+        mo = self.env[self_model].browse(self.env.context.get('active_ids',[]))
+        print ("\n\n\n", docids, "\n\n\n", mo, "\n\n\n")
+
+        # Ambil data mo yg akan ditampilan di report, dimasukan ke dict dengan key id 
+        # agar product dengan nama tidak tertumpuk
+        # karena dikelompokkan oleh id
+        data = {}
+        for order in mo:
+            for record in order.move_raw_ids:
+                if record.product_id.id in data:
+                    data[record.product_id.id]["qty"] += record.product_uom_qty
+                else:
+                    data[record.product_id.id] = {"name": record.product_id.name, "qty": record.product_uom_qty}
+        
+        # masukkan ke dalam list tanpa key untuk mempermudah sorting
+        # bisa di improve dengan library Pandas (untuk olah data) dan Jinja (templating report) agar lebih efektif
+        data_without_key = []
+        for key in data:
+            data_without_key.append(data[key])
+
+        docargs = {
+            "mo" : ", ".join(order.name for order in mo),
+            "data": sorted(data_without_key, key=lambda key: key["name"]) # sorting by name
+        }
+
+        # return self.env["report"].render('manufacturing_bom_report.report_mrpbomorder_new', docargs)
+        return docargs
+            

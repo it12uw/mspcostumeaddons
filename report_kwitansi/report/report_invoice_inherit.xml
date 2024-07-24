@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data>
+        <template id="report_invoice_inherit_document" inherit_id="account.report_invoice_document">
+            <xpath expr="//p[@t-if='o.fiscal_position_id.note']" position="after">
+                <!--<div style="position:absolute; top:700px;" >-->
+                    <div class="col-xs-5 pull-right">
+                        <table class="table table-condensed">
+                            <tr>
+                            <td class="text-center" style="border-top:none;"><img t-attf-src="data:image/png;base64,{{ o.approval_uid.digital_signature }}" 
+                                    style="position:absolute; width:200px; height:100px;"/>
+                                <t t-if="o.is_stamp == True"><img t-attf-src="data:image/png;base64,{{ o.company_id.stamp }}" 
+                                    style="position:relative; width:200px; height:100px;"/></t>              
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="text-center" style="border-top:none;"><span t-field="o.approval_uid" t-option='{"widget":"contact" "field":["name"]}'/></td>
+                            </tr>
+                        </table>
+                    </div>
+                <!--</div>-->
+            </xpath>
+        </template>
+    </data>
+</flectra>

@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+	<record id="view_msp_qc_inline3_wizard" model="ir.ui.view">
+		<field name="name">view msp_qc inline3 wizard</field>
+		<field name="model">msp.qc.inline3.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Line QC">
+				<!-- sample 151 - 280 -->
+					<group>
+						<t attrs="{'invisible':[('product_qty_inline','&gt;',8)]}">
+							<span style="color: red;">Sample SIze :</span>
+							<field name="sample_size_2_8" style="color: red;"/>
+							<br/>
+							<span style="color: red;">Mayor : </span>
+							<field name="mayor_2_8" style="color: red;"/>
+							<br/>
+							<span style="color: red;">Minor : </span>
+							<field name="minor_2_8" style="color: red;"/>
+						</t>
+						<br/>
+						<t attrs="{'invisible':[('product_qty_inline','&gt;',15)]}">
+							<t attrs="{'invisible':[('product_qty_inline_1','&lt;',9)]}">
+								<span style="color: red;">Sample SIze :</span>
+								<field name="sample_size_9_15" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Mayor : </span>
+								<field name="mayor_9_15" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Minor : </span>
+								<field name="minor_9_15" style="color: red;"/>
+							</t>
+						</t>
+						<br/>
+						<t attrs="{'invisible':[('product_qty_inline','&gt;',25)]}">
+							<t attrs="{'invisible':[('product_qty_inline_1','&lt;',16)]}">
+								<span style="color: red;">Sample SIze :</span>
+								<field name="sample_size_16_25" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Mayor : </span>
+								<field name="mayor_16_25" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Minor : </span>
+								<field name="minor_16_25" style="color: red;"/>
+							</t>
+						</t>
+						<br/>
+						<t attrs="{'invisible':[('product_qty_inline','&gt;',50)]}">
+							<t attrs="{'invisible':[('product_qty_inline_1','&lt;',26)]}">
+								<span style="color: red;">Sample SIze :</span>
+								<field name="sample_size_26_50" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Mayor : </span>
+								<field name="mayor_26_50" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Minor : </span>
+								<field name="minor_26_50" style="color: red;"/>
+							</t>
+						</t>
+						<br/>
+						<t attrs="{'invisible':[('product_qty_inline','&gt;',90)]}">
+							<t attrs="{'invisible':[('product_qty_inline_1','&lt;',51)]}">
+								<span style="color: red;">Sample SIze :</span>
+								<field name="sample_size_51_90" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Mayor : </span>
+								<field name="mayor_51_90" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Minor : </span>
+								<field name="minor_51_90" style="color: red;"/>
+							</t>
+						</t>
+						<br/>
+						<t attrs="{'invisible':[('product_qty_inline','&gt;',150)]}">
+							<t attrs="{'invisible':[('product_qty_inline_1','&lt;',91)]}">
+								<span style="color: red;">Sample SIze :</span>
+								<field name="sample_size_91_150" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Mayor : </span>
+								<field name="mayor_91_150" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Minor : </span>
+								<field name="minor_91_150" style="color: red;"/>
+							</t>
+						</t>
+						<br/>
+						<t attrs="{'invisible':[('product_qty_inline','&gt;',280)]}">
+							<t attrs="{'invisible':[('product_qty_inline_1','&lt;',151)]}">
+								<span style="color: red;">Sample SIze :</span>
+								<field name="sample_size_151_280" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Mayor : </span>
+								<field name="mayor_151_280" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Minor : </span>
+								<field name="minor_151_280" style="color: red;"/>
+							</t>
+						</t>
+						<br/>
+						<t attrs="{'invisible':[('product_qty_inline','&gt;',500)]}">
+							<t attrs="{'invisible':[('product_qty_inline_1','&lt;',281)]}">
+								<span style="color: red;">Sample SIze :</span>
+								<field name="sample_size_281_500" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Mayor : </span>
+								<field name="mayor_281_500" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Minor : </span>
+								<field name="minor_281_500" style="color: red;"/>
+							</t>
+						</t>
+						<br/>
+						<t attrs="{'invisible':[('product_qty_inline','&gt;',1200)]}">
+							<t attrs="{'invisible':[('product_qty_inline_1','&lt;',501)]}">
+								<span style="color: red;">Sample SIze :</span>
+								<field name="sample_size_501_1200" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Mayor : </span>
+								<field name="mayor_501_1200" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Minor : </span>
+								<field name="minor_501_1200" style="color: red;"/>
+							</t>
+						</t>
+						<br/>
+						<t attrs="{'invisible':[('product_qty_inline','&gt;',3200)]}">
+							<t attrs="{'invisible':[('product_qty_inline_1','&lt;',1201)]}">
+								<span style="color: red;">Sample SIze :</span>
+								<field name="sample_size_1201_3200" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Mayor : </span>
+								<field name="mayor_1201_3200" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Minor : </span>
+								<field name="minor_1201_3200" style="color: red;"/>
+							</t>
+						</t>
+						<br/>
+						<t attrs="{'invisible':[('product_qty_inline','&lt;',10000)]}">
+							<t attrs="{'invisible':[('product_qty_inline_1','&lt;',32001)]}">
+								<span style="color: red;">Sample SIze :</span>
+								<field name="sample_size_3201_10000" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Mayor : </span>
+								<field name="mayor_3201_10000" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Minor : </span>
+								<field name="minor_3201_10000" style="color: red;"/>
+							</t>
+						</t>
+						<br/>
+						<t attrs="{'invisible':[('product_qty_inline','&gt;',35000)]}">
+							<t attrs="{'invisible':[('product_qty_inline_1','&lt;',10001)]}">
+								<span style="color: red;">Sample SIze :</span>
+								<field name="sample_size_10001_35000" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Mayor : </span>
+								<field name="mayor_10001_35000" style="color: red;"/>
+								<br/>
+								<span style="color: red;">Minor : </span>
+								<field name="minor_10001_35000" style="color: red;"/>
+							</t>
+						</t>
+						<br/>
+						<t attrs="{'invisible':[('product_qty_inline','&lt;',35001)]}">
+							<span style="color: red;">Sample SIze :</span>
+							<field name="sample_size_35001" style="color: red;"/>
+							<br/>
+							<span style="color: red;">Mayor : </span>
+							<field name="mayor_35001" style="color: red;"/>
+							<br/>
+							<span style="color: red;">Minor : </span>
+							<field name="minor_35001" style="color: red;"/>
+						</t>
+					</group>
+				<group>
+					<label form="name" class="oe_edit_only" string="No Id" />
+					<group>
+						<field name="product_qty_inline_1" invisible="1"/>
+						<!-- <field name="product_qty_inline_2" invisible="1"/>
+						<field name="product_qty_inline_3" invisible="1"/>
+						<field name="product_qty_inline_4" invisible="1"/> -->
+						<field name="name" />
+						<field name="product_qty_inline" />
+						<field name="color" />
+						<field name="tgl_create" />
+						<field name="handfeel" />
+						<field name="mrp_productioin_id" />
+						<!-- <field name="handfeel" /> -->
+						<field name="keterangan" />
+					</group>
+					<group>
+						<table>
+								<tr>
+									<td>
+										<strong>Aksesoris</strong>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<strong>Benang</strong>
+										<field name="aksesoris_1" />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<strong>Bordir</strong>
+										<field name="aksesoris_2" />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<strong>Label</strong>
+										<field name="aksesoris_3" />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<strong>Hangtag</strong>
+										<field name="aksesoris_4" />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<strong>Barcode</strong>
+										<field name="aksesoris_5" />
+									</td>
+								</tr>
+							</table>
+					</group>
+				</group>
+				<group>
+					<group>
+						<field name="prodak" />
+					</group>
+					<group>
+						<table>
+							<tr>
+								<td colspan='2'>
+									<strong>No Carton Inspected</strong>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>1:</td>
+								<td>
+									<field name="no_carton_inspected_1" />
+								</td>
+								<td>2:</td>
+								<td>
+									<field name="no_carton_inspected_2" />
+								</td>
+							</tr>
+							<tr>
+								<td>3:</td>
+								<td>
+									<field name="no_carton_inspected_3" />
+								</td>
+								<td>4:</td>
+								<td>
+									<field name="no_carton_inspected_4" />
+								</td>
+							</tr>
+							<tr>
+								<td>5:</td>
+								<td>
+									<field name="no_carton_inspected_5" />
+								</td>
+								<td>6:</td>
+								<td>
+									<field name="no_carton_inspected_6" />
+								</td>
+							</tr>
+							<tr>
+								<td>7:</td>
+								<td>
+									<field name="no_carton_inspected_7" />
+								</td>
+								<td>8:</td>
+								<td>
+									<field name="no_carton_inspected_8" />
+								</td>
+							</tr>
+						</table>
+					</group>
+				</group>
+				<group>
+					<group>
+						<table>
+								<tr>
+									<td width="350px">
+									No
+									</td>
+									<td width="350px">
+										<strong>Reject</strong>
+									</td>
+									<td width="350px">
+										<strong>Kategori Reject</strong>
+									</td>
+									<td width="350px">
+										<strong>Jumlah</strong>
+									</td>
+									<td>
+										<strong>Sugestion</strong>
+									</td>
+								</tr>
+								<tr>
+									<td width="350px">
+									1
+									</td>
+									<td width="350px">
+										<field name="rijek_1" />
+									</td>
+									<td width="350px">
+										<field name="bentuk_rijek_1" />
+									</td>
+									<td width="350px">
+										<field name="nilai_rijek_1" />
+									</td>
+									<td>
+										<field name="sugestion_1" />
+									</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>
+										<field name="rijek_2" />
+									</td>
+									<td>
+										<field name="bentuk_rijek_2" />
+									</td>
+									<td>
+										<field name="nilai_rijek_2" />
+									</td>
+									<td>
+										<field name="sugestion_2" />
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>
+										<field name="rijek_3" />
+									</td>
+									<td>
+										<field name="bentuk_rijek_3" />
+									</td>
+									<td>
+										<field name="nilai_rijek_3" />
+									</td>
+									<td>
+										<field name="sugestion_3" />
+									</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>
+										<field name="rijek_4" />
+									</td>
+									<td>
+										<field name="bentuk_rijek_4" />
+									</td>
+									<td>
+										<field name="nilai_rijek_4" />
+									</td>
+									<td>
+										<field name="sugestion_4" />
+									</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>
+										<field name="rijek_5" />
+									</td>
+									<td>
+										<field name="bentuk_rijek_5" />
+									</td>
+									<td>
+										<field name="nilai_rijek_5" />
+									</td>
+									<td>
+										<field name="sugestion_5" />
+									</td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td>
+										<field name="rijek_6" />
+									</td>
+									<td>
+										<field name="bentuk_rijek_6" />
+									</td>
+									<td>
+										<field name="nilai_rijek_6" />
+									</td>
+									<td>
+										<field name="sugestion_6" />
+									</td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td>
+										<field name="rijek_7" />
+									</td>
+									<td>
+										<field name="bentuk_rijek_7" />
+									</td>
+									<td>
+										<field name="nilai_rijek_7" />
+									</td>
+									<td>
+										<field name="sugestion_7" />
+									</td>
+								</tr>
+								<tr>
+									<td>8</td>
+									<td>
+										<field name="rijek_8" />
+									</td>
+									<td>
+										<field name="bentuk_rijek_8" />
+									</td>
+									<td>
+										<field name="nilai_rijek_8" />
+									</td>
+									<td>
+										<field name="sugestion_8" />
+									</td>
+								</tr>
+							</table>
+					</group>
+				</group>
+				<group>
+					<field name="jumlah_kritikal_qc"/>
+					<field name="jumlah_mayor_qc"/>
+					<field name="jumlah_minor_qc"/>
+					<br/>
+					<field name="inspection_result" />
+					<field name="comment" />
+				</group>
+
+				<footer>
+					<button name="msp_qc_inline3_wizard" type="object" string="Save Line Qc" class="btn-primary" />
+					<button string="Cancel" class="btn-default" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+
+	<record id="act_msp_qc_inline3_wizard" model="ir.actions.act_window">
+		<field name="name">act msp qc inline3 wizard</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">msp.qc.inline3.wizard</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">form</field>
+		<field name="view_id" ref="view_msp_qc_inline3_wizard"/>
+		<field name="context">{'default_name_id':name,}</field>
+		<field name="target">new</field>
+	</record>
+</flectra>

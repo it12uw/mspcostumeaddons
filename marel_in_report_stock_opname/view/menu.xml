@@ -1,0 +1,147 @@
+<flectra>
+	<data>
+
+		<record id="action_in_plan_mes_list" model="ir.actions.act_window">
+			<field name="name">MES Plan</field>
+			<field name="res_model">in.plan.mes</field>
+			<field name="view_mode">tree,form,group,pivot</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					Click to add a MES
+				</p>
+				<p>klik tombol create untuk bikin MES Plan</p>
+			</field>
+		</record>
+
+
+		<record id="action_in_inherader_planwarping_list" model="ir.actions.act_window">
+			<field name="name">Header Plan Warping</field>
+			<field name="res_model">inherader.planwarping</field>
+			<field name="view_mode">tree,form,group,pivot</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					Click to add laporan harian shift warping
+				</p>
+			</field>
+		</record>
+
+		<record id="action_inoperator_mengisiwarping_list" model="ir.actions.act_window">
+			<field name="name">Opearator Mesingisi</field>
+			<field name="res_model">inoperator.mengisiwarping</field>
+			<field name="view_mode">tree,form,group,pivot</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					Click to add Operator Mengisi
+				</p>
+			</field>
+		</record>
+
+		<record id="action_in_laporanharian_shiftwarping_list" model="ir.actions.act_window">
+			<field name="name">Laporan Harian Shift Warping</field>
+			<field name="res_model">in.laporanharian.shiftwarping</field>
+			<field name="view_mode">tree,form,group,pivot</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					Click to add a Serah Trima
+				</p>
+				<p>klik tombol create Laporan Harian Shift Warping</p>
+			</field>
+		</record>
+
+		<record id="action_inherader_plansizing_list" model="ir.actions.act_window">
+			<field name="name">Plan Header Sizing</field>
+			<field name="res_model">inherader.plansizing</field>
+			<field name="view_mode">tree,form,group,pivot</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					Click to add Plan Header Sizing
+				</p>
+			</field>
+		</record>
+
+		<record id="action_in_operator_sizingdepan_list" model="ir.actions.act_window">
+			<field name="name">Operator Sizing Depan</field>
+			<field name="res_model">in.operator.sizingdepan</field>
+			<field name="view_mode">tree,form,group,pivot</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					Click to add Operator Sizing Depan
+				</p>
+			</field>
+		</record>
+	
+		<record id="action_in_serah_trimabenang_list" model="ir.actions.act_window">
+			<field name="name">Serah Terima Benang</field>
+			<field name="res_model">in.serah.trimabenang</field>
+			<field name="view_mode">tree,form,group,pivot</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					Click to add Serah Terima Benang
+				</p>
+			</field>
+		</record>
+
+
+		<menuitem id="mes_0"
+			name="Data MES"
+			sequence="20"/>
+
+		<menuitem id="mes_1"
+			name="MES Plan"
+			parent="mes_0"
+			sequence="20"/>
+		<!-- sub menu -->
+		<menuitem id="menu_mes"
+			name="Data MES Plan"
+			parent="mes_1"
+			action="action_in_plan_mes_list"
+			sequence="20"/>
+		<!-- menu warping -->
+
+		<menuitem id="mes_2"
+			name="Plan Warping"
+			parent="mes_0"
+			sequence="20"/>
+		<menuitem id="menu_inherader_planwarping"
+			name="Plan Header Warping"
+			parent="mes_2"
+			action="action_in_inherader_planwarping_list"
+			sequence="20"/>
+
+		<menuitem id="menu_inoperator_mengisiwarping"
+			name="Operator Mengisi Warping"
+			parent="mes_2"
+			action="action_inoperator_mengisiwarping_list"
+			sequence="20"/>
+
+		<menuitem id="menu_in_laporanharian_shiftwarping"
+			name="Laporan Harian Warping"
+			parent="mes_2"
+			action="action_in_laporanharian_shiftwarping_list"
+			sequence="20"/>
+
+		<menuitem id="menu_in_serah_trimabenang"
+			name="Serah Terima Benang"
+			parent="mes_2"
+			action="action_in_serah_trimabenang_list"
+			sequence="20"/>
+
+		<!-- menu sizing -->
+		<menuitem id="mes_3"
+			name="Plan Sizing"
+			parent="mes_0"
+			sequence="20"/>
+		<menuitem id="menu_inherader_plansizing"
+			name="Data Plan Header Sizing"
+			parent="mes_3"
+			action="action_inherader_plansizing_list"
+			sequence="20"/>
+
+		<menuitem id="menu_in_operator_sizingdepa"
+			name="Operator Sizing Depan"
+			parent="mes_3"
+			action="action_in_operator_sizingdepan_list"
+			sequence="20"/>
+
+	</data>
+</flectra>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <record id="view_msp_mrp_qc_inline_inherit_workorder_tree_1" model="ir.ui.view">
+            <field name="name">view_msp_mrp_qc_inline_inherit_workorder_tree_1</field>
+            <field name="model">mrp.workorder</field>
+            <field name="inherit_id" ref="mrp.mrp_production_workcenter_tree_view_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="/tree/field[@name='state']" position="after">
+                    <button name="action_nilai_inline_qc" type="object" string="Memo QC" class="btn-primary" context="{'default_active_id':active_id}" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</flectra>

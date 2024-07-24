@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <!-- create action untuk report -->
+    <report 
+        string="Resume Report SO" 
+        id="action_msp_abstractclass_1" 
+        model="sale.order" 
+        name="msp_abstractclass.marelreport_abstractclass"
+        file="msp_abstractclass.menu_report" 
+        report_type="qweb-pdf"
+    />
+    <!-- <report 
+        string="BoM Report Aksesoris" 
+        id="action_report_bom_production_order_aksesoris" 
+        model="mrp.production" 
+        name="manufacturing_bom_report_rekap.report_bom_aksesoris"
+        file="manufacturing_bom_report_rekap.bom_report_act" 
+        report_type="qweb-pdf"
+    />
+    <report 
+        string="BON Report Aksesoris" 
+        id="action_report_bon_production_order_aksesoris" 
+        model="mrp.production" 
+        name="manufacturing_bom_report_rekap.report_bon_aksesoris"
+        file="manufacturing_bom_report_rekap.bom_report_act" 
+        report_type="qweb-pdf"
+    /> -->
+</flectra>

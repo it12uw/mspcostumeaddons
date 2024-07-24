@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+	<data noupdate="0">
+		<record id="view_marel_pengambilan_sparepart_tree" model="ir.ui.view">
+			<field name="name">marel.pengambilan.sparepart.tree</field>
+			<field name="model">marel.pengambilan.sparepart</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Pengambilan">
+					<field name="name"/>
+					<field name="tgl_pengambilan"/>
+					<field name="shift"/>
+				</tree>
+			</field>
+		</record>
+		<record id="view_marel_pengambilan_sparepart_form" model="ir.ui.view">
+			<field name="name">marel.pengambilan.sparepart.form</field>
+			<field name="model">marel.pengambilan.sparepart</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Pengambilan">
+					<header>
+						<button name="action_confirm" string="Confirm" type="object" class="oe_highlight" attrs="{'invisible': [('state','!=','draft')]}" />
+						<button name="action_cancel" string="Cancel" type="object" attrs="{'invisible': [('state','=','cancel')]}" />
+						<field name="state" widget="statusbar" statusbar_visible="draft,confirm" />
+					</header>
+					<sheet>
+						<div class="oe_title">
+							<h1>
+								<field name="name" readonly="1"/>
+							</h1>
+						</div>
+						<group>
+							<field name="tgl_pengambilan" attrs="{'readonly': [('state','!=','draft')]}" required="1" options="{'no_open': True, 'no_create': True}" />
+							<field name="shift" attrs="{'readonly': [('state','!=','draft')]}" required="1" options="{'no_open': True, 'no_create': True}" />
+						</group>
+						<notebook>
+							<page string="BON Pengambilan Sparepart">
+								<field name="marel_pengambilan_sparepart_line" attrs="{'readonly': [('state','!=','draft')]}" required="1" options="{'no_open': True, 'no_create': True}">
+									<tree string="BON Pengambilan Sparepart" editable="bottom">
+										<field name="product_id" options="{'no_open': True, 'no_create': True , 'required': True}" />
+										<field name="jumlah_pengambilan" />
+										<field name="no_mesin_id" options="{'no_open': True, 'no_create': True , 'required': True}" />
+										<field name="keterangan" />
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+	</data>
+</flectra>

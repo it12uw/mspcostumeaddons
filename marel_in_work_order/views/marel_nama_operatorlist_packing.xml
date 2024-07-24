@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <record id="view_marel_nama_operatorlist_packing_tree" model="ir.ui.view">
+            <field name="name">marel.nama.operatorlist.packing.tree</field>
+            <field name="model">marel.nama.operatorlist.packing</field>
+            <field name="arch" type="xml">
+                <tree string="Data Pendataan Packing">
+                    <field name="tgl_kerja"/>
+                    <field name="nama_operator_id"/>
+                    <field name="no_kkp"/>
+                    <field name="qty_perbox"/>
+                    <field name="no_box"/>
+                </tree>
+            </field>
+        </record>
+        <!-- pivot -->
+        <!-- <record model="ir.ui.view" id="view_marel_nama_operatorlist_packing_pivot">
+            <field name="name">marel.nama.operatorlist.packing.pivot</field>
+            <field name="model">marel.nama.operatorlist.packing</field>
+            <field name="arch" type="xml">
+                <pivot string="Data Pendataan Packing">
+                    <field name="nama_operator_id" type="col"/>
+                    <field name="krono_kk_menit" type="measure"/>
+                    <field name="jumlah_yg_selesai" type="measure"/>
+                    <field name="jumlah_reject" type="measure"/>
+                    <field name="target_kk_operator" type="measure"/>
+                    <field name="gread_d" type="measure"/>
+                    <field name="putus_benang" type="measure"/>
+                    <field name="bolong" type="measure"/>
+                    <field name="vanise" type="measure"/>
+                    <field name="singker" type="measure"/>
+                    <field name="kotor" type="measure"/>
+                    <field name="terry" type="measure"/>
+                    <field name="jumpstich" type="measure"/>
+                    <field name="renggang" type="measure"/>
+                    <field name="tidak_loading" type="measure"/>
+                    <field name="belang" type="measure"/>
+                    <field name="ukuran" type="measure"/>
+                    <field name="jarum" type="measure"/>
+                    <field name="transfer_jebol" type="measure"/>
+                    <field name="tgl_kerja" type="row"/>
+                </pivot>
+            </field>
+        </record> -->
+        <!-- graph -->
+        <record model="ir.ui.view" id="view_marel_nama_operatorlist_packing_graph">
+            <field name="name">marel.nama.operatorlist.packing.graph</field>
+            <field name="model">marel.nama.operatorlist.packing</field>
+            <field name="arch" type="xml">
+                <graph string="Data Pendataan Packing">
+                    <field name="tgl_kerja" type="measure"/>
+                    <field name="nama_operator_id" type="measure"/>
+                    <field name="no_kkp" type="measure"/>
+                    <field name="qty_perbox" type="measure"/>
+                    <field name="no_box" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="view_marel_nama_operatorlist_packing_form" model="ir.ui.view">
+            <field name="name">marel.nama.operatorlist.packing.form</field>
+            <field name="model">marel.nama.operatorlist.packing</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Data Pendataan Packing">
+                    <sheet>
+                        <group>
+                            <!--  TABAHAN TGL 6/5/20 -->
+                            <button name="action_confirm_value_packing_fix" string="Confirm" type="object" attrs="{'invisible': [('status', 'not in', ['draft'])]}"/>
+                            <field name="status"/>
+                            <field name="tgl_kerja" attrs="{'readonly': ['|', ('status', '=', 'done','cancel')]}"/>
+                            <field name="nama_operator_id" attrs="{'readonly': ['|', ('status', '=', 'done','cancel')]}"/>
+                            <field name="no_kkp" attrs="{'readonly': ['|', ('status', '=', 'done','cancel')]}"/>
+                            <field name="qty_perbox_sementara" attrs="{'readonly': ['|', ('status', '=', 'done','cancel')]}"/>
+                            <field name="qty_perbox"/>
+                            <field name="no_box" attrs="{'readonly': ['|', ('status', '=', 'done','cancel')]}"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</flectra>

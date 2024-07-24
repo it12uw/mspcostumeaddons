@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data>
+        <record id="view_herader_plan_sizing_tree" model="ir.ui.view">
+            <field name="name">herader.plansizing.tree</field>
+            <field name="model">herader.plansizing</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Header Plan Sizing">
+                    <field name="name"/>
+                    <field name="kode_sizing"/>
+                    <field name="mo_warping"/>
+                    <field name="kode_warping"/>
+                    <field name="seri"/>
+                    <field name="tarikan"/>
+                    <field name="quantity"/>
+                    <field name="mesin"/>
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_herader_plan_sizing_form" model="ir.ui.view">
+            <field name="name">herader.plansizing.form</field>
+            <field name="model">herader.plansizing</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="in_herader_plan_sizing_form">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"
+                                string="Data Plan Sizing"/>
+                        </div>
+                        <group>
+                            <field name="name"/>
+                            <field name="kode_sizing"/>
+                            <field name="mo_warping"/>
+                            <field name="kode_warping"/>
+                            <field name="seri"/>
+                            <field name="tarikan"/>
+                            <field name="quantity"/>
+                            <field name="mesin"/>
+                            <field name="date_start"/>
+                            <field name="date_end"/>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- ============================= in.operator.sizingdepan ================================ -->
+        <record id="view_operator_sizing_depan_tree" model="ir.ui.view">
+            <field name="name">operator.sizingdepan.tree</field>
+            <field name="model">operator.sizingdepan</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Operator Sizing Depan">
+                    <field name="name"/>
+                    <field name="kode_sizing"/>
+                    <field name="quantity"/>
+                    <field name="mesin"/>
+                    <field name="tgl"/>
+                    <field name="operator_db_blk"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_operator_sizing_depan_form" model="ir.ui.view">
+            <field name="name">operator.sizingdepan.form</field>
+            <field name="model">operator.sizingdepan</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="in_operator_sizing_depan_form">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"
+                                string="Operator Sizing Depan"/>
+                        </div>
+                        <group>
+                            <field name="tgl"/>
+                            <field name="name"/>
+                            <field name="kode_sizing"/>
+                            <field name="seri"/>
+                            <field name="tarikan"/>
+                            <field name="quantity"/>
+                            <field name="mesin"/>
+                            <field name="date_start"/>
+                            <field name="date_end"/>
+                        </group>
+                        <notebook>
+                            <page string="SupHeader">
+                                <group>
+                                    <group>
+                                        <field name="warping"/>
+                                        <field name="grade"/>
+                                        <field name="seri"/>
+                                        <field name="mc_wvp"/>
+                                        <field name="mc_szg"/>
+                                        <field name="asal_benang"/>
+                                        <field name="elg"/>
+                                        <field name="stg"/>
+                                        <field name="pts_benang"/>
+                                        <field name="te"/>
+                                        <field name="pjg"/>
+                                        <field name="no_beam"/>
+                                        <field name="panjang_benang"/>
+                                        <field name="bruto"/>
+                                        <field name="beam"/>
+                                        <field name="netto"/>
+                                        <field name="spu"/>
+
+                                    </group>
+                                    <group>
+                                        <field name="visco_1"/>
+                                        <field name="visco_2"/>
+                                        <field name="suhu_1"/>
+                                        <field name="suhu_2"/>
+                                        <field name="ref"/>
+                                        <field name="jam_naik"/>
+                                        <field name="jam_turun"/>
+                                        <field name="hasil_menit"/>
+                                        <field name="hasil_shift"/>
+                                        <field name="speed"/>
+                                        <field name="press_dp_blk"/>
+
+                                        <field name="temp_cyl_1"/>
+                                        <field name="temp_cyl_2"/>
+                                        <field name="temp_cyl_3"/>
+                                        <field name="operator_db_blk"/>
+                                        <field name="leader"/>
+                                        <field name="putus_benang_size_box"/>
+                                        <field name="putus_benang_sisir"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Footer">
+                                <group>
+                                    <group>
+                                        <group>
+                                            <field name="afal_setting_m"/>
+                                            <field name="afal_setting_kg"/>
+                                        </group>
+                                        <group>
+                                            <field name="alfa_terkaji_awal"/>
+                                            <field name="alfa_terkaji_akhir"/>
+                                            <field name="alfa_terkaji_total"/>
+                                        </group>
+                                        <group>
+                                            <field name="alfa_belum_awal"/>
+                                            <field name="alfa_belum_akhir"/>
+                                            <field name="alfa_belum_total"/>
+                                        </group>
+                                    </group>
+                                    <group>
+                                        <group>
+                                            <field name="pesiapan_size_box_start"/>
+                                            <field name="pesiapan_size_box_finish"/>
+                                            <field name="pesiapan_size_box_total"/>
+                                        </group>
+                                        <group>
+                                            <field name="pesiapan_cyl_start"/>
+                                            <field name="pesiapan_cyl_finish"/>
+                                            <field name="pesiapan_cyl_total"/>
+                                        </group>
+                                        <group>
+                                            <field name="pesiapan_head_start"/>
+                                            <field name="pesiapan_head_finish"/>
+                                            <field name="pesiapan_head_total"/>
+                                        </group>
+                                        <group>
+                                            <field name="pesiapan_pesankan_start"/>
+                                            <field name="pesiapan_pesankan_finish"/>
+                                            <field name="pesiapan_pesankan_total"/>
+                                        </group>
+
+                                    </group>
+                                    <group>
+                                        <field name="informasi"/>
+                                        <field name="keterangan"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</flectra>

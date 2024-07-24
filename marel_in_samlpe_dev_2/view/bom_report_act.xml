@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <!-- create action untuk report -->
+    <report 
+        string="Permintaan Benang" 
+        id="action_sample_report_permintaan_benang" 
+        model="marelin.samlpe.dev2" 
+        name="marel_in_samlpe_dev_2.sample_report_permintaan_benang"
+        file="marel_in_samlpe_dev_2.bom_report_act" 
+        report_type="qweb-pdf"
+    />
+</flectra>

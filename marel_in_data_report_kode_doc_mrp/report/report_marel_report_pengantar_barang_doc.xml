@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+	<data noupdate="0">
+		<template id="report_marel_report_pengantar_barang_doc">
+			<t t-call="web.external_layout">
+				<t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})" />
+				<div class="page">
+					<div class="oe_structure" />
+					<div class="row">
+						<h3 align="center">
+							<strong>
+								SURAT PENGANTAR BARANG
+							</strong>
+						</h3>
+						<!-- <div class="text-center">
+							<strong>
+								<span t-field="o.name" />
+							</strong>
+						</div> -->
+						<div class="row mt32 mb32">
+							<div t-if="o.tgl_transaksi" class="col-xs-3">
+								<strong>
+									Tanggal:
+								</strong>
+								<p t-field="o.tgl_transaksi" />
+							</div>
+							<div t-if="o.nama_pengemudi" class="col-xs-3">
+								<strong>
+									Pengemudi:
+								</strong>
+								<p t-field="o.nama_pengemudi" />
+							</div>
+							<div t-if="o.no_plat_truck" class="col-xs-3">
+								<strong>
+									No Plat Truck:
+								</strong>
+								<p t-field="o.no_plat_truck" />
+							</div>
+						</div>
+						<table class="table table-condensed table-striped">
+							<tr>
+								<th>
+									Produk
+								</th>
+								<th>
+									Qty
+								</th>
+								<th>
+									Keterangan
+								</th>
+							</tr>
+							<tr t-foreach="o.move_lines" t-as="j">
+								<td>
+									<span t-field="j.product_id" />
+								</td>
+								<td>
+									<span t-field="j.quantity_done" />
+                                    <span t-field="j.product_uom" />
+								</td>
+								<td>
+									<span t-field="j.keterangan_move" />
+								</td>
+							</tr>
+						</table>
+						<h4 style="font-weight:bold;font-size:17px" class="text-left">
+							Keterangan :&#160;
+							<span t-field="o.note" style="font-size:15px" />
+						</h4>
+						<table align="center">
+							<tr style="height:100px">
+								<td width="450px">
+									Penerima :
+								</td>
+								<td width="450px">
+									Mengetahui :
+								</td>
+								<td>
+									Hormat Kami :
+								</td>
+							</tr>
+							<tr style="height:30px">
+								<td width="450px">
+									(.................................)
+								</td>
+								<td width="450px">
+									(.................................)
+								</td>
+								<td>
+									(.................................)
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</t>
+		</template>
+		<template id="report_marel_report_pengantar_barang">
+			<t t-call="web.html_container">
+				<t t-foreach="docs" t-as="o">
+					<t t-call="marel_in_stock_picking.report_marel_report_pengantar_barang_doc" t-lang="o.partner_id.lang" />
+				</t>
+			</t>
+		</template>
+	</data>
+</flectra>

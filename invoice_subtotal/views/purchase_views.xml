@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+
+    <record id="purchase_order_subtotal_form" model="ir.ui.view">
+        <field name="name">purchase.order.subtotal.form</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='price_subtotal']" position="replace">
+                <field name="price_subtotal" widget="monetary" groups="sale.group_show_price_subtotal"/>
+                <field name="price_total" widget="monetary" groups="sale.group_show_price_total"/>
+            </xpath>
+        </field>
+    </record>
+
+    
+</flectra>

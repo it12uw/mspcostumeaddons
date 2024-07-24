@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data>
+        <record model="ir.ui.view" id="mrp_stock_bom">
+            <field name="name">Stock Move BOM</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='unit_factor']" position="after">
+                    <field name="bom_line_factor" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</flectra>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data>
+        <record id="sale_report_view_cost_pivot" model="ir.ui.view">
+             <field name="name">sale.report.cost.pivot</field>
+             <field name="model">sale.report</field>
+             <field name="inherit_id" ref="sale.view_order_product_pivot"/>
+             <field name="arch" type="xml">
+                 <pivot>
+                     <field name="unit_cost"/>
+                     <field name="unit_price"/>
+                 </pivot>
+             </field>
+        </record>
+    </data>
+</flectra>

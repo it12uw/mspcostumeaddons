@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <record id="account_duelate_wiz_view" model="ir.ui.view" >
+        <field name="name">account.duelate.wiz.view</field>
+        <field name="model">account.duelate.wiz</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Account Duelate Wiz">
+                <group>
+                    <group>
+                        <field name="date_start"/>
+                    </group>
+                    <group>
+                        <field name="date_end"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="get_report" string="Get Report" type="object" class="oe_highlight"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="action_account_duelate_wiz"
+                name="Invoice Duelate Report"
+                res_model="account.duelate.wiz"
+                view_mode="form"
+                target="new"/>
+
+    <menuitem action="action_account_duelate_wiz"
+              id="menu_account_duelate_wiz"
+              parent="account.menu_finance_reports"
+              sequence="11"/>
+</flectra>

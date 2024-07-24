@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data>
+        <record model="ir.ui.view" id="product_saleable_form">
+            <field name="name">product.saleable.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="stock.product_form_view_procurement_button"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='%(stock.action_stock_level_forecast_report_product)d']" position="before">
+                        <button class="oe_stat_button"
+                                name="%(stock.product_open_quants)d"
+                                icon="fa-building-o"
+                                type="action" attrs="{'invisible':[('type', '!=', 'product')]}">
+                            <field name="qty_saleable" widget="statinfo" string="Saleable"/>
+                        </button>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="product_tmpl_saleable_form">
+            <field name="name">product.tmpl.saleable.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="stock.product_template_form_view_procurement_button" />
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='%(stock.action_stock_level_forecast_report_template)d']"
+                    position="before">
+                    <button type="object" name="action_open_quants"
+                        attrs="{'invisible':[('type', 'not in', ['product','consu'])]}"
+                        class="oe_stat_button" icon="fa-building-o">
+                        <div class="o_form_field o_stat_info">
+                            <field name="qty_saleable"
+                                widget="statinfo" nolabel="1" />
+                            <span class="o_stat_text">Saleable</span>
+                        </div>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="product_tmpl_saleable_kanban">
+            <field name="name">product.tmpl.saleable.kanban</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="stock.product_template_kanban_stock_view"/>
+            <field name="arch" type="xml">
+                <ul position="inside">
+                    <li t-if="record.type.raw_value == 'product'">Saleable <field name="qty_saleable"/> <field name="uom_id"/></li>
+                </ul>
+            </field>
+        </record>
+
+    </data>
+</flectra>

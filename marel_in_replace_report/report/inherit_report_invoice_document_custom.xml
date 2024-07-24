@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <template id="inherit_report_invoice_document_custom" inherit_id="account.report_invoice_document">
+            <xpath expr="//div[@id='total']" position="after">
+                <table align="center" >
+                    <tr style="height:100px">
+                        <td width="500px">Received by : </td>
+                        <td width="400px">Approved by :</td>
+                        <td width="100px">Sincerely :</td>
+                    </tr>
+                    <tr style="height:30px">
+                        <td width="500px">
+                            <div t-field="o.partner_id"
+                        t-options='{"widget": "contact", "fields": ["name"], "no_marker": True}' />
+                        </td>
+                        <td width="400px">Erli Faniwati/Martin Lukas/Wati</td>
+                        <td width="100px">Vero/Wati</td>
+                    </tr>
+                </table>
+            </xpath>
+        </template>
+    </data>
+</flectra>

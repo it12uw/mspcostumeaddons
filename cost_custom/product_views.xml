@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data>
+        <record model="ir.ui.view" id="product_cost_bom_form">
+            <field name="name">product.cost.bom.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='compute_price']" position="attributes">
+                    <attribute name="attrs">{'invisible': [('bom_count', '=', 0)]}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="product_cost_bom_form_normal">
+            <field name="name">product.cost.bom.form.normal</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='compute_price']" position="attributes">
+                    <attribute name="attrs">{'invisible': [('bom_count', '=', 0)]}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="product_cost_bom_form_easy">
+            <field name="name">product.cost.bom.form.easy</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_variant_easy_edit_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='compute_price']" position="attributes">
+                    <attribute name="attrs">{'invisible': [('bom_count', '=', 0)]}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="product_cost_update_form">
+            <field name="name">product.cost.update.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='%(stock_account.action_view_change_standard_price)d']" position="attributes">
+                    <attribute name="attrs">{'invisible': []}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="mrp_production_postbutton">
+            <field name="name">mrp.production.postbutton</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='post_inventory']" position="attributes">
+                    <attribute name="groups"></attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</flectra>

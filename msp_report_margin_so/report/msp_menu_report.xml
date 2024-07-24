@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <!-- model : posisi print report
+             file : folder addons database
+             name : folder file
+         -->
+        <!-- pemesanan aksesoris-->
+        <report id="menu_report_msp_report_margin_so" string="Margin SO" report_type="qweb-pdf" model="sale.order" file="msp_report_margin_so.msp_menu_report" name="msp_report_margin_so.menu_report_msp_report_margin_so_report"/>
+        <template id="menu_report_msp_report_margin_so_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="msp_report_margin_so.msp_report_margin_so_doc" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+
+        <!-- <report id="marel_report_msp_report_rijek_mrp_doc" string="Data Rijek" report_type="qweb-pdf" model="mrp.production" file="msp_report_margin_so.msp_menu_report" name="msp_report_margin_so.marel_report_msp_report_rijek_mrp_doc_report" />
+        <template id="marel_report_msp_report_rijek_mrp_doc_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="msp_report_margin_so.msp_report_rijek_mrp_doc" t-lang="o.create_uid.lang"/>
+                </t>
+            </t>
+        </template> -->
+    </data>
+</flectra>

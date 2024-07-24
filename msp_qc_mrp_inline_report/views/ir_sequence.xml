@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="1">
+        <!-- inline 20  -->
+        <record model="ir.sequence" id="seq_msp_qc_mrp_inline_no_1">
+            <field name="name">Nomenclature No msp_qc_mrp_inline</field>
+            <field name="code">msp.qc.inline1.no</field>
+            <field name="prefix">QC/Inline1/%(year)s/</field>
+            <field name="padding">5</field>
+        </record>
+        <record model="ir.sequence" id="seq_msp_qc_mrp_inline_code">
+            <field name="name">Nomenclature untuk msp_qc_mrp_inline APP Code</field>
+            <field name="code">msp.qc.inline1.app</field>
+            <field name="padding">4</field>
+        </record>
+        <!-- inline 50 -->
+        <record model="ir.sequence" id="seq_msp_qc_mrp_inline_no_2">
+            <field name="name">Nomenclature No msp_qc_mrp_inline</field>
+            <field name="code">msp.qc.inline2.no</field>
+            <field name="prefix">QC/Inline2/%(year)s/</field>
+            <field name="padding">5</field>
+        </record>
+        <record model="ir.sequence" id="seq_msp_qc_mrp_inline_code_2">
+            <field name="name">Nomenclature untuk msp_qc_mrp_inline APP Code</field>
+            <field name="code">msp.qc.inline2.app</field>
+            <field name="padding">4</field>
+        </record>
+        <!-- inline 90 -->
+        <record model="ir.sequence" id="seq_msp_qc_mrp_inline_no_3">
+            <field name="name">Nomenclature No msp_qc_mrp_inline</field>
+            <field name="code">msp.qc.inline3.no</field>
+            <field name="prefix">QC/Inline3/%(year)s/</field>
+            <field name="padding">5</field>
+        </record>
+        <record model="ir.sequence" id="seq_msp_qc_mrp_inline_code_3">
+            <field name="name">Nomenclature untuk msp_qc_mrp_inline APP Code</field>
+            <field name="code">msp.qc.inline3.app</field>
+            <field name="padding">4</field>
+        </record>
+    </data>
+</flectra>

@@ -1,0 +1,7 @@
+<report id="action_msp_qc_mrp_inline4_report" string="Inline 4 Report" report_type="qweb-pdf" model="msp.qc.inline4" file="msp_qc_mrp_inline_report.menu_report" name="msp_qc_mrp_inline_report.marel_msp_qc_mrp_inline4_report_template" />
+        <template id="marel_msp_qc_mrp_inline4_report_template">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="msp_qc_mrp_inline_report.msp_qc_mrp_inline4_report" t-lang="o.partner_id.lang"/></t>
+            </t>
+        </template>

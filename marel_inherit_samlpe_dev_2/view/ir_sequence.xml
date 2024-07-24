@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="1">
+        <record model="ir.sequence" id="seq_marelin_samlpe_dev2_no">
+            <field name="name">Nomenclature No marelin_samlpe_dev2</field>
+            <field name="code">marelin.samlpe.dev2.no</field>
+            <field name="prefix">SPL/DEV/%(year)s/</field>
+            <field name="padding">5</field>
+        </record>  
+        <record model="ir.sequence" id="seq_marelin_samlpe_dev2_code">
+            <field name="name">Nomenclature untuk marelin_samlpe_dev2 APP Code</field>
+            <field name="code">marelin.samlpe.dev2.app</field>
+            <field name="padding">4</field>
+        </record>
+    </data>
+</flectra>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <!-- model : posisi print report
+             file : folder addons database
+             name : folder file
+         -->
+        <report id="marel_report_kkp_sisa" string="KKP Sisa" report_type="qweb-pdf" model="mrp.production" file="product.marel_report_kkp_sisa" name="marel_in_report_mo.marel_report_kkp_report_sisa" />
+        <!-- doc -->
+        <!-- template semua record-->
+        <template id="marel_report_kkp_report_sisa">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="marel_in_report_mo.report_marel_in_report_mo_sisa_doc" t-lang="doc.create_uid.lang"/></t>
+            </t>
+        </template>
+        <!-- data perRecord -->
+    </data>
+</flectra>

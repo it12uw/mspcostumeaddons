@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+	<template id="report_stock_request_sr_doc">
+		<t t-call="web.external_layout">
+			<t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})" />
+			<div class="page oe_purchase_font_title">
+				<div class="oe_structure" />
+				<table class="table table-condensed">
+					<thead>
+						<tr>
+							<th>
+								Document ID
+							</th>
+							<th>
+								Page
+							</th>
+							<th>
+								Revision No
+							</th>
+							<th>
+								Revision Date
+							</th>
+							<th>
+								Effective Date
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>MSP/F/P/PCH/02.01</td>
+							<td>Page 1 of 1</td>
+							<td>-</td>
+							<td>-</td>
+							<td>02 JANUARI 2019</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="row">
+					<h3 align="center">
+						<strong>
+							DATA STOCK REQUEST
+						</strong>
+					</h3>
+				</div>
+				<table class="table table-condensed">
+					<tr>
+						<th>
+							<strong>
+									Name
+							</strong>
+						</th>
+						<td>
+							<p t-field="o.name" />
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<strong>
+									Product
+							</strong>
+						</th>
+						<td>
+							<p t-field="o.product_id" />
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<strong>
+									Expected Date
+							</strong>
+						</th>
+						<td>
+							<p t-field="o.expected_date" />
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<strong>
+									Picking Policy
+							</strong>
+						</th>
+						<td>
+							<p t-field="o.picking_policy" />
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<strong>
+									Unit Price
+							</strong>
+						</th>
+						<td>
+							<p t-field="o.price_unit" />
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<strong>
+									Qty
+							</strong>
+						</th>
+						<td>
+							<p t-field="o.product_uom_qty" />
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<strong>
+									Qty In Progress
+							</strong>
+						</th>
+						<td>
+							<p t-field="o.qty_in_progress" />
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<strong>
+									Qty Cancelled
+							</strong>
+						</th>
+						<td>
+							<p t-field="o.qty_cancelled" />
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<strong>
+									Qty Done
+							</strong>
+						</th>
+						<td>
+							<p t-field="o.qty_done" />
+						</td>
+					</tr>
+
+				</table>
+			</div>
+		</t>
+	</template>
+</flectra>

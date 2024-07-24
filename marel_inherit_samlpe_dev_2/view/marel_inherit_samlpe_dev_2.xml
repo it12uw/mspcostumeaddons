@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flectra>
+    <data noupdate="0">
+        <record id="view_marel_inherit_samlpe_dev_2_1_form" model="ir.ui.view">
+            <field name="name">marel_inherit_samlpe_dev2_form_1</field>
+            <field name="model">marelin.samlpe.dev2</field>
+            <field name="inherit_id" ref="marel_in_samlpe_dev_2.view_marel_in_samlpe_dev_2_form"/>
+            <field name="arch" type="xml">
+                <!-- <xpath expr="/sheet/group/group/field[@name='penjerat']" position="after"> -->
+                <xpath expr="//field[@name='penjerat']" position="after">
+                    <field name="penjerat_2"/>
+                </xpath>
+                <xpath expr="//field[@name='brand']" position="before">
+                    <field name="kode_dokumen"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_marel_inherit_samlpe_dev_2_2_form" model="ir.ui.view">
+            <field name="name">marel_inherit_samlpe_dev2_form_1</field>
+            <field name="model">marelin.samlpe.dev2</field>
+            <field name="inherit_id" ref="marel_in_samlpe_dev_2.view_marel_in_samlpe_dev_2_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='patter_5']" position="after">
+                    <field name="patter_6"/>
+                    <field name="patter_7"/>
+                    <field name="patter_8"/>
+                    <field name="patter_9"/>
+                    <field name="patter_10"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</flectra>
