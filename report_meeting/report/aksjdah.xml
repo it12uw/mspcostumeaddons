@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <record id="action_report_pre_production" model="ir.actions.report">
+        <field name="name">Pre Production Meeting</field>
+        <field name="model">mrp.production</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">report_meeting.pre_production_report_template</field>
+        <field name="report_file">report_meeting.pre_production_report_template</field>
+        <field name="binding_model_id" ref="mrp.model_mrp_production"/>
+        <field name="binding_type">report</field>
+    </record>
+    
+    <!-- Template halaman 2 -->
+    <template id="pre_production_report_template_page2">
+        <t t-call="web.external_layout">
+            <div class="page" style="font-family: Arial; font-size: 12px;">
+                        <table class="table table-borderless" style="border: 1px solid black;">
+                            <tr>
+                                <td width="25%" style="border-right: 1px solid black;">
+                                    <img t-if="res_company.logo" t-att-src="image_data_uri(res_company.logo)" style="max-height: 80px;" alt="Logo"/>
+                                </td>
+                                <td width="35%" style="border-right: 1px solid black; text-align: center; vertical-align: middle;">
+                                    <strong>PT. MAREL SUKSES PRATAMA</strong>
+                                </td>
+                                <td width="40%">
+                                    <table class="table table-sm table-borderless" style="margin-bottom: 0px;">
+                                        <tr>
+                                            <td width="40%">Kode dok</td>
+                                            <td width="60%">MSP/F.PPC/04.01</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Halaman</td>
+                                            <td>2 DARI 2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Revisi ke</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tgl Revisi</td>
+                                            <td>2 JANUARI 2025</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tgl Efektif</td>
+                                            <td>15 JANUARI 2025</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tgl</td>
+                                            <td><span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d %B %Y')"/></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Form Title -->
+                        <div class="text-center mb-3">
+                            <strong>FORM PRE PRODUCTION MEETING</strong>
+                        </div>
+                        
+                        <!-- Section 4: QC Planning -->
+                        <div class="mb-3">
+                            <strong>4. Rencana QC</strong>
+                            <table class="table table-bordered table-sm">
+                                <tr>
+                                    <td colspan="3">Kriteria Kualitas</td>
+                                </tr>
+                                <tr>
+                                    <td width="25%">Metode Pengecekan</td>
+                                    <td width="25%">Random</td>
+                                    <td width="50%">
+                                        <table class="table table-sm table-borderless" style="margin-bottom: 0px;">
+                                            <tr>
+                                                <td width="40%">Sample Size</td>
+                                                <td width="20%">Accepted</td>
+                                                <td width="20%">Rejected</td>
+                                            </tr>
+                                            <tr>
+                                                <td>125</td>
+                                                <td>7</td>
+                                                <td>8</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>AQL</td>
+                                    <td colspan="2"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <!-- Section 5: Packaging Instructions -->
+                        <div class="mb-3">
+                            <strong>5. Instruksi Packaging</strong>
+                            <table class="table table-bordered table-sm">
+                                <tr>
+                                    <td width="25%">Jenis Packaging</td>
+                                    <td width="75%">Packing plastik satuan &amp; lusinan</td>
+                                </tr>
+                                <tr>
+                                    <td>Instruksi Lipat</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Detail Labeling box</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Informasi Pengiriman/Alamat kirim</td>
+                                    <td>
+                                        Cynthia /CV Denic Advertising<br/>
+                                        Jalan Pluit Indah Nomor 08, Pluit, Kecamatan Penjaringan<br/>
+                                        Jakarta Utara DKI Jakarta 14450
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <!-- Section 6: Supplier Notes -->
+                        <div class="mb-3">
+                            <strong>6. Catatan Pengadaan</strong>
+                            <table class="table table-bordered table-sm">
+                                <tr>
+                                    <th width="25%">Material yang Perlu Pengadaan</th>
+                                    <th width="15%">Tgl Pengajuan</th>
+                                    <th width="15%">Tgl PO</th>
+                                    <th width="15%">Jumlah Pengadaan</th>
+                                    <th width="10%">Est. Tgl Datang</th>
+                                    <th width="10%">PIC</th>
+                                    <th width="10%">KET</th>
+                                </tr>
+                                <tr>
+                                    <td>D150 P75 Soft lycra White/White_Windu = 12 kg</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Nylon 70/2_Vivid Ozone Blue/MSP 370_Permata = 3 kg</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>S30 P75_White/White_JOYOUS TEXTILE = 8.77kg</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <!-- Section 7: Sample Approval Process -->
+                        <div class="mb-3">
+                            <strong>7. Proses Approval Sampel</strong>
+                            <table class="table table-bordered table-sm">
+                                <tr>
+                                    <td width="25%">Status Sampel</td>
+                                    <td width="75%">
+                                        Approved
+                                        <span style="float: right;">Tgl Approve Jika belum Aprove :</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Komentar/Revisi dari Buyer</td>
+                                    <td>Stretch dibuat 24 cm seperti sampel pertama</td>
+                                </tr>
+                                <tr>
+                                    <td>Tanggal Pengiriman Sampel</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <!-- Section 8: Production Constraints -->
+                        <div class="mb-3">
+                            <strong>8. Kemungkinan kendala produksi(RACI)</strong>
+                            <table class="table table-bordered table-sm">
+                                <tr>
+                                    <th width="20%">Pelaksana</th>
+                                    <th width="20%">Penanggung jawab</th>
+                                    <th width="20%">Konsultan</th>
+                                    <th width="40%">Perlu Di Info</th>
+                                </tr>
+                                <tr>
+                                    <td>Leader</td>
+                                    <td>Teknisi</td>
+                                    <td>Maintenance</td>
+                                    <td>General Manager / Marketing / PPIC</td>
+                                </tr>
+                                <tr>
+                                    <td>QC / Operator</td>
+                                    <td>Teknisi</td>
+                                    <td>Marketing</td>
+                                    <td>General Manager / PPIC</td>
+                                </tr>
+                                <tr>
+                                    <td>Operator</td>
+                                    <td>Leader</td>
+                                    <td>Gudang</td>
+                                    <td>General Manager</td>
+                                </tr>
+                                <tr>
+                                    <td>Operator Finishing</td>
+                                    <td>Leader Finishing</td>
+                                    <td>Dev / Marketing / QC / Utility</td>
+                                    <td>General Manager</td>
+                                </tr>
+                                <tr>
+                                    <td>All</td>
+                                    <td>HRD</td>
+                                    <td>HRD</td>
+                                    <td>General Manager</td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <!-- Add potential constraints table -->
+                        <div class="mb-3">
+                            <table class="table table-bordered table-sm">
+                                <tr>
+                                    <td width="30%">Potensi kendala dalam Produksi</td>
+                                    <td width="70%"></td>
+                                </tr>
+                                <tr>
+                                    <td>Kendala terkait Kualitas</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Kendala terkait material</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Kendala terkait Finishing</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Kendala terkait SDM</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <strong>DAFTAR HADIR</strong>
+                            <table class="table table-bordered table-sm">
+                                <thead>
+                                    <tr>
+                                        <th width="40%">NAMA</th>
+                                        <th width="30%">BAGIAN</th>
+                                        <th width="30%">TTD</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Aria Wahyu E.Y</td>
+                                        <td></td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-6 text-center">1</div>
+                                                <div class="col-6 text-center">2</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tugiya</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Oktavianus</td>
+                                        <td></td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-6 text-center">3</div>
+                                                <div class="col-6 text-center">4</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wardiyono</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arlian Tri Wahyu</td>
+                                        <td></td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-6 text-center">5</div>
+                                                <div class="col-6 text-center">6</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yulia Susanti</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yayan Aji s</td>
+                                        <td></td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-6 text-center">7</div>
+                                                <div class="col-6 text-center">8</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Adhilya Indah Putri</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Veby Andria</td>
+                                        <td></td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-6 text-center">9</div>
+                                                <div class="col-6 text-center">10</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Suwarni</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Astiah</td>
+                                        <td></td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-6 text-center">11</div>
+                                                <div class="col-6 text-center">12</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Budiana</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tawakal m.r</td>
+                                        <td></td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-6 text-center">13</div>
+                                                <div class="col-6 text-center">14</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kukuh Murniasih</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Krisnita hayu k</td>
+                                        <td></td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-6 text-center">15</div>
+                                                <div class="col-6 text-center">16</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Triwahudin</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+        </t>
+    </template>
+
+    <!-- Template utama tanpa inheritance -->
+    <template id="pre_production_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <!-- Halaman 1 -->
+                <t t-call="web.external_layout">
+                    <div class="page" style="font-family: Arial; font-size: 12px;">
+                        <!-- Header with Logo and Company Info -->
+                        <table class="table table-borderless" style="border: 1px solid black;">
+                            <tr>
+                                <td width="25%" style="border-right: 1px solid black;">
+                                    <img t-if="res_company.logo" t-att-src="image_data_uri(res_company.logo)" style="max-height: 80px;" alt="Logo"/>
+                                </td>
+                                <td width="35%" style="border-right: 1px solid black; text-align: center; vertical-align: middle;">
+                                    <strong>PT. MAREL SUKSES PRATAMA</strong>
+                                </td>
+                                <td width="40%">
+                                    <table class="table table-sm table-borderless" style="margin-bottom: 0px;">
+                                        <tr>
+                                            <td width="40%">Kode dok</td>
+                                            <td width="60%">MSP/F.PPC/04.01</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Halaman</td>
+                                            <td>1 DARI 2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Revisi ke</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tgl Revisi</td>
+                                            <td>2 JANUARI 2025</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tgl Efektif</td>
+                                            <td>15 JANUARI 2025</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tgl</td>
+                                            <td><span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d %B %Y')"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Chrono</td>
+                                            <td>04.20/ 111 pcs / shift</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Kaos Kaki</td>
+                                            <td>→</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Form Title -->
+                        <div class="text-center mb-3">
+                            <strong>FORM PRE PRODUCTION MEETING</strong>
+                        </div>
+                        
+                        <!-- Document Number -->
+                        <div class="mb-2">
+                            <table class="table table-sm table-borderless" style="margin-bottom: 0px;">
+                                <tr>
+                                    <td width="15%">No. Dokumen</td>
+                                    <td width="25%">006_/PPM/01/2025</td>
+                                    <td><small>(no.urut/PPM/Bulan/Tahun)</small></td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <!-- Section 1: Product Information -->
+                        <div class="mb-3">
+                            <strong>1. Informasi Produk</strong>
+                            <table class="table table-bordered table-sm">
+                                <tr>
+                                    <td width="15%">Nama Produk</td>
+                                    <td width="35%">GOODR</td>
+                                    <td width="15%">Jenis</td>
+                                    <td width="35%"></td>
+                                </tr>
+                                <tr>
+                                    <td>Kode Produk/ SO/MO</td>
+                                    <td>
+                                        <div>MSP24/SO14617</div>
+                                        <div>MSP25/MO0958</div>
+                                    </td>
+                                    <td rowspan="2">Proses</td>
+                                    <td rowspan="2">
+                                        <div>
+                                            <input type="checkbox" checked="checked" disabled="disabled"/> Knitting
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" checked="checked" disabled="disabled"/> Conti
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" checked="checked" disabled="disabled"/> Setting
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Deskripsi Produk</td>
+                                    <td>Goodr 2025 Crew Socks White R/L</td>
+                                </tr>
+                                <tr>
+                                    <td>Warna</td>
+                                    <td>WHITE</td>
+                                    <td>Size Setting</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>Ukuran</td>
+                                    <td></td>
+                                    <td>Suhu</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Jumlah Pesanan</td>
+                                    <td>2000</td>
+                                    <td>Waktu</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Tanggal Pengiriman</td>
+                                    <td>25 Maret 2025</td>
+                                    <td>Keterangan</td>
+                                    <td>TANPA PRESS</td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <!-- Section 2: Technical Specifications -->
+                        <div class="mb-3">
+                            <strong>2. Spesifikasi Teknik</strong>
+                            <div class="mb-2">
+                                <strong>a. Jenis benang</strong>
+                                <table class="table table-bordered table-sm">
+                                    <tr>
+                                        <th width="20%">a. Jenis benang</th>
+                                        <th width="20%">Ukuran</th>
+                                        <th width="15%">Gramasi</th>
+                                        <th width="15%">Kebutuhan</th>
+                                        <th width="15%">Supplier</th>
+                                        <th width="15%">Keterangan</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Material utama 1</td>
+                                        <td>Nylon</td>
+                                        <td>-</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Material utama 2</td>
+                                        <td>Nylon</td>
+                                        <td>-</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Spandex</td>
+                                        <td>S30P75</td>
+                                        <td>-</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Karet</td>
+                                        <td>D150P75 SOFT LYCRA</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nylon 1</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nylon 2</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nylon 3</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nylon 4</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                            <div class="mb-2">
+                                <strong>b. Jenis Aksesoris</strong>
+                                <table class="table table-bordered table-sm">
+                                    <tr>
+                                        <th width="20%">Check</th>
+                                        <th width="15%">Jumlah</th>
+                                        <th width="15%"></th>
+                                        <th width="20%">Check</th>
+                                        <th width="15%">Jumlah</th>
+                                        <th width="15%">TAMBAHAN</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Hologram</td>
+                                        <td>
+                                            <input type="checkbox" disabled="disabled"/>
+                                        </td>
+                                        <td>Tag pin</td>
+                                        <td>
+                                            <input type="checkbox" checked="checked" disabled="disabled"/>
+                                        </td>
+                                        <td></td>
+                                        <td rowspan="4">TAMBAHAN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hanger</td>
+                                        <td>
+                                            <input type="checkbox" disabled="disabled"/>
+                                        </td>
+                                        <td>Plastik Lusin</td>
+                                        <td>
+                                            <input type="checkbox" checked="checked" disabled="disabled"/>
+                                        </td>
+                                        <td>85</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Packaging</td>
+                                        <td>
+                                            <input type="checkbox" disabled="disabled"/>
+                                        </td>
+                                        <td>Plastik 13x30</td>
+                                        <td>
+                                            <input type="checkbox" checked="checked" disabled="disabled"/>
+                                        </td>
+                                        <td>1000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Barcode</td>
+                                        <td>
+                                            <input type="checkbox" disabled="disabled"/>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <input type="checkbox" disabled="disabled"/>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                            <div class="mb-2">
+                                <strong>c. Instruksi Printing/Embroidery</strong>
+                                <table class="table table-bordered table-sm">
+                                    <tr>
+                                        <td width="20%">Warna Benang</td>
+                                        <td width="30%"></td>
+                                        <td width="20%">Ukuran bordir</td>
+                                        <td width="30%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Posisi Bordir</td>
+                                        <td></td>
+                                        <td>Jenis kain Keras</td>
+                                        <td>→</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Desain</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jenis design dibutuhkan</td>
+                                        <td>→</td>
+                                        <td></td>
+                                        <td>→</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                            <div class="mb-2">
+                                <strong>d. Anti Slip</strong>
+                                <table class="table table-bordered table-sm">
+                                    <tr>
+                                        <td width="20%">Bentuk screen</td>
+                                        <td width="80%">→</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Resep</td>
+                                        <td>%</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pewarna</td>
+                                        <td>%</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <!-- Section 3: Production Plan -->
+                        <div class="mb-3">
+                            <strong>3. Rencana Produksi</strong>
+                            <table class="table table-bordered table-sm">
+                                <tr>
+                                    <td width="50%">Tanggal Mulai Produksi</td>
+                                    <td width="50%">10 Maret 2025</td>
+                                </tr>
+                                <tr>
+                                    <td>Durasi Produksi yang Direncanakan</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Jumlah Mesin yang Diperlukan</td>
+                                    <td>
+                                        <span>1</span>
+                                        <span style="float: right;">N 156</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <!-- Footer for signatures -->
+                        <div class="row mt-5">
+                            <div class="col-3 text-center">
+                                <p>Disiapkan oleh:</p>
+                                <br/><br/><br/>
+                                <p>_______________</p>
+                                <p>PPC</p>
+                            </div>
+                            <div class="col-3 text-center">
+                                <p>Disetujui oleh:</p>
+                                <br/><br/><br/>
+                                <p>_______________</p>
+                                <p>Production Manager</p>
+                            </div>
+                            <div class="col-3 text-center">
+                                <p>Diverifikasi oleh:</p>
+                                <br/><br/><br/>
+                                <p>_______________</p>
+                                <p>QC Manager</p>
+                            </div>
+                            <div class="col-3 text-center">
+                                <p>Diketahui oleh:</p>
+                                <br/><br/><br/>
+                                <p>_______________</p>
+                                <p>Factory Manager</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Python helper function to extract data -->
+                        <t t-set="get_sale_order" t-value="lambda mo: env['sale.order'].search([('name', '=', mo.origin)], limit=1) if mo.origin else False"/>
+                        
+                    </div>
+                </t>
+                
+                <!-- Halaman 2 -->
+                <t t-call="report_meeting.pre_production_report_template_page2"/>
+            </t>
+        </t>
+    </template>
+</flectra>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <!-- Add Print Pre Production report button to MO form -->
+    <record id="pre_production_report_button" model="ir.ui.view">
+        <field name="name">mrp.production.pre.production.button</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_cancel']" position="before">
+                <button name="%(report_meeting.action_report_pre_production)d" 
+                        string="Print Pre Production Meeting" 
+                        type="action" 
+                        attrs="{'invisible': [('state', '=', 'cancel')]}"
+                        class="oe_highlight"/>
+            </xpath>
+        </field>
+    </record>
+    
+    <!-- Report action -->
+    <record id="action_report_pre_production" model="ir.actions.report">
+        <field name="name">Pre Production Meeting</field>
+        <field name="model">mrp.production</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">report_meeting.pre_production_report_template</field>
+        <field name="report_file">report_meeting.pre_production_report_template</field>
+        <field name="binding_model_id" ref="mrp.model_mrp_production"/>
+        <field name="binding_type">report</field>
+    </record>
+</flectra>
